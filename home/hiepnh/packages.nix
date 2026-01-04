@@ -1,0 +1,26 @@
+{ pkgs, inputs, ... }:
+{
+  home.packages = with pkgs; [
+    kitty
+    stow
+    vicinae
+    eza
+    fzf
+    fastfetch
+    starship
+    lazygit
+    tree-sitter
+    ripgrep
+    fd
+    amber-lang
+    tmux
+    thunar
+    app2unit
+    inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
+    inputs.hyprshutdown.packages.${stdenv.hostPlatform.system}.hyprshutdown
+    flameshot
+    telegram-desktop
+    inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
+    obs-studio
+  ];
+}
