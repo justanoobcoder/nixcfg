@@ -22,5 +22,7 @@
     telegram-desktop
     inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
     obs-studio
+    keepassxc
+    btop
   ];
 }

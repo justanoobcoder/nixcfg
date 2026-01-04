@@ -7,6 +7,8 @@
     neovide
   ];
 
+  xdg.autostart.enable = true; # Enable creation of XDG autostart entries.
+
   xdg.configFile."mimeapps.list".force = true;
 
   xdg.mimeApps = {
