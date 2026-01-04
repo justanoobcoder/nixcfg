@@ -24,5 +24,7 @@
     obs-studio
     keepassxc
     btop
+    inputs.self.packages.${stdenv.hostPlatform.system}.keypop
+    inputs.self.packages.${stdenv.hostPlatform.system}.wlctl
   ];
 }
