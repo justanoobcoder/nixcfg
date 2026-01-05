@@ -26,5 +26,6 @@
     syncthing
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop
     inputs.self.packages.${stdenv.hostPlatform.system}.wlctl
+    inputs.self.packages.${stdenv.hostPlatform.system}.zalo
   ];
 }
