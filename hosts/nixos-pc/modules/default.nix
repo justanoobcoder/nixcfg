@@ -10,5 +10,7 @@
     ./fonts.nix
     ./security.nix
     ./services.nix
+    ./gpg.nix
+    ./tts.nix
   ];
 }
