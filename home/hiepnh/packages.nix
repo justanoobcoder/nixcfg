@@ -13,7 +13,6 @@
     ripgrep
     fd
     amber-lang
-    tmux
     thunar
     app2unit
     inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
