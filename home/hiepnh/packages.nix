@@ -15,17 +15,22 @@
     amber-lang
     thunar
     app2unit
-    inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
-    inputs.hyprshutdown.packages.${stdenv.hostPlatform.system}.hyprshutdown
     flameshot
     telegram-desktop
-    inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
     obs-studio
     keepassxc
     btop
     syncthing
+
+    # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop
     inputs.self.packages.${stdenv.hostPlatform.system}.wlctl
-    inputs.self.packages.${stdenv.hostPlatform.system}.zalo
+
+    # packages from outside of nixpkgs
+    inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
+    inputs.hyprshutdown.packages.${stdenv.hostPlatform.system}.hyprshutdown
+    inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
+    inputs.zalo.packages.${stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
