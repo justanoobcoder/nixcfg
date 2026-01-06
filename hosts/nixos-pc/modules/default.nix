@@ -12,5 +12,6 @@
     ./services.nix
     ./gpg.nix
     ./tts.nix
+    ./virtualisation.nix
   ];
 }
