@@ -1,6 +1,7 @@
 {lib, ...}: {
   imports = [
     ./nix.nix
+    ./bash.nix
   ];
 
   programs.nvf.settings.vim = {
@@ -8,6 +9,11 @@
       enable = true;
       inlayHints.enable = true;
       formatOnSave = true;
+      servers.amber = {
+        enable = true;
+        cmd = ["amber-lsp"];
+        filetypes = ["amber"];
+      };
     };
     autocomplete.nvim-cmp.enable = true;
     diagnostics = {

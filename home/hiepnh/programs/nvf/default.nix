@@ -7,6 +7,8 @@
     ./comment.nix
     ./filetree.nix
     ./theme.nix
+    ./dashboard.nix
+    ./terminal.nix
   ];
 
   programs.nvf = {

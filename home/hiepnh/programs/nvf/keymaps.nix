@@ -59,13 +59,13 @@
         key = "<S-h>";
         mode = "n";
         silent = true;
-        action = "gT";
+        action = ":bp<CR>";
       }
       {
         key = "<S-l>";
         mode = "n";
         silent = true;
-        action = "gt";
+        action = ":bn<CR>";
       }
       {
         key = "<leader>e";
