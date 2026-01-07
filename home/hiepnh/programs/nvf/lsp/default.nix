@@ -2,6 +2,7 @@
   imports = [
     ./nix.nix
     ./bash.nix
+    ./lua.nix
   ];
 
   programs.nvf.settings.vim = {
