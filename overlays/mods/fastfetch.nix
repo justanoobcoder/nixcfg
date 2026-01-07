@@ -1,5 +1,5 @@
 {prev}:
-prev.fastfetch.overrideAttrs (oldAttrs: rec {
+prev.fastfetch.overrideAttrs (oldAttrs: {
   version = "2.34.0";
   src = prev.fetchFromGitHub {
     owner = "fastfetch-cli";

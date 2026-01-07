@@ -1,7 +1,10 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
-    kitty
+    kitty 
     stow
     vicinae
     eza
@@ -21,6 +24,8 @@
     keepassxc
     btop
     syncthing
+    nixd
+    alejandra
 
     # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop

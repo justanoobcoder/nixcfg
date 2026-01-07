@@ -1,11 +1,8 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./modules
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules
+  ];
 
   networking.hostName = "nixos-pc";
 
@@ -18,7 +15,7 @@
     binfmt = true;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   system.stateVersion = "25.11";
 }

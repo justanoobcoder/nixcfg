@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     neovim
     killall
@@ -11,5 +10,4 @@
     unzip
     gpu-screen-recorder
   ];
-
 }
