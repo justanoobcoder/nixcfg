@@ -9,8 +9,9 @@
   programs.nvf.settings.vim = {
     lsp = {
       enable = true;
+      lspconfig.enable = true;
       inlayHints.enable = true;
-      formatOnSave = true;
+      formatOnSave = false;
       servers.amber = {
         enable = true;
         cmd = ["amber-lsp"];

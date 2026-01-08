@@ -12,6 +12,7 @@
     ./persist.nix
     ./colorizer.nix
     ./autocomplete.nix
+    ./conform.nix
   ];
 
   programs.nvf = {

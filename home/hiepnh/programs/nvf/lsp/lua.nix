@@ -7,8 +7,6 @@
         lsp.servers = ["lua-language-server"];
         treesitter.enable = true;
         extraDiagnostics.enable = true;
-        format.enable = true;
-        format.type = ["stylua"];
       };
     };
   };

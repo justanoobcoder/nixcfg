@@ -7,8 +7,6 @@
         lsp.servers = ["nixd"];
         treesitter.enable = true;
         extraDiagnostics.enable = true;
-        format.enable = true;
-        format.type = ["alejandra"];
       };
     };
   };

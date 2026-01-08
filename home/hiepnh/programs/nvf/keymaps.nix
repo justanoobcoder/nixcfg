@@ -79,6 +79,12 @@
         silent = true;
         action = ":bd<CR>";
       }
+      {
+        key = "<leader>cf";
+        mode = "n";
+        silent = true;
+        action = ":Format<CR>";
+      }
     ];
   };
 }
