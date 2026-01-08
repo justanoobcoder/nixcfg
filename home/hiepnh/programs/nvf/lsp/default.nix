@@ -17,7 +17,6 @@
         filetypes = ["amber"];
       };
     };
-    autocomplete.nvim-cmp.enable = true;
     diagnostics = {
       enable = true;
       config = {

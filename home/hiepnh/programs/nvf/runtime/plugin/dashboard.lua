@@ -66,7 +66,7 @@ require("dashboard").setup({
 		header = header,
 		center = center,
 		footer = {
-			"It works on my machine.",
+			'"It works on my machine."',
 			"\t\t\t— Famous last words",
 		},
 	},

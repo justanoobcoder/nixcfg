@@ -11,6 +11,7 @@
     ./terminal.nix
     ./persist.nix
     ./colorizer.nix
+    ./autocomplete.nix
   ];
 
   programs.nvf = {
@@ -38,6 +39,9 @@
         statusline.lualine.enable = true;
         telescope.enable = true;
         treesitter.enable = true;
+        additionalRuntimePaths = [
+          "$HOME/.nixcfg/home/hiepnh/programs/nvf/runtime"
+        ];
       };
     };
   };
