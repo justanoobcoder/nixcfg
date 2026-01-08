@@ -42,18 +42,22 @@ local center = {
 		action = "Telescope live_grep",
 	},
 	{
+		icon = " ",
+		desc = "Restore Session",
+		key = "s",
+		action = "SessionLoad",
+	},
+	{
 		icon = " ",
 		desc = "Quit",
 		key = "q",
-		action = function()
-			vim.api.nvim_input("<cmd>qa<cr>")
-		end,
+		action = "qa!",
 	},
 }
 
 for _, button in ipairs(center) do
 	button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-	button.key_format = "  %s"
+	button.key_format = "  » %s «"
 end
 
 require("dashboard").setup({
@@ -61,6 +65,9 @@ require("dashboard").setup({
 	config = {
 		header = header,
 		center = center,
-		footer = {},
+		footer = {
+			"It works on my machine.",
+			"\t\t\t— Famous last words",
+		},
 	},
 })

@@ -9,6 +9,7 @@
     ./theme.nix
     ./dashboard.nix
     ./terminal.nix
+    ./persist.nix
   ];
 
   programs.nvf = {

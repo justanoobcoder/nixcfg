@@ -59,13 +59,13 @@
         key = "<S-h>";
         mode = "n";
         silent = true;
-        action = ":bp<CR>";
+        action = ":BufferLineCyclePrev<CR>";
       }
       {
         key = "<S-l>";
         mode = "n";
         silent = true;
-        action = ":bn<CR>";
+        action = ":BufferLineCycleNext<CR>";
       }
       {
         key = "<leader>e";

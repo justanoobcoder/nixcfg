@@ -1,16 +1,20 @@
-{
+let
+  ignore_filetypes = ["dashboard" "startify" "ministarter"];
+in {
   programs.nvf.settings.vim = {
     visuals.indent-blankline = {
       enable = true;
-      setupOpts.scope.enabled = false;
-      setupOpts.indent.char = "▏";
-      setupOpts.exclude.filetypes = ["dashboard"];
+      setupOpts = {
+        scope.enabled = false;
+        indent.char = "▏";
+        exclude.filetypes = ignore_filetypes;
+      };
     };
     mini.indentscope = {
       enable = true;
       setupOpts = {
         symbol = "▏";
-        ignore_filetypes = ["dashboard"];
+        inherit ignore_filetypes;
       };
     };
     luaConfigPost = ''
