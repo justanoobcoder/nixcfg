@@ -10,6 +10,7 @@
     ./dashboard.nix
     ./terminal.nix
     ./persist.nix
+    ./colorizer.nix
   ];
 
   programs.nvf = {
