@@ -3,6 +3,7 @@
     ./nix.nix
     ./bash.nix
     ./lua.nix
+    ./clang.nix
   ];
 
   programs.nvf.settings.vim = {
