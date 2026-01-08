@@ -13,7 +13,7 @@
       inlayHints.enable = true;
       formatOnSave = false;
       servers.amber = {
-        enable = true;
+        enable = false;
         cmd = ["amber-lsp"];
         filetypes = ["amber"];
       };
