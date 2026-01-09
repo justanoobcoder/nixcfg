@@ -7,6 +7,7 @@
     kitty
     stow
     vicinae
+    brightnessctl
     eza
     fzf
     fastfetch
