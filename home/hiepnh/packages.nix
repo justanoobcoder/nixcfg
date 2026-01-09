@@ -20,7 +20,6 @@
     amber-lang
     thunar
     app2unit
-    flameshot
     telegram-desktop
     obs-studio
     keepassxc
