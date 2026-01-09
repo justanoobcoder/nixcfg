@@ -14,6 +14,9 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 
   services = {
     keyd = {
