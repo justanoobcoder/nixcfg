@@ -4,6 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    discord
     kitty
     stow
     vicinae
@@ -25,18 +26,13 @@
     keepassxc
     btop
     syncthing
-    # nixd
-    # alejandra
+    qogir-icon-theme
 
     # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop
     inputs.self.packages.${stdenv.hostPlatform.system}.wlctl
 
     # packages from outside of nixpkgs
-    inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
-    inputs.hyprshutdown.packages.${stdenv.hostPlatform.system}.hyprshutdown
-    inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
     inputs.zalo.packages.${stdenv.hostPlatform.system}.default
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

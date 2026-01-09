@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     firefox
     mpv
@@ -7,9 +6,14 @@
     neovide
   ];
 
-  xdg.autostart.enable = true; # Enable creation of XDG autostart entries.
-
-  xdg.configFile."mimeapps.list".force = true;
+  xdg = {
+    autostart.enable = true; # Enable creation of XDG autostart entries.
+    configFile = {
+      "mimeapps.list".force = true;
+      "gtk-3.0/settings.ini".force = true;
+      "gtk-4.0/settings.ini".force = true;
+    };
+  };
 
   xdg.mimeApps = {
     enable = true;

@@ -14,31 +14,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprshutdown = {
-      url = "github:hyprwm/hyprshutdown";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    rose-pine-hyprcursor = {
-      url = "github:ndom91/rose-pine-hyprcursor";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprlang.follows = "hyprland/hyprlang";
     };
 
     zalo = {
       url = "github:justanoobcoder/zalo-for-linux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -68,10 +50,12 @@
         home-manager.nixosModules.home-manager
         {
           nixpkgs.overlays = builtins.attrValues self.overlays;
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.hiepnh = ./home/hiepnh;
-          home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager = {
+            users.hiepnh = ./home/hiepnh;
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = {inherit inputs;};
+          };
         }
       ];
     };
