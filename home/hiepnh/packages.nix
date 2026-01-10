@@ -26,6 +26,8 @@
     btop
     syncthing
     qogir-icon-theme
+    hypridle
+    python313Packages.python
 
     # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop
