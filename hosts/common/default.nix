@@ -1,24 +1,50 @@
-{ config, lib, pkgs, ... }:
+{pkgs, ...}: {
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
 
-{
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.efiSupport = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.loader.efi.canTouchEfiVariables = true;
+    loader = {
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+      };
+      efi = {
+        efiSysMountPoint = "/boot";
+        canTouchEfiVariables = true;
+      };
+    };
+  };
+  boot.kernelParams = [
+    "mem_sleep_default=s2idle"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+    "nvidia.NVreg_TemporaryFilePath=/var/tmp"
+  ];
+  systemd.sleep.extraConfig = ''
+    AllowSuspend=yes
+    AllowHibernation=yes
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+  '';
+  powerManagement.enable = true;
+  hardware.nvidia = {
+    powerManagement = {
+      enable = true;
+      finegrained = false;
+    };
+    modesetting.enable = true;
+  };
 
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking.networkmanager.enable = true;
-  hardware.bluetooth.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
+  hardware.bluetooth.enable = false;
 
   services = {
+    power-profiles-daemon.enable = true;
+    upower.enable = true;
+    openssh.enable = true;
     keyd = {
       enable = true;
       keyboards = {
@@ -34,8 +60,6 @@
       };
     };
   };
-
-  services.openssh.enable = true;
 
   nix.settings.download-buffer-size = 524288000;
 }

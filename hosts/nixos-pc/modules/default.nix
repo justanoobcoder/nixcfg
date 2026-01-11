@@ -1,5 +1,6 @@
 {
   imports = [
+    ./swap.nix
     ./user.nix
     ./packages.nix
     ./gpu.nix

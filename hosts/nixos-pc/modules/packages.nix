@@ -8,6 +8,5 @@
     gcc15
     gnutar
     unzip
-    gpu-screen-recorder
   ];
 }
