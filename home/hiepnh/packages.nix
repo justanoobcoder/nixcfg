@@ -4,30 +4,35 @@
   ...
 }: {
   home.packages = with pkgs; [
+    # desktop
     discord
     kitty
-    stow
-    vicinae
-    brightnessctl
-    eza
-    fzf
-    fastfetch
-    starship
-    lazygit
-    tree-sitter
-    ripgrep
-    fd
-    amber-lang
-    thunar
     app2unit
+    vicinae
+    thunar
     telegram-desktop
     obs-studio
     keepassxc
-    btop
     syncthing
     qogir-icon-theme
     hypridle
-    python313Packages.python
+    hyprlock
+    brightnessctl
+    easyeffects
+    gimp
+    gpu-screen-recorder
+    obsidian
+
+    # cli
+    fastfetch
+    starship
+    lazygit
+    stow
+    tree-sitter
+    eza
+    fzf
+    amber-lang
+    btop
 
     # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop

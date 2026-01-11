@@ -8,5 +8,10 @@
     gcc15
     gnutar
     unzip
+    bat
+    jq
+    fd
+    ripgrep
+    python313Packages.python
   ];
 }
