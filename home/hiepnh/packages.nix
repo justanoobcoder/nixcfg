@@ -22,6 +22,7 @@
     gimp
     gpu-screen-recorder
     obsidian
+    libnotify
 
     # cli
     fastfetch
