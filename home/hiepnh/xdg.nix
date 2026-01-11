@@ -36,6 +36,7 @@
       "image/gif" = imageViewers;
       "image/webp" = imageViewers;
       "text/plain" = textEditors;
+      "application/json" = textEditors;
       #"text/csv" = ["wps-office-et.desktop"];
       #"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = ["wps-office-et.desktop"];
       #"application/vnd.ms-excel" = ["wps-office-et.desktop"];
