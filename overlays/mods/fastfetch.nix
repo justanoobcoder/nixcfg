@@ -1,11 +1,11 @@
 {prev}:
-prev.fastfetch.overrideAttrs (oldAttrs: {
-  version = "2.34.0";
+prev.fastfetch.overrideAttrs (oldAttrs: rec {
+  version = "2.57.0";
   src = prev.fetchFromGitHub {
     owner = "fastfetch-cli";
     repo = "fastfetch";
-    rev = "2.34.0";
-    hash = "sha256-ZTtDYUnLp8IzGluJXLCHBxHCZAXxO+akUkPOCPMdA5w=";
+    rev = "2.57.0";
+    hash = "sha256-bdzD+od+KyEqkFixqGf/7O//1nHO9i0jzg65NRDIN7I=";
   };
   postPatch = "";
 })
