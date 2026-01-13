@@ -4,6 +4,7 @@
     ./bash.nix
     ./lua.nix
     ./clang.nix
+    ./rust.nix
   ];
 
   programs.nvf.settings.vim = {

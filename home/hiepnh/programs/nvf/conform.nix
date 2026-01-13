@@ -16,6 +16,7 @@
           nix = ["alejandra"];
           lua = ["stylua"];
           bash = ["shfmt"];
+          rust = ["rustfmt"];
         };
       };
     };
@@ -24,6 +25,7 @@
       clang-tools #c/c++
       stylua # lua
       shfmt # bash
+      rustfmt
     ];
   };
 }
