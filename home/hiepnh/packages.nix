@@ -23,6 +23,8 @@
     gpu-screen-recorder
     obsidian
     libnotify
+    jetbrains.rust-rover
+    jetbrains.idea-oss
 
     # cli
     fastfetch
@@ -41,5 +43,6 @@
 
     # packages from outside of nixpkgs
     inputs.zalo.packages.${stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
