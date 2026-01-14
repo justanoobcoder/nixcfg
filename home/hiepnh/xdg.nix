@@ -18,7 +18,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = let
-      broswers = ["firefox.desktop"];
+      broswers = ["zen.desktop"];
       videoPlayers = [
         "mpv.desktop"
         "umpv.desktop"
