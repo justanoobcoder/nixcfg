@@ -9,8 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:NotAShelf/nvf";
+    noobvim = {
+      url = "github:justanoobcoder/noobvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
