@@ -1,9 +1,4 @@
 {
-  swapDevices = [
-    {
-      device = "/dev/nvme0n1p6";
-    }
-  ];
   boot = {
     resumeDevice = "/dev/nvme0n1p6";
     kernelParams = [

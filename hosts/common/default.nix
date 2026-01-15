@@ -3,13 +3,10 @@
     kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {
-      grub = {
+      systemd-boot = {
         enable = true;
-        device = "nodev";
-        efiSupport = true;
       };
       efi = {
-        efiSysMountPoint = "/boot";
         canTouchEfiVariables = true;
       };
     };
@@ -39,7 +36,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking.networkmanager.enable = true;
-  hardware.bluetooth.enable = false;
+  hardware.bluetooth.enable = true;
 
   services = {
     power-profiles-daemon.enable = true;
