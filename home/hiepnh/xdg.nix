@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   home.packages = with pkgs; [
-    firefox
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     mpv
     imv
     neovide
