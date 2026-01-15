@@ -8,6 +8,7 @@
     ./theme.nix
     ./xdg.nix
     ./services.nix
+    ./input.nix
   ];
 
   home.username = "hiepnh";
