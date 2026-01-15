@@ -1,20 +1,42 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   gtk = {
     enable = true;
-    theme = {
-      name = "WhiteSur-Dark";
-      package = pkgs.whitesur-gtk-theme;
+    gtk2 = {
+      theme = {
+        name = "WhiteSur-Dark";
+        package = pkgs.whitesur-gtk-theme;
+      };
+
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
     };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+    gtk3 = {
+      theme = {
+        name = "WhiteSur-Dark";
+        package = pkgs.whitesur-gtk-theme;
+      };
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
     };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
+    gtk4 = {
+      theme = {
+        name = "WhiteSur-Dark";
+        package = pkgs.whitesur-gtk-theme;
+      };
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
     };
   };
 
