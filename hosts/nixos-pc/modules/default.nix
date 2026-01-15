@@ -13,5 +13,6 @@
     ./gpg.nix
     ./tts.nix
     ./virtualisation.nix
+    ./input.nix
   ];
 }

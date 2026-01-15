@@ -1,5 +1,3 @@
-{ config, pkgs, inputs, ... }:
-
 {
   imports = [
     ../common
@@ -11,8 +9,9 @@
     ./input.nix
   ];
 
-  home.username = "hiepnh";
-  home.homeDirectory = "/home/hiepnh";
-
-  home.stateVersion = "25.11";
+  home = {
+    username = "hiepnh";
+    homeDirectory = "/home/hiepnh";
+    stateVersion = "25.11";
+  };
 }
