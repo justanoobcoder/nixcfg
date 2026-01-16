@@ -1,6 +1,5 @@
 {
   imports = [
-    ./swap.nix
     ./user.nix
     ./packages.nix
     ./gpu.nix
@@ -10,9 +9,9 @@
     ./fonts.nix
     ./security.nix
     ./services.nix
-    ./gpg.nix
     ./tts.nix
     ./virtualisation.nix
     ./input.nix
+    ./suspend-hibernate.nix
   ];
 }

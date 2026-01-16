@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   security.sudo.extraRules = [
     {
       groups = ["wheel"];

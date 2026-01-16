@@ -172,11 +172,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1768362396,
-        "narHash": "sha256-aPQsJX8Oqhw5r1vWPZX/ybLTgJHhq1ET1xmc4gZLYsA=",
+        "lastModified": 1768540169,
+        "narHash": "sha256-wZE1/BYoS0Aa/CZ6ScmubljwkHQYFz50FCpPvewYiq8=",
         "owner": "justanoobcoder",
         "repo": "noobvim",
-        "rev": "4d9468424372966d1b67e13608a0d9832c517aad",
+        "rev": "0ce64deb5f0dc0548bcea5339a83e81f37a9499b",
         "type": "github"
       },
       "original": {
