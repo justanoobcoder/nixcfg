@@ -14,31 +14,31 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/36db1072-6ed0-4493-bddd-c56bd7c047ad";
+    { device = "/dev/disk/by-uuid/49d6e9ce-6eaf-423b-8b64-978d870a1451";
       fsType = "btrfs";
       options = [ "subvol=root" "compress=zstd" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/36db1072-6ed0-4493-bddd-c56bd7c047ad";
+    { device = "/dev/disk/by-uuid/49d6e9ce-6eaf-423b-8b64-978d870a1451";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/36db1072-6ed0-4493-bddd-c56bd7c047ad";
+    { device = "/dev/disk/by-uuid/49d6e9ce-6eaf-423b-8b64-978d870a1451";
       fsType = "btrfs";
       options = [ "subvol=nix" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/36db1072-6ed0-4493-bddd-c56bd7c047ad";
+    { device = "/dev/disk/by-uuid/49d6e9ce-6eaf-423b-8b64-978d870a1451";
       fsType = "btrfs";
-      options = [ "subvol=swap" "noatime" "nodatacow" "nodatasum" ];
+      options = [ "subvol=swap" "noatime" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/12CE-A600";
+    { device = "/dev/disk/by-uuid/F59D-7D65";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -46,7 +46,7 @@
   swapDevices = [{
     device = "/swap/swapfile";
     size = 10240;
-  } ];
+  }];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
