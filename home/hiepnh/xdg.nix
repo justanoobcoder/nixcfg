@@ -10,8 +10,6 @@
     autostart.enable = true; # Enable creation of XDG autostart entries.
     configFile = {
       "mimeapps.list".force = true;
-      "gtk-3.0/settings.ini".force = true;
-      "gtk-4.0/settings.ini".force = true;
     };
   };
 

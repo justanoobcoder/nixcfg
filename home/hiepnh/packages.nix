@@ -9,7 +9,7 @@
     kitty
     app2unit
     vicinae
-    thunar
+    nautilus
     telegram-desktop
     obs-studio
     keepassxc
@@ -25,6 +25,10 @@
     libnotify
     jetbrains.rust-rover
     jetbrains.idea-oss
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
+    adw-gtk3
+    tela-circle-icon-theme
 
     # cli
     fastfetch

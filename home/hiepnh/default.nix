@@ -3,7 +3,7 @@
     ../common
     ./programs
     ./packages.nix
-    ./theme.nix
+    #./theme.nix
     ./xdg.nix
     ./services.nix
     ./input.nix
