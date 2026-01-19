@@ -13,5 +13,6 @@
     fd
     ripgrep
     python313Packages.python
+    inetutils
   ];
 }
