@@ -9,17 +9,19 @@
     kitty
     app2unit
     vicinae
-    nautilus
+    kdePackages.dolphin
     telegram-desktop
     obs-studio
     keepassxc
     syncthing
     qogir-icon-theme
     hypridle
-    hyprlock
     brightnessctl
     easyeffects
     gimp
+    grim
+    slurp
+    tesseract
     gpu-screen-recorder
     obsidian
     libnotify
@@ -31,6 +33,7 @@
     tela-circle-icon-theme
 
     # cli
+    yazi
     fastfetch
     starship
     lazygit
