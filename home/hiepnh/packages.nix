@@ -9,7 +9,7 @@
     kitty
     app2unit
     vicinae
-    kdePackages.dolphin
+    pcmanfm-qt
     telegram-desktop
     obs-studio
     keepassxc
