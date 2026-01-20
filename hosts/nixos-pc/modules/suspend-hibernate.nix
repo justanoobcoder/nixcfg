@@ -12,7 +12,7 @@
       "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
       "nvidia.NVreg_TemporaryFilePath=/var/tmp"
       "zswap.enabled=1"
-      "zswap.compressor=lz4"
+      "zswap.compressor=zstd"
       "zswap.max_pool_percent=20"
       "zswap.shrinker_enabled=1"
     ];
