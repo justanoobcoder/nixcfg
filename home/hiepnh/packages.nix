@@ -26,7 +26,6 @@
     tesseract
     gpu-screen-recorder
     obsidian
-    libnotify
     jetbrains.rust-rover
     jetbrains.idea-oss
     kdePackages.qt6ct
