@@ -10,6 +10,7 @@
     app2unit
     vicinae
     pcmanfm-qt
+    wl-clipboard
     telegram-desktop
     obs-studio
     keepassxc
@@ -21,6 +22,7 @@
     gimp
     grim
     slurp
+    swappy
     tesseract
     gpu-screen-recorder
     obsidian
