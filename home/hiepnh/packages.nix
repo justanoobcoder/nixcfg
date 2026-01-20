@@ -32,6 +32,7 @@
     libsForQt5.qt5ct
     adw-gtk3
     tela-circle-icon-theme
+    antigravity
 
     # cli
     yazi
