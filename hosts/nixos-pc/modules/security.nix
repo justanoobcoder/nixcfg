@@ -4,6 +4,13 @@
       groups = ["wheel"];
       commands = [
         {
+          command = "/run/current-system/sw/bin/systemctl";
+          options = [
+            "SETENV"
+            "NOPASSWD"
+          ];
+        }
+        {
           command = "/run/current-system/sw/bin/nvim";
           options = [
             "SETENV"
