@@ -11,6 +11,11 @@
     configFile = {
       "mimeapps.list".force = true;
     };
+    portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+      config.common.default = "*";
+    };
   };
 
   xdg.mimeApps = {
