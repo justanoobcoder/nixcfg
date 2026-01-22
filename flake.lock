@@ -297,11 +297,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1768876287,
-        "narHash": "sha256-U35YVGW0v72KlCYSa1uC9Pqxn5fqyGMBAX1rTrJnNbY=",
+        "lastModified": 1769041394,
+        "narHash": "sha256-PM7bDzEg+mUam+uCGx72cIH+w0cu5XG0AxzOBap+tYQ=",
         "owner": "justanoobcoder",
         "repo": "zalo-for-linux",
-        "rev": "6c2df3cc9770d50367c4833c1e66683c5cfe4c76",
+        "rev": "24cdc54a914703c78aa77215236ff44ec3d9703f",
         "type": "github"
       },
       "original": {
