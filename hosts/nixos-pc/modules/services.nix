@@ -5,7 +5,7 @@
     description = "Set power profile and brightness based on AC state at boot";
     wantedBy = ["multi-user.target"];
     after = ["power-profiles-daemon.service"];
-    requires = ["power-profiles-daemon.service"];
+    wants = ["power-profiles-daemon.service"];
     serviceConfig.Type = "oneshot";
 
     script = ''
@@ -38,14 +38,6 @@
       fi
     '';
   };
-
-  # services.udev.extraRules = ''
-  #   SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", \
-  #     RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
-  #
-  #   SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", \
-  #     RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced"
-  # '';
 
   services.udev.extraRules = ''
     SUBSYSTEM=="power_supply", ATTR{type}=="Mains", TAG+="systemd", \
