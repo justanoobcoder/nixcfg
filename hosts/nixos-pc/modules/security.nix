@@ -39,14 +39,14 @@
           ];
         }
         {
-          command = "/run/current-system/sw/bin/mount";
+          command = "/run/wrappers/bin/mount";
           options = [
             "SETENV"
             "NOPASSWD"
           ];
         }
         {
-          command = "/run/current-system/sw/bin/umount";
+          command = "/run/wrappers/bin/mount";
           options = [
             "SETENV"
             "NOPASSWD"
