@@ -45,6 +45,7 @@
     fzf
     amber-lang
     btop
+    google-cloud-sdk
 
     # custom packages
     inputs.self.packages.${stdenv.hostPlatform.system}.keypop
