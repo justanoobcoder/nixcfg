@@ -18,4 +18,7 @@
       };
     };
   };
+  systemd.services.keyd.serviceConfig = {
+    SuccessExitStatus = [0 15];
+  };
 }
