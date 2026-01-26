@@ -57,6 +57,11 @@ stdenv.mkDerivation {
 
   installFlags = ["DESTDIR=$(out)" "PREFIX="];
 
+  postInstall = ''
+    substituteInPlace $out/lib/systemd/system/fcitx5-vmk-server@.service \
+      --replace "/usr/bin/fcitx5-vmk-server" "$out/bin/fcitx5-vmk-server"
+  '';
+
   meta = with lib; {
     description = "Fcitx5 VMK input method";
     license = licenses.gpl3;
