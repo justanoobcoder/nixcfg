@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     killall
+    tree
     git
     curl
     wget
