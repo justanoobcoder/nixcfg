@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  imports = [
-    ./hardware-configuration.nix
-    ./modules
-  ];
-
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     kernel.sysctl."kernel.sysrq" = 1;

@@ -1,13 +1,14 @@
-{
-  imports = [
-    ../common
-    ./programs
-    ./packages.nix
-    #./theme.nix
-    ./xdg.nix
-    ./services.nix
-    ./input.nix
-  ];
+{lib, ...}: {
+  imports =
+    [
+      ../common
+      ./programs
+    ]
+    ++ (
+      builtins.filter
+      (path: lib.hasSuffix ".nix" path && !(lib.hasPrefix "default.nix" (baseNameOf path)))
+      (map (f: ./. + "/${f}") (builtins.attrNames (builtins.readDir ./.)))
+    );
 
   home = {
     username = "hiepnh";

@@ -36,25 +36,33 @@
     home-manager,
     ...
   } @ inputs: let
-    systems = [
-      "aarch64-linux"
-      "i686-linux"
-      "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
+    systems = ["x86_64-linux"];
     forAllSystems = nixpkgs.lib.genAttrs systems;
+
+    custom-pkgs = final: prev: {
+      custom = import ./pkgs {pkgs = prev;};
+    };
   in {
-    packages =
-      forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    overlays = import ./overlays {inherit inputs;};
+    packages = forAllSystems (system: import ./pkgs {pkgs = nixpkgs.legacyPackages.${system};});
+
+    overlays =
+      (import ./overlays {inherit inputs;})
+      // {
+        default = custom-pkgs;
+      };
+
     nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/nixos-pc
         home-manager.nixosModules.home-manager
         {
-          nixpkgs.overlays = builtins.attrValues self.overlays;
+          nixpkgs.overlays =
+            [
+              self.overlays.default
+            ]
+            ++ (builtins.attrValues (import ./overlays {inherit inputs;}));
+
           home-manager = {
             users.hiepnh = ./home/hiepnh;
             useGlobalPkgs = true;

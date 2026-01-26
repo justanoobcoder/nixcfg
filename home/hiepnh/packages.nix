@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  platform = pkgs.stdenv.hostPlatform.system;
+in {
   home.packages = with pkgs; [
     # desktop
     discord
@@ -48,11 +50,12 @@
     google-cloud-sdk
 
     # custom packages
-    inputs.self.packages.${stdenv.hostPlatform.system}.keypop
-    inputs.self.packages.${stdenv.hostPlatform.system}.wlctl
+    custom.keypop
+    custom.wlctl
+    custom.fcitx5-vmk
 
     # packages from outside of nixpkgs
-    inputs.zalo.packages.${stdenv.hostPlatform.system}.default
-    inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.zalo.packages.${platform}.default
+    inputs.noobvim.packages.${platform}.default
   ];
 }
