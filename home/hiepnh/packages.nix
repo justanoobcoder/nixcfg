@@ -52,7 +52,6 @@ in {
     # custom packages
     custom.keypop
     custom.wlctl
-    custom.fcitx5-vmk
 
     # packages from outside of nixpkgs
     inputs.zalo.packages.${platform}.default
