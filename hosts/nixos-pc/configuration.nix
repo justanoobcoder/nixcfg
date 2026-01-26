@@ -8,13 +8,7 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  networking.networkmanager.enable = true;
-
-  hardware.bluetooth.enable = true;
-
   networking.hostName = "nixos-pc";
-
-  nixpkgs.config.allowUnfree = true;
 
   # To run AppImage easily
   programs.appimage = {

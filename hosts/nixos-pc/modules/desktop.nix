@@ -5,6 +5,8 @@
 }: {
   services.libinput.enable = true;
 
+  hardware.bluetooth.enable = true;
+
   programs = {
     niri.enable = true;
     uwsm = {
