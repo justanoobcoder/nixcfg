@@ -1,17 +1,31 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-pkgs.stdenv.mkDerivation {
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  extra-cmake-modules,
+  pkg-config,
+  go,
+  gcc,
+  gettext,
+  hicolor-icon-theme,
+  fcitx5,
+  libinput,
+  xorg,
+  udev,
+}:
+stdenv.mkDerivation {
   pname = "fcitx5-vmk";
   version = "0.9.3alpha";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "nhktmdzhg";
     repo = "VMK";
-    rev = "main";
-    sha256 = "sha256-13Vi99zbS6qc38dOyKpd66vAhUbEXDEBi+G/z0/LM0s=";
+    rev = "08818402994decceb2d3ac5f6abdbc8f72eea90a";
+    sha256 = "sha256-AVA+Sh5D9L+QAwHiVzejy2h/Lc/RBfGuX+lP+JvcNdw=";
   };
 
-  nativeBuildInputs = with pkgs; [
+  nativeBuildInputs = [
     cmake
     extra-cmake-modules
     pkg-config
@@ -21,10 +35,9 @@ pkgs.stdenv.mkDerivation {
     hicolor-icon-theme
   ];
 
-  buildInputs = with pkgs; [
+  buildInputs = [
     fcitx5
     libinput
-    systemd
     xorg.libX11
     udev
   ];
@@ -42,12 +55,11 @@ pkgs.stdenv.mkDerivation {
     runHook postBuild
   '';
 
-  installFlags = [ "DESTDIR=$(out)" "PREFIX=" ];
+  installFlags = ["DESTDIR=$(out)" "PREFIX="];
 
-  meta = with pkgs.lib; {
+  meta = with lib; {
     description = "Fcitx5 VMK input method";
     license = licenses.gpl3;
     platforms = platforms.linux;
   };
 }
-
