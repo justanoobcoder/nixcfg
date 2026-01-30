@@ -28,6 +28,11 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fcitx5-vmk = {
+      url = "github:justanoobcoder/VMK";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
