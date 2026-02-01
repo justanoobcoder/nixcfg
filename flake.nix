@@ -30,7 +30,7 @@
     };
 
     fcitx5-vmk = {
-      url = "github:justanoobcoder/VMK";
+      url = "github:nhktmdzhg/VMK";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

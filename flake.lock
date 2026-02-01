@@ -29,15 +29,15 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1769480596,
-        "narHash": "sha256-8UxsX5Xor0Qg63nKTt8KpQ2WSN9igBB9aMHOWD2kw/g=",
-        "owner": "justanoobcoder",
+        "lastModified": 1769934400,
+        "narHash": "sha256-iO5+IVhr5Ul+ToWYqxMlbtjByzrZlir1smDcOP1Bs20=",
+        "owner": "nhktmdzhg",
         "repo": "VMK",
-        "rev": "3954e4a863f282026c87ece67382f08f01ce96d0",
+        "rev": "e184646a7a1fa04b45dc49a172ec30a72a2816d2",
         "type": "github"
       },
       "original": {
-        "owner": "justanoobcoder",
+        "owner": "nhktmdzhg",
         "repo": "VMK",
         "type": "github"
       }
