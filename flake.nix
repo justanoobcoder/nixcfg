@@ -29,10 +29,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fcitx5-vmk = {
-      url = "github:nhktmdzhg/VMK";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    fcitx5-vmk.url = "path:/home/hiepnh/proj/VMK";
+    # fcitx5-vmk = {
+    #   url = "github:nhktmdzhg/VMK";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
