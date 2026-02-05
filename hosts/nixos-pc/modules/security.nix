@@ -46,7 +46,7 @@
           ];
         }
         {
-          command = "/run/wrappers/bin/mount";
+          command = "/run/wrappers/bin/umount";
           options = [
             "SETENV"
             "NOPASSWD"
