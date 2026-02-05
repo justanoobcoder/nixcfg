@@ -13,8 +13,8 @@
     publicShare = "${config.home.homeDirectory}/xdg/public";
     templates = "${config.home.homeDirectory}/xdg/templates";
     extraConfig = {
-      XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/screenshots";
-      XDG_SCREENCAST_DIR = "${config.xdg.userDirs.videos}/recordings";
+      SCREENSHOTS = "${config.xdg.userDirs.pictures}/screenshots";
+      SCREENCAST = "${config.xdg.userDirs.videos}/recordings";
     };
   };
 }
