@@ -13,4 +13,6 @@
     ];
     packages = [];
   };
+
+  nix.settings.trusted-users = ["root" "hiepnh"];
 }

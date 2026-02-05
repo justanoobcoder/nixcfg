@@ -48,6 +48,7 @@ in {
     amber-lang
     btop
     google-cloud-sdk
+    devenv
 
     # custom packages
     custom.keypop
