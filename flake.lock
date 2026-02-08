@@ -324,7 +324,6 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "noobvim": "noobvim",
-        "zalo": "zalo",
         "zen-browser": "zen-browser"
       }
     },
@@ -378,60 +377,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "systems_3": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "utils": {
-      "inputs": {
-        "systems": "systems_3"
-      },
-      "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "zalo": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "utils": "utils"
-      },
-      "locked": {
-        "lastModified": 1770284029,
-        "narHash": "sha256-/doGQ6x+Jxqy8u15hVEP+Kkvz2yNJHyGr47GiEAwbR0=",
-        "owner": "justanoobcoder",
-        "repo": "zalo-for-linux",
-        "rev": "f14aead614eb2fe0a7b7ce534aff2cdee7d97663",
-        "type": "github"
-      },
-      "original": {
-        "owner": "justanoobcoder",
-        "repo": "zalo-for-linux",
         "type": "github"
       }
     },

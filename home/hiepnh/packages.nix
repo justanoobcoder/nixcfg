@@ -35,6 +35,7 @@ in {
     adw-gtk3
     tela-circle-icon-theme
     antigravity
+    lutris
 
     # cli
     yazi
@@ -55,7 +56,6 @@ in {
     custom.wlctl
 
     # packages from outside of nixpkgs
-    inputs.zalo.packages.${platform}.default
     inputs.noobvim.packages.${platform}.default
   ];
 }
