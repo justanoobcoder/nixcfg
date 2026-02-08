@@ -9,7 +9,7 @@
       "audio"
       "video"
       "networkmanager"
-      "libvirtd"
+      # "libvirtd"
     ];
     packages = [];
   };
