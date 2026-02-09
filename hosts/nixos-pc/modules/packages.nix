@@ -16,5 +16,6 @@
     python313Packages.python
     inetutils
     e2fsprogs
+    efibootmgr
   ];
 }
