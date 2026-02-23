@@ -36,6 +36,7 @@ in {
     tela-circle-icon-theme
     antigravity
     lutris
+    blobdrop
 
     # cli
     yazi
