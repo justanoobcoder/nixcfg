@@ -50,6 +50,7 @@ in {
     btop
     google-cloud-sdk
     devenv
+    nh
 
     # custom packages
     custom.keypop
