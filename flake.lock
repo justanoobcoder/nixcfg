@@ -21,19 +21,19 @@
         "type": "github"
       }
     },
-    "fcitx5-vmk": {
+    "fcitx5-lotus": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1771155656,
-        "narHash": "sha256-tL277wFYY/IvxTp7oOD3neW4cL6GuPUUnX2XMiS/WBc=",
-        "path": "/home/hiepnh/proj/VMK",
+        "lastModified": 1771543406,
+        "narHash": "sha256-yYLyhD598N0mlTC8PnW1/37f6WUa7eVglLQd0qnfM2s=",
+        "path": "/home/hiepnh/proj/fcitx5-lotus",
         "type": "path"
       },
       "original": {
-        "path": "/home/hiepnh/proj/VMK",
+        "path": "/home/hiepnh/proj/fcitx5-lotus",
         "type": "path"
       }
     },
@@ -188,11 +188,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1771008912,
-        "narHash": "sha256-gf2AmWVTs8lEq7z/3ZAsgnZDhWIckkb+ZnAo5RzSxJg=",
+        "lastModified": 1771369470,
+        "narHash": "sha256-0NBlEBKkN3lufyvFegY4TYv5mCNHbi5OmBDrzihbBMQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a82ccc39b39b621151d6732718e3e250109076fa",
+        "rev": "0182a361324364ae3f436a63005877674cf45efb",
         "type": "github"
       },
       "original": {
@@ -319,7 +319,7 @@
     "root": {
       "inputs": {
         "dms": "dms",
-        "fcitx5-vmk": "fcitx5-vmk",
+        "fcitx5-lotus": "fcitx5-lotus",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
@@ -332,7 +332,7 @@
         "flake-compat": "flake-compat",
         "flake-utils-plus": "flake-utils-plus",
         "nixpkgs": [
-          "fcitx5-vmk",
+          "fcitx5-lotus",
           "nixpkgs"
         ]
       },
