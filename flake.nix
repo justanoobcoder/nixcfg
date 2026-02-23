@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noobvim = {
-      url = "github:justanoobcoder/noobvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,7 +19,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fcitx5-lotus.url = "path:/home/hiepnh/proj/fcitx5-lotus";
+    noobvim = {
+      url = "path:/home/hiepnh/proj/noobvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    fcitx5-lotus = {
+      url = "path:/home/hiepnh/proj/fcitx5-lotus";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
