@@ -37,6 +37,7 @@ in {
     antigravity
     lutris
     blobdrop
+    hyprshutdown
 
     # cli
     yazi
