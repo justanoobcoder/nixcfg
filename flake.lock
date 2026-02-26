@@ -650,8 +650,8 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1771827857,
-        "narHash": "sha256-zw8Pip6mkzE3clhEfszXJ/HD5qAShwffOi0Fdsvj1qU=",
+        "lastModified": 1771829085,
+        "narHash": "sha256-5clNzRZEnMk4xdR4/YzP3SBUsGd9T52vD8Yq/5ShNpo=",
         "path": "/home/hiepnh/proj/noobvim",
         "type": "path"
       },
