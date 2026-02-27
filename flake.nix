@@ -11,6 +11,8 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    wayscriber.url = "github:devmobasa/wayscriber";
+
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";

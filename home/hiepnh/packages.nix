@@ -60,5 +60,6 @@ in {
 
     # packages from outside of nixpkgs
     inputs.noobvim.packages.${platform}.default
+    inputs.wayscriber.packages.${platform}.default
   ];
 }
