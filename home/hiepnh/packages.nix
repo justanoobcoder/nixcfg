@@ -25,11 +25,8 @@ in {
     grim
     slurp
     swappy
-    tesseract
     gpu-screen-recorder
     obsidian
-    jetbrains.rust-rover
-    jetbrains.idea-oss
     kdePackages.qt6ct
     libsForQt5.qt5ct
     adw-gtk3
