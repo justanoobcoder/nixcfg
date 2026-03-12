@@ -18,12 +18,12 @@
     ];
     initrd.systemd.enable = true;
   };
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=yes
-    AllowHibernation=yes
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = "yes";
+    AllowHibernation = "yes";
+    AllowHybridSleep = "no";
+    AllowSuspendThenHibernate = "no";
+  };
   powerManagement.enable = true;
   hardware.nvidia = {
     powerManagement = {
