@@ -17,5 +17,6 @@
     inetutils
     e2fsprogs
     efibootmgr
+    gnumake
   ];
 }
