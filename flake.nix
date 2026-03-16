@@ -32,8 +32,6 @@
       url = "path:/home/hiepnh/proj/fcitx5-lotus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    jcm.url = "path:/home/hiepnh/proj/jcm";
   };
 
   outputs = {
