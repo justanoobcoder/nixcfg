@@ -9,6 +9,7 @@
       "audio"
       "video"
       "networkmanager"
+      "docker"
       # "libvirtd"
     ];
     packages = [];
