@@ -59,6 +59,13 @@
             "NOPASSWD"
           ];
         }
+        {
+          command = "/run/current-system/sw/bin/docker";
+          options = [
+            "SETENV"
+            "NOPASSWD"
+          ];
+        }
       ];
     }
   ];
