@@ -1,14 +1,18 @@
 {pkgs, ...}: {
-  # virtualisation = {
-  #   podman = {
-  #     enable = true;
-  #     dockerCompat = true;
-  #   };
-  #   libvirtd = {
-  #     enable = true;
-  #     qemu.vhostUserPackages = with pkgs; [virtiofsd];
-  #   };
-  # };
+  virtualisation = {
+    docker = {
+      enable = true;
+      storageDriver = "btrfs";
+    };
+    #   podman = {
+    #     enable = true;
+    #     dockerCompat = true;
+    #   };
+    #   libvirtd = {
+    #     enable = true;
+    #     qemu.vhostUserPackages = with pkgs; [virtiofsd];
+    #   };
+  };
   #
   # environment.systemPackages = with pkgs; [
   #   distrobox
