@@ -32,6 +32,8 @@
       url = "path:/home/hiepnh/proj/fcitx5-lotus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    jcm.url = "github:justanoobcoder/jcm";
   };
 
   outputs = {
