@@ -13,6 +13,7 @@ in {
     vicinae
     pcmanfm-qt
     wl-clipboard
+    wtype
     telegram-desktop
     obs-studio
     keepassxc
@@ -34,7 +35,11 @@ in {
     antigravity
     lutris
     blobdrop
-    hyprshutdown
+    # hyprshutdown
+    zed-editor-fhs
+    showmethekey
+    kdePackages.okular
+    jetbrains-toolbox
 
     # cli
     yazi
@@ -50,6 +55,8 @@ in {
     google-cloud-sdk
     devenv
     nh
+    jdk21_headless
+    maven
 
     # custom packages
     custom.keypop
