@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   services = {
     udisks2.enable = true;
-    cloudflare-warp.enable = true;
 
+    cloudflare-warp.enable = true;
     udev.extraRules = let
       powerScript = pkgs.writeShellScript "power-profile-change" ''
         AC=$(cat /sys/class/power_supply/AC*/online | head -n 1)
@@ -19,6 +19,19 @@
       SUBSYSTEM=="power_supply", ACTION=="change", RUN+="${powerScript}"
     '';
   };
+
+  environment.etc."warp-proxy.pac" = {
+    text = ''
+      function FindProxyForURL(url, host) {
+          if (isInNet(dnsResolve(host), "127.0.0.1", "255.255.255.255")) {
+              return "DIRECT";
+          }
+          return "SOCKS5 127.0.0.1:40000; DIRECT";
+      }
+    '';
+    mode = "0644";
+  };
+
   systemd.services.trigger-udev-power = {
     description = "Trigger udev power rules at boot";
     wantedBy = ["multi-user.target"];
