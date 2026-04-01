@@ -16,7 +16,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = let
-      broswers = ["zen.desktop"];
+      browsers = ["zen.desktop"];
       videoPlayers = [
         "mpv.desktop"
         "umpv.desktop"
@@ -47,8 +47,8 @@
       #];
       #"application/vnd.ms-powerpoint" = ["wps-office-wpp.desktop"];
       #"application/pdf" = ["wps-office-pdf.desktop"];
-      "image/svg+xml" = broswers;
-      "text/html" = broswers;
+      "image/svg+xml" = browsers;
+      "text/html" = browsers;
     };
   };
 }
