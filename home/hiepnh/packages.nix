@@ -10,7 +10,6 @@ in {
     discord
     kitty
     app2unit
-    vicinae
     pcmanfm-qt
     wl-clipboard
     wtype
