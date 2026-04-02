@@ -16,7 +16,6 @@ in {
     telegram-desktop
     obs-studio
     keepassxc
-    syncthing
     qogir-icon-theme
     hypridle
     brightnessctl

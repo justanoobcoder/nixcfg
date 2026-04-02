@@ -6,7 +6,7 @@
     ]
     ++ (
       builtins.filter
-      (path: lib.hasSuffix ".nix" path && !(lib.hasPrefix "default.nix" (baseNameOf path)))
+      (path: lib.hasSuffix ".nix" path && (baseNameOf path) != "default.nix")
       (map (f: ./. + "/${f}") (builtins.attrNames (builtins.readDir ./.)))
     );
 

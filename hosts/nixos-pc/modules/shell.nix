@@ -1,7 +1,7 @@
 {
   programs.zsh = {
     enable = true;
-    shellInit = "export ZDOTDIR=/home/hiepnh/.config/zsh";
+    shellInit = "export ZDOTDIR=$HOME/.config/zsh";
     syntaxHighlighting.enable = true;
     autosuggestions.enable = true;
   };

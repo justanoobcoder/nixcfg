@@ -12,7 +12,6 @@
       "docker"
       # "libvirtd"
     ];
-    packages = [];
   };
 
   nix.settings.trusted-users = ["root" "hiepnh"];
