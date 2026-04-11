@@ -33,7 +33,6 @@ in {
     antigravity
     lutris
     blobdrop
-    # hyprshutdown
     zed-editor-fhs
     showmethekey
     kdePackages.okular
@@ -55,6 +54,7 @@ in {
     nh
     jdk21_headless
     maven
+    direnv
 
     # custom packages
     custom.keypop
