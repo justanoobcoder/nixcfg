@@ -37,6 +37,8 @@ in {
     showmethekey
     kdePackages.okular
     jetbrains-toolbox
+    postman
+    winboat
 
     # cli
     yazi
