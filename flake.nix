@@ -42,12 +42,15 @@
       url = "path:/home/hiepnh/proj/keypop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nix-cachyos-kernel,
     ...
   } @ inputs: let
     systems = ["x86_64-linux"];
@@ -73,6 +76,7 @@
         {
           nixpkgs.overlays =
             [
+              nix-cachyos-kernel.overlays.default
               self.overlays.default
             ]
             ++ (builtins.attrValues (import ./overlays {inherit inputs;}));
