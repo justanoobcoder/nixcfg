@@ -33,7 +33,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    jcm.url = "github:justanoobcoder/jcm";
+    jcm = {
+      url = "github:justanoobcoder/jcm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    keypop = {
+      url = "path:/home/hiepnh/proj/keypop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
