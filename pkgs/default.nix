@@ -1,4 +1,4 @@
 {pkgs ? import <nixpkgs> {}}: {
-  keypop = pkgs.callPackage ./keypop {};
+  # keypop = pkgs.callPackage ./keypop {};
   wlctl = pkgs.callPackage ./wlctl {};
 }

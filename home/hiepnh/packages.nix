@@ -59,11 +59,11 @@ in {
     direnv
 
     # custom packages
-    custom.keypop
     custom.wlctl
 
     # packages from outside of nixpkgs
     inputs.noobvim.packages.${platform}.default
     inputs.wayscriber.packages.${platform}.default
+    inputs.keypop.packages.${platform}.default
   ];
 }
