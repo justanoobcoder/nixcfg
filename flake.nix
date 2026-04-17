@@ -44,6 +44,11 @@
     };
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+
+    wayvibes = {
+      url = "path:/home/hiepnh/proj/wayvibes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
