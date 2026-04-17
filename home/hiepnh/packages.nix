@@ -31,6 +31,7 @@ in {
     adw-gtk3
     tela-circle-icon-theme
     antigravity
+    code-cursor
     lutris
     blobdrop
     zed-editor-fhs
