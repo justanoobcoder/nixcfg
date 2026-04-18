@@ -66,6 +66,5 @@ in {
     inputs.noobvim.packages.${platform}.default
     inputs.wayscriber.packages.${platform}.default
     inputs.keypop.packages.${platform}.default
-    inputs.wayvibes.packages.${platform}.default
   ];
 }
