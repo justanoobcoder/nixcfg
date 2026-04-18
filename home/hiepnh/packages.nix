@@ -17,7 +17,6 @@ in {
     obs-studio
     keepassxc
     qogir-icon-theme
-    hypridle
     brightnessctl
     easyeffects
     gimp
