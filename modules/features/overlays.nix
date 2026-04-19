@@ -3,7 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.globalOverlays = {
+  flake.nixosModules.overlays = {
     nixpkgs.overlays = lib.attrValues self.overlays;
   };
 }
