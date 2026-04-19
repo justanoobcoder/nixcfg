@@ -16,7 +16,6 @@
       self.nixosModules.zsh
       self.nixosModules.zoxide
       self.nixosModules.battery
-      self.nixosModules.cloudflareWarp
       self.nixosModules.nvidia
     ];
   };

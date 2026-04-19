@@ -13,6 +13,7 @@
         self.nixosModules.udisks2
         self.nixosModules.tts
         self.nixosModules.networkManager
+        self.nixosModules.cloudflareWarp
       ];
     };
 
