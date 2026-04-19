@@ -1,0 +1,74 @@
+{
+  flake.nixosModules.sudoNoPass = _: {
+    security.sudo.extraRules = [
+      {
+        groups = ["wheel"];
+        commands = [
+          {
+            command = "/run/current-system/sw/bin/systemctl";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/nvim";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/nixos-rebuild";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/nix";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/nix-collect-garbage";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/wrappers/bin/mount";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/wrappers/bin/umount";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/efibootmgr";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+          {
+            command = "/run/current-system/sw/bin/docker";
+            options = [
+              "SETENV"
+              "NOPASSWD"
+            ];
+          }
+        ];
+      }
+    ];
+  };
+}

@@ -1,25 +1,16 @@
 {
+  description = "My NixOS configuration";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
+
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # hyprland.url = "github:hyprwm/Hyprland";
-
-    wayscriber.url = "github:devmobasa/wayscriber";
-
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,12 +25,12 @@
     };
 
     jcm = {
-      url = "github:justanoobcoder/jcm";
+      url = "path:/home/hiepnh/proj/jcm";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    keypop = {
-      url = "path:/home/hiepnh/proj/keypop";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -51,49 +42,17 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-cachyos-kernel,
-    ...
-  } @ inputs: let
-    systems = ["x86_64-linux"];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-
-    custom-pkgs = final: prev: {
-      custom = import ./pkgs {pkgs = prev;};
-    };
-  in {
-    packages = forAllSystems (system: import ./pkgs {pkgs = nixpkgs.legacyPackages.${system};});
-
-    overlays =
-      (import ./overlays {inherit inputs;})
-      // {
-        default = custom-pkgs;
-      };
-
-    nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/nixos-pc
-        home-manager.nixosModules.home-manager
-        {
-          nixpkgs.overlays =
-            [
-              nix-cachyos-kernel.overlays.default
-              self.overlays.default
-            ]
-            ++ (builtins.attrValues (import ./overlays {inherit inputs;}));
-
-          home-manager = {
-            users.hiepnh = ./home/hiepnh;
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = {inherit inputs;};
-          };
-        }
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [
+        (inputs.import-tree ./modules)
       ];
+
+      flake.nixosModules.globalOverlays = {
+        nixpkgs.overlays = [
+          (import ./pkgs)
+          (import ./overlays)
+        ];
+      };
     };
-  };
 }

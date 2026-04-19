@@ -1,9 +1,9 @@
-{ lib
-, stdenv
-, fetchurl
-, networkmanager
+{
+  lib,
+  stdenv,
+  fetchurl,
+  networkmanager,
 }:
-
 stdenv.mkDerivation rec {
   pname = "wlctl";
   version = "0.1.3";
