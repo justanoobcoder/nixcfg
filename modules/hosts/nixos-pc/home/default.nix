@@ -1,12 +1,12 @@
 {self, ...}: {
   flake.homeModules.hiepnhModule = _: {
     imports = [
+      self.coreSystemBundle.homeModules
+      self.devBundle.homeModules
       self.niriDesktopBundle.homeModules
 
-      self.homeModules.git
       self.homeModules.xdg
       self.homeModules.syncthing
-      self.homeModules.tmux
     ];
 
     home = {
