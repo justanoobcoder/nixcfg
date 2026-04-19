@@ -5,7 +5,6 @@
 }: {
   flake.nixosConfigurations.nixos-pc = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.nixosModules.globalOverlays
       self.nixosModules.nixosPcConfiguration
       self.nixosModules.homeManager
 
