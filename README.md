@@ -13,69 +13,69 @@ Here is the high-level tree structure of the repository:
 
 ```text
 .
+├── modules
+│   ├── common
+│   │   ├── features
+│   │   │   ├── bundles
+│   │   │   │   ├── core-system.nix
+│   │   │   │   ├── dev.nix
+│   │   │   │   └── niri-desktop.nix
+│   │   │   ├── home-manager
+│   │   │   │   ├── default.nix
+│   │   │   │   ├── git.nix
+│   │   │   │   ├── hypridle.nix
+│   │   │   │   ├── jcm.nix
+│   │   │   │   ├── syncthing.nix
+│   │   │   │   ├── tmux.nix
+│   │   │   │   ├── udiskie.nix
+│   │   │   │   └── wayvibes.nix
+│   │   │   ├── allow-unfree.nix
+│   │   │   ├── appimage.nix
+│   │   │   ├── battery.nix
+│   │   │   ├── bluetooth.nix
+│   │   │   ├── cachyos-kernel.nix
+│   │   │   ├── cloudflare-warp.nix
+│   │   │   ├── dms.nix
+│   │   │   ├── docker.nix
+│   │   │   ├── fonts.nix
+│   │   │   ├── gnupg.nix
+│   │   │   ├── network-manager.nix
+│   │   │   ├── niri.nix
+│   │   │   ├── nvidia.nix
+│   │   │   ├── openssh.nix
+│   │   │   ├── optimise-disk.nix
+│   │   │   ├── overlays.nix
+│   │   │   ├── sound.nix
+│   │   │   ├── swap-capslk-esc.nix
+│   │   │   ├── sysrq.nix
+│   │   │   ├── systemd-boot.nix
+│   │   │   ├── tts.nix
+│   │   │   ├── udisks2.nix
+│   │   │   ├── vietnamese-input-method.nix
+│   │   │   ├── zoxide.nix
+│   │   │   └── zsh.nix
+│   │   ├── overlays
+│   │   │   ├── fastfetch.nix
+│   │   │   └── niri.nix
+│   │   └── packages
+│   │       └── wlctl.nix
+│   ├── hosts
+│   │   └── nixos-pc
+│   │       ├── features
+│   │       │   ├── sudo-no-pass.nix
+│   │       │   └── suspend-hibernate.nix
+│   │       ├── home
+│   │       │   └── hiepnh
+│   │       │       ├── default.nix
+│   │       │       └── xdg.nix
+│   │       ├── configuration.nix
+│   │       ├── default.nix
+│   │       ├── hardware.nix
+│   │       ├── packages.nix
+│   │       └── user.nix
+│   └── parts.nix
 ├── flake.lock
-├── flake.nix
-└── modules
-    ├── common
-    │   ├── features
-    │   │   ├── allow-unfree.nix
-    │   │   ├── appimage.nix
-    │   │   ├── battery.nix
-    │   │   ├── bluetooth.nix
-    │   │   ├── bundles
-    │   │   │   ├── core-system.nix
-    │   │   │   ├── dev.nix
-    │   │   │   └── niri-desktop.nix
-    │   │   ├── cachyos-kernel.nix
-    │   │   ├── cloudflare-warp.nix
-    │   │   ├── dms.nix
-    │   │   ├── docker.nix
-    │   │   ├── fonts.nix
-    │   │   ├── gnupg.nix
-    │   │   ├── home-manager
-    │   │   │   ├── default.nix
-    │   │   │   ├── git.nix
-    │   │   │   ├── hypridle.nix
-    │   │   │   ├── jcm.nix
-    │   │   │   ├── syncthing.nix
-    │   │   │   ├── tmux.nix
-    │   │   │   ├── udiskie.nix
-    │   │   │   └── wayvibes.nix
-    │   │   ├── network-manager.nix
-    │   │   ├── niri.nix
-    │   │   ├── nvidia.nix
-    │   │   ├── openssh.nix
-    │   │   ├── optimise-disk.nix
-    │   │   ├── overlays.nix
-    │   │   ├── sound.nix
-    │   │   ├── swap-capslk-esc.nix
-    │   │   ├── sysrq.nix
-    │   │   ├── systemd-boot.nix
-    │   │   ├── tts.nix
-    │   │   ├── udisks2.nix
-    │   │   ├── vietnamese-input-method.nix
-    │   │   ├── zoxide.nix
-    │   │   └── zsh.nix
-    │   ├── overlays
-    │   │   ├── fastfetch.nix
-    │   │   └── niri.nix
-    │   └── packages
-    │       └── wlctl.nix
-    ├── hosts
-    │   └── nixos-pc
-    │       ├── configuration.nix
-    │       ├── default.nix
-    │       ├── features
-    │       │   ├── sudo-no-pass.nix
-    │       │   └── suspend-hibernate.nix
-    │       ├── hardware.nix
-    │       ├── home
-    │       │   └── hiepnh
-    │       │       ├── default.nix
-    │       │       └── xdg.nix
-    │       ├── packages.nix
-    │       └── user.nix
-    └── parts.nix
+└── flake.nix
 ```
 </details>
 
