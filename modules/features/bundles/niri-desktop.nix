@@ -10,9 +10,9 @@
         self.nixosModules.vietnameseInputMethod
         self.nixosModules.swapCapslkEsc
         self.nixosModules.appimage
-        self.nixosModules.gnupg
         self.nixosModules.udisks2
         self.nixosModules.tts
+        self.nixosModules.networkManager
       ];
     };
 
