@@ -4,15 +4,16 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:vic/import-tree";
-
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    import-tree.url = "github:vic/import-tree";
+
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     noobvim = {
       url = "path:/home/hiepnh/proj/noobvim";
@@ -34,25 +35,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
-
     wayvibes = {
       url = "path:/home/hiepnh/proj/wayvibes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [
-        (inputs.import-tree ./modules)
-      ];
-
-      flake.nixosModules.globalOverlays = {
-        nixpkgs.overlays = [
-          (import ./pkgs)
-          (import ./overlays)
-        ];
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 }
