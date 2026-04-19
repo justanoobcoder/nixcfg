@@ -5,37 +5,15 @@
 }: {
   flake.nixosModules.packages = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
+      # desktop
       kitty
       app2unit
-      eza
-      starship
-      fzf
-      zoxide
-      direnv
-      git
+      discord
       wl-clipboard
-      fastfetch
-      lazygit
-      inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       mpv
       imv
       neovide
       antigravity
-      killall
-      tree
-      curl
-      wget
-      gnutar
-      unzip
-      bat
-      jq
-      fd
-      ripgrep
-      inetutils
-
-      # desktop
-      discord
       pcmanfm-qt
       wtype
       telegram-desktop
@@ -71,9 +49,30 @@
       google-cloud-sdk
       devenv
       nh
+      fastfetch
+      lazygit
+      eza
+      starship
+      fzf
+      killall
+      zoxide
+      direnv
+      git
+      tree
+      curl
+      wget
+      gnutar
+      unzip
+      bat
+      jq
+      fd
+      ripgrep
+      inetutils
 
-      # custom packages
       self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
+
+      inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
