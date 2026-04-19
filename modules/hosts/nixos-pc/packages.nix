@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.nixosModules.packages = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       kitty
@@ -69,7 +73,7 @@
       nh
 
       # custom packages
-      custom.wlctl
+      self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
     ];
   };
 }
