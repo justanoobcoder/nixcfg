@@ -3,11 +3,11 @@
     "cachyos-kernel": {
       "flake": false,
       "locked": {
-        "lastModified": 1776183001,
-        "narHash": "sha256-lvLKB5dTqjO1S/YonS9ZyWemEjO6QXtN4D76rYEYy4s=",
+        "lastModified": 1776608760,
+        "narHash": "sha256-ehDv8bF7k/2Kf4b8CCoSm51U/MOoFuLsRXqe5wZ57sE=",
         "owner": "CachyOS",
         "repo": "linux-cachyos",
-        "rev": "4224303b6d7a50dd1cc3ffa78864050cc9536eec",
+        "rev": "7e06e29005853bbaaa3b1c1067f915d6e0db728a",
         "type": "github"
       },
       "original": {
@@ -40,14 +40,17 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1776431180,
-        "narHash": "sha256-OngxY0aDyqUALaqQ+oJLhSLhUBWE2db/49r/c05447s=",
-        "path": "/home/hiepnh/proj/fcitx5-lotus",
-        "type": "path"
+        "lastModified": 1776490323,
+        "narHash": "sha256-+/VfrPkTqH5fM+Q0mPdtenHc73s8DMI/7zOJVHfcpRY=",
+        "owner": "LotusInputMethod",
+        "repo": "fcitx5-lotus",
+        "rev": "81d125d919b18e18037905afac1eb9204481377a",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hiepnh/proj/fcitx5-lotus",
-        "type": "path"
+        "owner": "LotusInputMethod",
+        "repo": "fcitx5-lotus",
+        "type": "github"
       }
     },
     "flake-compat": {
@@ -235,14 +238,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1773470623,
-        "narHash": "sha256-u1C98dGaC9TWVIGoH12RPVrPS/Djuvq+2Eq0gDyoG+o=",
-        "path": "/home/hiepnh/proj/jcm",
-        "type": "path"
+        "lastModified": 1776649048,
+        "narHash": "sha256-f3dy3z2vJwBoa0AjE37gIhMJvzxoFYvqeTr97IzjYDg=",
+        "owner": "justanoobcoder",
+        "repo": "jcm",
+        "rev": "8f641476536a7f6476fd7e88f16d69357107f44f",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hiepnh/proj/jcm",
-        "type": "path"
+        "owner": "justanoobcoder",
+        "repo": "jcm",
+        "type": "github"
       }
     },
     "mnw": {
@@ -292,11 +298,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1776535646,
-        "narHash": "sha256-ynXxDJ66ZgN7NlXuMxH9aIMnmiX4Q4ZhdEDie9Klnfc=",
+        "lastModified": 1776622065,
+        "narHash": "sha256-yv+04KR/xndDJ8lID/LHpMuYhMCrQfR58ABGTl2OyQ0=",
         "owner": "xddxdd",
         "repo": "nix-cachyos-kernel",
-        "rev": "c5b2b559d888644417de5eb3939548854fa4d837",
+        "rev": "61a3cabe264695c487c6266a7536e5806323985e",
         "type": "github"
       },
       "original": {
@@ -307,11 +313,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1776475594,
-        "narHash": "sha256-mxLieVl5lqjd+QUvgHbvpVrvb9d8zox7m+MiRO6FHu8=",
+        "lastModified": 1776544041,
+        "narHash": "sha256-ryzOZLvuS/4ZbYJzR8+wYZpyG/Ssp6BAe6oTQ8ttAqU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9a3a5b8400951b3497d2ef8f239f8451175cf3a1",
+        "rev": "f731538cdf1410a3c53d3a75a6a1142afc08e3af",
         "type": "github"
       },
       "original": {
@@ -391,14 +397,17 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1776508912,
-        "narHash": "sha256-2y8Je86yErW/dAzqWoZp24CNJaxjTfuacAuQ38KLUAg=",
-        "path": "/home/hiepnh/proj/noobvim",
-        "type": "path"
+        "lastModified": 1776646825,
+        "narHash": "sha256-ommobV4y6q67j8HpU/wjQzrrk6ItIiIF4pqLli6SpRg=",
+        "owner": "justanoobcoder",
+        "repo": "noobvim",
+        "rev": "ed78fe5ba37d21b0ae3b8791fa2ee9818b4af8e8",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hiepnh/proj/noobvim",
-        "type": "path"
+        "owner": "justanoobcoder",
+        "repo": "noobvim",
+        "type": "github"
       }
     },
     "nvf": {
@@ -411,11 +420,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1775676744,
-        "narHash": "sha256-p0zYceLcmNEAXY3KzdAocs4mGB6XcxbTpWK67lo+ugM=",
+        "lastModified": 1776630589,
+        "narHash": "sha256-Ty/cyZ8tnxYliznpVG1ntziWaTfUAROHkHFR8k+p5j4=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "ba1fcf1eaa977b4f70bf1df72e7eef371df8c09c",
+        "rev": "cd9c79b8cd012beaba818df713a0e0ea632b74a3",
         "type": "github"
       },
       "original": {
@@ -498,14 +507,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1776480286,
-        "narHash": "sha256-/JgXlKjxlBU7mUkoUEHOsuNOX1iN7W+Kq40jXPGjLPU=",
-        "path": "/home/hiepnh/proj/wayvibes",
-        "type": "path"
+        "lastModified": 1776640839,
+        "narHash": "sha256-UsUG+Eevr2Iw/N6GJP4P7XnnnedIe6L8DBo02T2hY+Q=",
+        "owner": "justanoobcoder",
+        "repo": "wayvibes",
+        "rev": "fdf41d7e21246eb000ac5b6f56328603f1e53c63",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hiepnh/proj/wayvibes",
-        "type": "path"
+        "owner": "justanoobcoder",
+        "repo": "wayvibes",
+        "type": "github"
       }
     },
     "zen-browser": {
