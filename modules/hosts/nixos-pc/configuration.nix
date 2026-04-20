@@ -26,6 +26,14 @@
 
     networking.hostName = "nixos-pc";
 
+    age.secrets = {
+      cachixAuthToken = {
+        file = ./secrets/cachix-auth-token.age;
+        owner = "hiepnh";
+        mode = "0400";
+      };
+    };
+
     home-manager.users.hiepnh = self.homeModules.hiepnhModule;
 
     system.stateVersion = "26.05";

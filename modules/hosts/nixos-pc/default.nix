@@ -5,6 +5,8 @@
 }: {
   flake.nixosConfigurations.nixos-pc = inputs.nixpkgs.lib.nixosSystem {
     modules = [
+      inputs.agenix.nixosModules.default
+
       self.nixosModules.nixosPcConfiguration
       self.nixosModules.homeManager
 

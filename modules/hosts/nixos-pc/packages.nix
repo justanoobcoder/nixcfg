@@ -72,6 +72,7 @@
 
       self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
+      inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];

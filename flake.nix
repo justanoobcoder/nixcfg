@@ -39,7 +39,11 @@
       url = "github:justanoobcoder/wayvibes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix.url = "github:ryantm/agenix";
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake {inherit inputs;}
+    (inputs.import-tree.filterNot (path: baseNameOf path == "secrets.nix") ./modules);
 }
