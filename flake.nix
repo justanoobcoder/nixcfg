@@ -16,17 +16,17 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     noobvim = {
-      url = "path:/home/hiepnh/proj/noobvim";
+      url = "github:justanoobcoder/noobvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     fcitx5-lotus = {
-      url = "path:/home/hiepnh/proj/fcitx5-lotus";
+      url = "github:LotusInputMethod/fcitx5-lotus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     jcm = {
-      url = "path:/home/hiepnh/proj/jcm";
+      url = "github:justanoobcoder/jcm";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -36,7 +36,7 @@
     };
 
     wayvibes = {
-      url = "path:/home/hiepnh/proj/wayvibes";
+      url = "github:justanoobcoder/wayvibes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
