@@ -19,7 +19,7 @@ jobs:
       - name: Setup Cachix
         uses: cachix/cachix-action@v17
         with:
-          name: <put-your-cache-name-here>
+          name: justanoobcoder
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Run Checks
@@ -116,7 +116,7 @@ jobs:
       - name: Setup Cachix
         uses: cachix/cachix-action@v17
         with:
-          name: <put-your-cache-name-here>
+          name: justanoobcoder
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Build Configuration 📋
