@@ -7,7 +7,6 @@
         self.nixosModules.sysrq
         self.nixosModules.optimiseDisk
         self.nixosModules.allowUnfree
-        self.nixosModules.swapCapslkEsc
         self.nixosModules.overlays
       ];
     };
