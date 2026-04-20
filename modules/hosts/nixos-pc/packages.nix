@@ -68,6 +68,7 @@
       fd
       ripgrep
       inetutils
+      cachix
 
       self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
