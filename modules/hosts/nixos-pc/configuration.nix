@@ -8,7 +8,17 @@
       self.nixosModules.suspendHibernate
     ];
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
+    nix.settings = {
+      experimental-features = ["nix-command" "flakes"];
+      trusted-users = ["root" "hiepnh"];
+
+      substituters = [
+        "https://justanoobcoder.cachix.org"
+      ];
+      trusted-public-keys = [
+        "justanoobcoder.cachix.org-1:D2/vJZSn8o8Fpsxzbjc9tHo2/D1ejBUqc4r71UvDVyk="
+      ];
+    };
 
     time.timeZone = "Asia/Ho_Chi_Minh";
 
