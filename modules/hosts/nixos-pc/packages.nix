@@ -40,6 +40,7 @@
       jetbrains-toolbox
       postman
       winboat
+      localsend
 
       # cli
       yazi
