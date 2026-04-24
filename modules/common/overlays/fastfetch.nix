@@ -1,12 +1,12 @@
 {
   flake.overlays.fastfetch = _: prev: {
-    fastfetch = prev.fastfetch.overrideAttrs (_: {
-      version = "2.57.0";
+    fastfetch = prev.fastfetch.overrideAttrs (_: rec {
+      version = "2.62.1";
       src = prev.fetchFromGitHub {
         owner = "fastfetch-cli";
         repo = "fastfetch";
-        rev = "2.57.0";
-        hash = "sha256-bdzD+od+KyEqkFixqGf/7O//1nHO9i0jzg65NRDIN7I=";
+        rev = version;
+        hash = "sha256-lI3p0LPDg5EXQ60NIYkpv0sNeckUdZjJSsmc2XP1l0E=";
       };
       postPatch = "";
     });
