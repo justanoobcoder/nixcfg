@@ -4,15 +4,15 @@
       newSrc = prev.fetchFromGitHub {
         owner = "YaLTeR";
         repo = "niri";
-        rev = "68bb942d2146cd2c8af69c0f16db18396b4388fe";
-        hash = "sha256-7Bbp0fDBJMDRpKfdHelMXbhY51bdCa5+Qn/+XONaOwk=";
+        rev = "4438aefc8d01b775ee855f96c7d93b16e55a7a9f";
+        hash = "sha256-W4KXT0RtNYs+qe2ScroVRiaaenlfJpI8aU/DLk2t8/0=";
       };
     in
       prev.niri.overrideAttrs (_: {
         src = newSrc;
         cargoDeps = prev.rustPlatform.fetchCargoVendor {
           src = newSrc;
-          hash = "sha256-tievZgYwlZ/zUjl/R6B3UFmFiav9tHxAujxPQjP6niU=";
+          hash = "sha256-gfnalA3qI3a9h3PvsxgQLCrzapfjLLkxhTMJpwRh+ro=";
         };
         postPatch = ''
           patchShebangs resources/niri-session
