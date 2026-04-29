@@ -14,6 +14,7 @@
       self.devBundle.nixosModules
       self.niriDesktopBundle.nixosModules
 
+      self.nixosModules.tuigreet
       self.nixosModules.zsh
       self.nixosModules.zoxide
       self.nixosModules.battery
