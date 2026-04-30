@@ -22,13 +22,13 @@ Here is the high-level tree structure of the repository:
 │   │   │   │   └── niri-desktop.nix
 │   │   │   ├── home-manager
 │   │   │   │   ├── default.nix
-│   │   │   │   ├── git.nix
-│   │   │   │   ├── hypridle.nix
-│   │   │   │   ├── jcm.nix
-│   │   │   │   ├── syncthing.nix
-│   │   │   │   ├── tmux.nix
-│   │   │   │   ├── udiskie.nix
-│   │   │   │   └── wayvibes.nix
+│   │   │   │   ├── hm-git.nix
+│   │   │   │   ├── hm-hypridle.nix
+│   │   │   │   ├── hm-jcm.nix
+│   │   │   │   ├── hm-syncthing.nix
+│   │   │   │   ├── hm-tmux.nix
+│   │   │   │   ├── hm-udiskie.nix
+│   │   │   │   └── hm-wayvibes.nix
 │   │   │   ├── allow-unfree.nix
 │   │   │   ├── appimage.nix
 │   │   │   ├── battery.nix
@@ -37,6 +37,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── cloudflare-warp.nix
 │   │   │   ├── dms.nix
 │   │   │   ├── docker.nix
+│   │   │   ├── fish.nix
 │   │   │   ├── fonts.nix
 │   │   │   ├── gnupg.nix
 │   │   │   ├── network-manager.nix
@@ -50,13 +51,14 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── sysrq.nix
 │   │   │   ├── systemd-boot.nix
 │   │   │   ├── tts.nix
+│   │   │   ├── tuigreet.nix
 │   │   │   ├── udisks2.nix
 │   │   │   ├── vietnamese-input-method.nix
 │   │   │   ├── zoxide.nix
 │   │   │   └── zsh.nix
 │   │   ├── overlays
 │   │   │   ├── fastfetch.nix
-│   │   │   └── niri.nix
+│   │   │   └── openldap.nix
 │   │   └── packages
 │   │       └── wlctl.nix
 │   ├── hosts
@@ -67,7 +69,12 @@ Here is the high-level tree structure of the repository:
 │   │       ├── home
 │   │       │   └── hiepnh
 │   │       │       ├── default.nix
-│   │       │       └── xdg.nix
+│   │       │       ├── hm-env.nix
+│   │       │       ├── hm-fish.nix
+│   │       │       └── hm-xdg.nix
+│   │       ├── secrets
+│   │       │   ├── cachix-auth-token.age
+│   │       │   └── secrets.nix
 │   │       ├── configuration.nix
 │   │       ├── default.nix
 │   │       ├── hardware.nix
@@ -75,7 +82,7 @@ Here is the high-level tree structure of the repository:
 │   │       └── user.nix
 │   └── parts.nix
 ├── flake.lock
-└── flake.nix
+├── flake.nix
 ```
 </details>
 
