@@ -16,6 +16,7 @@
 
       self.nixosModules.tuigreet
       self.nixosModules.zsh
+      self.nixosModules.fish
       self.nixosModules.zoxide
       self.nixosModules.battery
       self.nixosModules.nvidia
