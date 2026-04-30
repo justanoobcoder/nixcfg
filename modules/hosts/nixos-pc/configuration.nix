@@ -34,6 +34,10 @@
       };
     };
 
+    environment.sessionVariables = {
+      EDITOR = "nvim";
+    };
+
     home-manager.users.hiepnh = self.homeModules.hiepnhModule;
 
     system.stateVersion = "26.05";
