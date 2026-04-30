@@ -1,5 +1,5 @@
 {
-  flake.homeModules.udiskie = {pkgs, ...}: {
+  flake.homeModules.hmUdiskie = {pkgs, ...}: {
     services.udiskie = {
       enable = true;
       settings = {

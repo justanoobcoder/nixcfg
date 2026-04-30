@@ -1,5 +1,5 @@
 {
-  flake.homeModules.git = {
+  flake.homeModules.hmGit = {
     lib,
     config,
     ...

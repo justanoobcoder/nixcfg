@@ -19,10 +19,10 @@
 
     homeModules = _: {
       imports = [
-        self.homeModules.wayvibes
-        self.homeModules.udiskie
-        self.homeModules.hypridle
-        self.homeModules.jcm
+        self.homeModules.hmWayvibes
+        self.homeModules.hmUdiskie
+        self.homeModules.hmHypridle
+        self.homeModules.hmJcm
       ];
     };
   };

@@ -5,8 +5,10 @@
       self.devBundle.homeModules
       self.niriDesktopBundle.homeModules
 
-      self.homeModules.xdg
-      self.homeModules.syncthing
+      self.homeModules.hmFish
+      self.homeModules.hmEnv
+      self.homeModules.hmXdg
+      self.homeModules.hmSyncthing
     ];
 
     home = {

@@ -1,5 +1,5 @@
 {
-  flake.homeModules.xdg = {config, ...}: {
+  flake.homeModules.hmXdg = {config, ...}: {
     xdg = {
       enable = true;
       autostart.enable = true; # Enable creation of XDG autostart entries.

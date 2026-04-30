@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  flake.homeModules.wayvibes = _: {
+  flake.homeModules.hmWayvibes = _: {
     imports = [
       inputs.wayvibes.nixosModules.default
     ];
