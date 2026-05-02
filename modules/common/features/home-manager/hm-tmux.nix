@@ -32,13 +32,16 @@
         tmuxPlugins.cpu
         {
           plugin = tmuxPlugins.resurrect;
-          extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+          extraConfig = ''
+            set -g @resurrect-strategy-nvim 'session'
+            set -g @resurrect-capture-pane-contents 'on'
+          '';
         }
         {
           plugin = tmuxPlugins.continuum;
           extraConfig = ''
             set -g @continuum-restore 'on'
-            set -g @continuum-save-interval '60' # minutes
+            set -g @continuum-save-interval '30' # minutes
           '';
         }
       ];
