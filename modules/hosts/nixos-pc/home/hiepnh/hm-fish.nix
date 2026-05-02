@@ -17,14 +17,16 @@
         fzf --fish | source
 
         if command -q fastfetch
-          if test -n "$DISPLAY" || test -n "$WAYLAND_DISPLAY"
-            if test -f ~/.face
-              fastfetch --logo ~/.face --logo-padding-top 3
+          if test "$SHLVL" -eq 1
+            if test -n "$DISPLAY" || test -n "$WAYLAND_DISPLAY"
+              if test -f ~/.face
+                fastfetch --logo ~/.face --logo-padding-top 3
+              else
+                fastfetch
+              end
             else
               fastfetch
             end
-          else
-            fastfetch
           end
         end
 
