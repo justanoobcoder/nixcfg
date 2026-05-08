@@ -15,7 +15,6 @@
       neovide
       antigravity
       pcmanfm-qt
-      wtype
       telegram-desktop
       obs-studio
       keepassxc
@@ -32,7 +31,6 @@
       libsForQt5.qt5ct
       adw-gtk3
       tela-circle-icon-theme
-      code-cursor
       lutris
       blobdrop
       zed-editor-fhs
