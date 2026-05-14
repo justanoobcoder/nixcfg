@@ -5,7 +5,7 @@
       useTextGreeter = true;
       settings = {
         default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --greeting 'Hey, YOU. Stay away from my computer!' --remember --cmd 'uwsm start -F niri-session'";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --greeting 'Hey, YOU. Stay away from my computer!' --remember --cmd 'uwsm start hyprland.desktop'";
           user = "greeter";
         };
       };
