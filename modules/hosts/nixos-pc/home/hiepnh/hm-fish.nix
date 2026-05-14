@@ -53,22 +53,46 @@
       functions = {
         fb = ''
           set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.local/bin -type f | fzf --exact)
-          [ -z "$file" ] || $EDITOR $file
+
+          if [ -n "$file" ]
+              set prev_dir $PWD
+              cd (dirname $file)
+              $EDITOR $file
+              cd $prev_dir
+          end
         '';
 
-        cfg = ''
-          set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/hypr -type f | fzf --exact)
-          [ -z "$file" ] || $EDITOR $file
+        cfh = ''
+          set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/hypr -type f -not -path '*/dms/*' | fzf --exact)
+
+          if [ -n "$file" ]
+              set prev_dir $PWD
+              cd (dirname $file)
+              $EDITOR $file
+              cd $prev_dir
+          end
         '';
 
         cfn = ''
-          set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/niri -type f | fzf --exact)
-          [ -z "$file" ] || $EDITOR $file
+          set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/niri -type f -not -path '*/dms/*' | fzf --exact)
+
+          if [ -n "$file" ]
+              set prev_dir $PWD
+              cd (dirname $file)
+              $EDITOR $file
+              cd $prev_dir
+          end
         '';
 
         cfz = ''
           set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/zsh -type f | fzf --exact)
-          [ -z "$file" ] || $EDITOR $file
+
+          if [ -n "$file" ]
+              set prev_dir $PWD
+              cd (dirname $file)
+              $EDITOR $file
+              cd $prev_dir
+          end
         '';
       };
     };
