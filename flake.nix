@@ -60,7 +60,9 @@
     };
   };
 
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake {inherit inputs;}
-    (inputs.import-tree.filterNot (path: baseNameOf path == "secrets.nix") ./modules);
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
+      inputs.import-tree.filterNot (path: baseNameOf path == "secrets.nix") ./modules
+    );
 }
