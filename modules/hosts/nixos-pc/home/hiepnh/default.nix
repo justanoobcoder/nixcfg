@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.homeModules.hiepnhModule = _: {
     imports = [
       self.coreSystemBundle.homeModules

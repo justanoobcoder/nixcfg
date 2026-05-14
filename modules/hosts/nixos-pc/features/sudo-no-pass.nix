@@ -2,7 +2,7 @@
   flake.nixosModules.sudoNoPass = _: {
     security.sudo.extraRules = [
       {
-        groups = ["wheel"];
+        groups = [ "wheel" ];
         commands = [
           {
             command = "/run/current-system/sw/bin/systemctl";

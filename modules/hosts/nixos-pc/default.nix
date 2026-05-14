@@ -2,9 +2,10 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   flake.nixosConfigurations.nixos-pc = inputs.nixpkgs.lib.nixosSystem {
-    specialArgs = {inherit inputs;};
+    specialArgs = { inherit inputs; };
 
     modules = [
       inputs.agenix.nixosModules.default

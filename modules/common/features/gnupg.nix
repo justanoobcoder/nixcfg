@@ -1,8 +1,10 @@
 {
-  flake.nixosModules.gnupg = {pkgs, ...}: {
-    programs.gnupg = {
-      agent.enable = true;
-      agent.pinentryPackage = pkgs.pinentry-curses;
+  flake.nixosModules.gnupg =
+    { pkgs, ... }:
+    {
+      programs.gnupg = {
+        agent.enable = true;
+        agent.pinentryPackage = pkgs.pinentry-curses;
+      };
     };
-  };
 }

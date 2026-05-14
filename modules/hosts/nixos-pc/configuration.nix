@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.nixosModules.nixosPcConfiguration = _: {
     imports = [
       self.nixosModules.nixosPcHardware
@@ -10,8 +11,11 @@
     ];
 
     nix.settings = {
-      experimental-features = ["nix-command" "flakes"];
-      trusted-users = ["hiepnh"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      trusted-users = [ "hiepnh" ];
 
       substituters = [
         "https://justanoobcoder.cachix.org"

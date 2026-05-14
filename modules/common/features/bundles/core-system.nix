@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.coreSystemBundle = {
     nixosModules = _: {
       imports = [
@@ -12,7 +13,7 @@
     };
 
     homeModules = _: {
-      imports = [];
+      imports = [ ];
     };
   };
 }

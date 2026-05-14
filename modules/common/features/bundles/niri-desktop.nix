@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.niriDesktopBundle = {
     nixosModules = _: {
       imports = [

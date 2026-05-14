@@ -5,7 +5,7 @@
         enable = true;
         keyboards = {
           default = {
-            ids = ["*"];
+            ids = [ "*" ];
             settings = {
               main = {
                 capslock = "overload(control, esc)";
@@ -17,7 +17,10 @@
       };
     };
     systemd.services.keyd.serviceConfig = {
-      SuccessExitStatus = [0 15];
+      SuccessExitStatus = [
+        0
+        15
+      ];
     };
   };
 }

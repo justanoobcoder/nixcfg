@@ -3,7 +3,7 @@
     nix = {
       optimise = {
         automatic = true;
-        dates = ["08:00"];
+        dates = [ "08:00" ];
       };
       gc = {
         automatic = true;

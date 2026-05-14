@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.devBundle = {
     nixosModules = _: {
       imports = [
