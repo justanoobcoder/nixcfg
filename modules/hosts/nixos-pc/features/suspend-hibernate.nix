@@ -9,7 +9,7 @@
       # If btrfs: btrfs inspect-internal map-swapfile -r swap_file
       kernelParams = [
         "resume_offset=1208020"
-        # "mem_sleep_default=s2idle"
+        "mem_sleep_default=s2idle"
         "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
         "nvidia.NVreg_TemporaryFilePath=/var/tmp"
         "zswap.enabled=1"
