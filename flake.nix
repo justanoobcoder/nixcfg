@@ -40,7 +40,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    keypop = {
+      url = "github:justanoobcoder/keypop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix.url = "github:ryantm/agenix";
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:

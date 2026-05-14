@@ -4,6 +4,8 @@
   ...
 }: {
   flake.nixosConfigurations.nixos-pc = inputs.nixpkgs.lib.nixosSystem {
+    specialArgs = {inherit inputs;};
+
     modules = [
       inputs.agenix.nixosModules.default
 
@@ -20,6 +22,7 @@
       self.nixosModules.zoxide
       self.nixosModules.battery
       self.nixosModules.nvidia
+      self.nixosModules.hyprland
     ];
   };
 }
