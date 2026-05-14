@@ -11,7 +11,7 @@
 
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];
-      trusted-users = ["root" "hiepnh"];
+      trusted-users = ["hiepnh"];
 
       substituters = [
         "https://justanoobcoder.cachix.org"
