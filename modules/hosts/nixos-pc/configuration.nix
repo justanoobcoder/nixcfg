@@ -6,6 +6,7 @@
       self.nixosModules.packages
       self.nixosModules.sudoNoPass
       self.nixosModules.suspendHibernate
+      self.nixosModules.firewall
     ];
 
     nix.settings = {
