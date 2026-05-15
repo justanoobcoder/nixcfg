@@ -22,6 +22,7 @@
       userName = "Nguyen Hong Hiep";
       userEmail = "syaorancode@gmail.com";
       defaultBranch = "main";
+      signingKey = "88ADF3E7C761E5A7";
     };
   };
 }
