@@ -4,7 +4,7 @@
     imports = [
       self.coreSystemBundle.homeModules
       self.devBundle.homeModules
-      self.niriDesktopBundle.homeModules
+      self.desktopBundle.homeModules
 
       self.homeModules.hmFish
       self.homeModules.hmEnv

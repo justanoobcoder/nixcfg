@@ -15,15 +15,15 @@
 
       self.coreSystemBundle.nixosModules
       self.devBundle.nixosModules
-      self.niriDesktopBundle.nixosModules
+      self.desktopBundle.nixosModules
 
+      self.nixosModules.hyprland
       self.nixosModules.tuigreet
       self.nixosModules.zsh
       self.nixosModules.fish
       self.nixosModules.zoxide
       self.nixosModules.battery
       self.nixosModules.nvidia
-      self.nixosModules.hyprland
     ];
   };
 }
