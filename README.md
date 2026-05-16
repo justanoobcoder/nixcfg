@@ -18,8 +18,8 @@ Here is the high-level tree structure of the repository:
 │   │   ├── features
 │   │   │   ├── bundles
 │   │   │   │   ├── core-system.nix
-│   │   │   │   ├── dev.nix
-│   │   │   │   └── niri-desktop.nix
+│   │   │   │   ├── desktop.nix
+│   │   │   │   └── dev.nix
 │   │   │   ├── home-manager
 │   │   │   │   ├── default.nix
 │   │   │   │   ├── hm-git.nix
@@ -40,6 +40,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── fish.nix
 │   │   │   ├── fonts.nix
 │   │   │   ├── gnupg.nix
+│   │   │   ├── hyprland.nix
 │   │   │   ├── network-manager.nix
 │   │   │   ├── niri.nix
 │   │   │   ├── nvidia.nix
@@ -64,6 +65,7 @@ Here is the high-level tree structure of the repository:
 │   ├── hosts
 │   │   └── nixos-pc
 │   │       ├── features
+│   │       │   ├── firewall.nix
 │   │       │   ├── sudo-no-pass.nix
 │   │       │   └── suspend-hibernate.nix
 │   │       ├── home
