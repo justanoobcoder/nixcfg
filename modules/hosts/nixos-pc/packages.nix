@@ -79,6 +79,12 @@
         inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+        (inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
+          postPatch = (old.postPatch or "") + ''
+            substituteInPlace shell.qml --replace-fail '/Pictures' '/xdg/pictures'
+            substituteInPlace shell.qml --replace-fail '/Screenshots' '/screenshots'
+          '';
+        }))
       ];
     };
 }
