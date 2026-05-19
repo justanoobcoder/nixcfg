@@ -43,6 +43,7 @@
         winboat
         localsend
         playerctl
+        hyprpicker
 
         # cli
         yazi
