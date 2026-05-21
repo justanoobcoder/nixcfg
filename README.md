@@ -35,7 +35,6 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── bluetooth.nix
 │   │   │   ├── cachyos-kernel.nix
 │   │   │   ├── cloudflare-warp.nix
-│   │   │   ├── dms.nix
 │   │   │   ├── docker.nix
 │   │   │   ├── fish.nix
 │   │   │   ├── fonts.nix
@@ -43,6 +42,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── hyprland.nix
 │   │   │   ├── network-manager.nix
 │   │   │   ├── niri.nix
+│   │   │   ├── noctalia-shell.nix
 │   │   │   ├── nvidia.nix
 │   │   │   ├── openssh.nix
 │   │   │   ├── optimise-disk.nix
