@@ -21,7 +21,7 @@
     };
 
     fcitx5-lotus = {
-      url = "github:LotusInputMethod/fcitx5-lotus";
+      url = "github:justanoobcoder/fcitx5-lotus/ecm";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -49,13 +49,18 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    HyprQuickFrame = {
+      url = "github:Ronin-CK/HyprQuickFrame";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
