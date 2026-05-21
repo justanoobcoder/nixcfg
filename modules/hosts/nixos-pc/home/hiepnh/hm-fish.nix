@@ -65,8 +65,6 @@
           '';
 
           cfh = ''
-            set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/hypr -type f -not -path '*/dms/*' | fzf --exact)
-
             if [ -n "$file" ]
                 set prev_dir $PWD
                 cd (dirname $file)
@@ -76,8 +74,6 @@
           '';
 
           cfn = ''
-            set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/niri -type f -not -path '*/dms/*' | fzf --exact)
-
             if [ -n "$file" ]
                 set prev_dir $PWD
                 cd (dirname $file)

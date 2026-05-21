@@ -4,7 +4,6 @@
     nixosModules = _: {
       imports = [
         self.nixosModules.fonts
-        self.nixosModules.dms
         self.nixosModules.noctaliaShell
         self.nixosModules.sound
         self.nixosModules.bluetooth
