@@ -22,7 +22,7 @@
             if test "$SHLVL" -eq 1
               if test -n "$DISPLAY" || test -n "$WAYLAND_DISPLAY"
                 if test -f ~/.face
-                  fastfetch --logo ~/.face --logo-padding-top 3
+                  fastfetch --logo-type sixel --logo ~/.face --logo-padding-top 3
                 else
                   fastfetch
                 end
@@ -65,6 +65,8 @@
           '';
 
           cfh = ''
+            set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/hypr -type f | fzf --exact)
+
             if [ -n "$file" ]
                 set prev_dir $PWD
                 cd (dirname $file)
@@ -74,6 +76,8 @@
           '';
 
           cfn = ''
+            set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/niri -type f -not -path '*/dms/*' | fzf --exact)
+
             if [ -n "$file" ]
                 set prev_dir $PWD
                 cd (dirname $file)
