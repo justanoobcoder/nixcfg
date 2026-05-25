@@ -21,7 +21,7 @@
     };
 
     fcitx5-lotus = {
-      url = "github:justanoobcoder/fcitx5-lotus/ecm";
+      url = "github:LotusInputMethod/fcitx5-lotus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -46,8 +46,6 @@
     };
 
     agenix.url = "github:ryantm/agenix";
-
-    hyprland.url = "github:hyprwm/Hyprland";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
