@@ -47,13 +47,8 @@
 
     agenix.url = "github:ryantm/agenix";
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      url = "github:noctalia-dev/noctalia-shell/v5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
