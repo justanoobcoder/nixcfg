@@ -5,8 +5,8 @@
       settings = {
         general = {
           after_sleep_cmd = "sleep 3s; powerprofilesctl set balanced";
-          before_sleep_cmd = "powerprofilesctl set power-saver; noctalia-shell ipc call lockScreen lock";
-          lock_cmd = "noctalia-shell ipc call lockScreen lock";
+          before_sleep_cmd = "powerprofilesctl set power-saver; noctalia msg session lock";
+          lock_cmd = "noctalia msg session lock";
         };
 
         listener = [
@@ -25,7 +25,7 @@
           # lock screen after 6 minutes of inactivity
           {
             timeout = 360;
-            on-timeout = "noctalia-shell ipc call lockScreen lock";
+            on-timeout = "noctalia msg session lock";
           }
           # turn off screen after 10 minutes of inactivity
           {

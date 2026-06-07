@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.noctaliaShell =
+  flake.nixosModules.noctalia =
     { pkgs, ... }:
     {
       nix.settings = {

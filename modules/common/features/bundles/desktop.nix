@@ -4,7 +4,7 @@
     nixosModules = _: {
       imports = [
         self.nixosModules.fonts
-        self.nixosModules.noctaliaShell
+        self.nixosModules.noctalia
         self.nixosModules.sound
         self.nixosModules.bluetooth
         self.nixosModules.vietnameseInputMethod
