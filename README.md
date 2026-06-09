@@ -22,6 +22,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   │   └── dev.nix
 │   │   │   ├── home-manager
 │   │   │   │   ├── default.nix
+│   │   │   │   ├── hm-foot.nix
 │   │   │   │   ├── hm-git.nix
 │   │   │   │   ├── hm-hypridle.nix
 │   │   │   │   ├── hm-jcm.nix
@@ -42,7 +43,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── hyprland.nix
 │   │   │   ├── network-manager.nix
 │   │   │   ├── niri.nix
-│   │   │   ├── noctalia-shell.nix
+│   │   │   ├── noctalia.nix
 │   │   │   ├── nvidia.nix
 │   │   │   ├── openssh.nix
 │   │   │   ├── optimise-disk.nix
