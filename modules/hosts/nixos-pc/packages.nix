@@ -46,6 +46,7 @@
         hyprpicker
 
         # cli
+        e2fsprogs
         yazi
         stow
         amber-lang
