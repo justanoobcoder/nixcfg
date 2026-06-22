@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.homeModules.hiepnhModule = _: {
+  flake.homeModules.hiepnhModule = { config, ... }: {
     imports = [
       self.coreSystemBundle.homeModules
       self.devBundle.homeModules
@@ -22,7 +22,8 @@
       userName = "Nguyen Hong Hiep";
       userEmail = "syaorancode@gmail.com";
       defaultBranch = "main";
-      signingKey = "88ADF3E7C761E5A7";
+      signingFormat = "ssh";
+      signingKey = "${config.home.homeDirectory}/.ssh/id_ed25519.pub";
     };
   };
 }

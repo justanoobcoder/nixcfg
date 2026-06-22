@@ -31,14 +31,6 @@
 
     networking.hostName = "nixos-pc";
 
-    age.secrets = {
-      cachixAuthToken = {
-        file = ./secrets/cachix-auth-token.age;
-        owner = "hiepnh";
-        mode = "0400";
-      };
-    };
-
     environment.sessionVariables = {
       EDITOR = "nvim";
     };

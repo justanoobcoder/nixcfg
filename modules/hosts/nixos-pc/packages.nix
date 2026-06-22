@@ -21,9 +21,7 @@
         telegram-desktop
         obs-studio
         keepassxc
-        qogir-icon-theme
         brightnessctl
-        easyeffects
         gimp
         grim
         slurp
@@ -36,9 +34,7 @@
         tela-circle-icon-theme
         lutris
         blobdrop
-        zed-editor-fhs
         kdePackages.okular
-        jetbrains-toolbox
         postman
         winboat
         localsend
@@ -78,7 +74,6 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
         inputs.keypop.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         (inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {

@@ -7,7 +7,7 @@
 
     services.wayvibes = {
       enable = true;
-      soundpack = "/home/hiepnh/proj/wayvibes/soundpacks/cherrymx-red-abs";
+      soundpack = "/home/hiepnh/Projects/wayvibes/soundpacks/cherrymx-red-abs";
       volume = 3;
     };
   };

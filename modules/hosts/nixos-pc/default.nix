@@ -8,8 +8,6 @@
     specialArgs = { inherit inputs; };
 
     modules = [
-      inputs.agenix.nixosModules.default
-
       self.nixosModules.nixosPcConfiguration
       self.nixosModules.homeManager
 
@@ -18,7 +16,7 @@
       self.desktopBundle.nixosModules
 
       self.nixosModules.hyprland
-      self.nixosModules.tuigreet
+      self.nixosModules.noctaliaGreeter
       self.nixosModules.zsh
       self.nixosModules.fish
       self.nixosModules.zoxide
