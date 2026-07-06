@@ -43,6 +43,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── hyprland.nix
 │   │   │   ├── network-manager.nix
 │   │   │   ├── niri.nix
+│   │   │   ├── noctalia-greeter.nix
 │   │   │   ├── noctalia.nix
 │   │   │   ├── nvidia.nix
 │   │   │   ├── openssh.nix
@@ -53,7 +54,6 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── sysrq.nix
 │   │   │   ├── systemd-boot.nix
 │   │   │   ├── tts.nix
-│   │   │   ├── tuigreet.nix
 │   │   │   ├── udisks2.nix
 │   │   │   ├── vietnamese-input-method.nix
 │   │   │   ├── zoxide.nix
@@ -75,9 +75,6 @@ Here is the high-level tree structure of the repository:
 │   │       │       ├── hm-env.nix
 │   │       │       ├── hm-fish.nix
 │   │       │       └── hm-xdg.nix
-│   │       ├── secrets
-│   │       │   ├── cachix-auth-token.age
-│   │       │   └── secrets.nix
 │   │       ├── configuration.nix
 │   │       ├── default.nix
 │   │       ├── hardware.nix
