@@ -5,7 +5,7 @@
       imports = [
         self.nixosModules.gnupg
         self.nixosModules.openssh
-        self.nixosModules.docker
+        self.nixosModules.distroboxPodman
       ];
     };
 
