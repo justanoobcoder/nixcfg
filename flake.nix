@@ -13,7 +13,7 @@
 
     import-tree.url = "github:vic/import-tree";
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     noobvim = {
       url = "github:justanoobcoder/noobvim";
@@ -46,8 +46,7 @@
     };
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia/cachix";
     };
 
     HyprQuickFrame = {
