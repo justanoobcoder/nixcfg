@@ -37,8 +37,9 @@
         shellAliases = {
           cl = "clear";
           v = "nvim";
+          y = "yazi";
           ls = "eza --group-directories-last";
-          ll = "ls -lbg --icons";
+          ll = "ls -lbg --icons always";
           la = "ls -a";
           lla = "ll -a";
           grep = "grep --color=auto";

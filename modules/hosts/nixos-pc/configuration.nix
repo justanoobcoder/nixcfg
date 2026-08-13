@@ -35,6 +35,10 @@
       EDITOR = "nvim";
     };
 
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-40.10.5"
+    ];
+
     home-manager.users.hiepnh = self.homeModules.hiepnhModule;
 
     system.stateVersion = "26.05";

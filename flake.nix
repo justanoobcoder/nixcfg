@@ -16,7 +16,21 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     noobvim = {
-      url = "github:justanoobcoder/noobvim";
+      # url = "github:justanoobcoder/noobvim/dev";
+      url = "path:/home/hiepnh/Projects/noobvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-scroll-overview = {
+      url = "github:yayuuu/hyprland-scroll-overview/new-release";
+      inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    wlctl = {
+      url = "github:aashish-thapa/wlctl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

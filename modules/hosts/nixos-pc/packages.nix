@@ -9,6 +9,7 @@
     {
       environment.systemPackages = with pkgs; [
         # desktop
+        brave
         kitty
         app2unit
         discord
@@ -16,7 +17,7 @@
         mpv
         imv
         neovide
-        antigravity
+        antigravity-ide
         pcmanfm-qt
         telegram-desktop
         obs-studio
@@ -27,7 +28,6 @@
         slurp
         swappy
         gpu-screen-recorder
-        obsidian
         kdePackages.qt6ct
         libsForQt5.qt5ct
         adw-gtk3
@@ -36,10 +36,10 @@
         blobdrop
         kdePackages.okular
         postman
-        winboat
         localsend
         playerctl
         hyprpicker
+
 
         # cli
         e2fsprogs
@@ -47,7 +47,6 @@
         stow
         amber-lang
         btop
-        google-cloud-sdk
         devenv
         nh
         fastfetch
@@ -57,7 +56,6 @@
         fzf
         killall
         zoxide
-        direnv
         git
         tree
         curl
@@ -70,10 +68,14 @@
         ripgrep
         inetutils
         cachix
+        hw-probe
+        usbutils
 
-        self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
+        # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
         inputs.keypop.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.scrolloverview
+        inputs.wlctl.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         (inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
