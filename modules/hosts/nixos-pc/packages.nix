@@ -70,6 +70,8 @@
         cachix
         hw-probe
         usbutils
+        nixpkgs-review
+        gh
 
         # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
