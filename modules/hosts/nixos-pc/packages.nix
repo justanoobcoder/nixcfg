@@ -12,7 +12,7 @@
         brave
         kitty
         app2unit
-        discord
+        vesktop
         wl-clipboard
         mpv
         imv

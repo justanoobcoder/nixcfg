@@ -988,10 +988,10 @@
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {
-        "lastModified": 1787800224,
-        "narHash": "sha256-PoXB44EKD2M7zFNsZNZDN4Pc35XTIuHioT/ac5Z6JlU=",
+        "lastModified": 1787802713,
+        "narHash": "sha256-8TLstcgakwwSKi2Csu1auKLE/XYsgZypXxgRx/bJGM8=",
         "ref": "dev",
-        "rev": "30a573c8ccab2cabbc4b4491b83f226293ff0d6b",
+        "rev": "b9ea46dc0337ff0c7b5779389401a60032b84669",
         "revCount": 606,
         "submodules": true,
         "type": "git",
