@@ -25,6 +25,9 @@
       ];
     };
 
+    services.gnome.gnome-keyring.enable = true;
+    security.pam.services.login.enableGnomeKeyring = true;
+
     time.timeZone = "Asia/Ho_Chi_Minh";
 
     i18n.defaultLocale = "en_US.UTF-8";

@@ -19,7 +19,7 @@
           fzf --fish | source
 
           if command -q fastfetch
-            if test "$SHLVL" -eq 1
+            # if test "$SHLVL" -eq 1
               if test -n "$DISPLAY" || test -n "$WAYLAND_DISPLAY"
                 if test -f ~/.face
                   fastfetch --logo-type sixel --logo ~/.face --logo-padding-top 3
@@ -29,7 +29,7 @@
               else
                 fastfetch
               end
-            end
+            # end
           end
 
           starship init fish | source
@@ -50,6 +50,7 @@
           g = "lazygit";
           gd = "lazygit -w $DOTFILES_DIR";
           ts = "tmux-sessionizer";
+          ripdrag = "GSK_RENDERER=gl command ripdrag";
           clean-up = "nh clean all -a --keep 2";
         };
 
@@ -67,6 +68,17 @@
 
           cfh = ''
             set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/hypr -type f | fzf --exact)
+
+            if [ -n "$file" ]
+                set prev_dir $PWD
+                cd (dirname $file)
+                $EDITOR $file
+                cd $prev_dir
+            end
+          '';
+
+          cfu = ''
+            set file (find ${config.home.sessionVariables.DOTFILES_DIR}/.config/umbriel -type f | fzf --exact)
 
             if [ -n "$file" ]
                 set prev_dir $PWD

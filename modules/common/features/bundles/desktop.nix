@@ -3,6 +3,7 @@
   flake.desktopBundle = {
     nixosModules = _: {
       imports = [
+        self.nixosModules.numlock
         self.nixosModules.fonts
         self.nixosModules.noctalia
         self.nixosModules.sound

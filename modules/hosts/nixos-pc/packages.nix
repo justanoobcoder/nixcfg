@@ -33,13 +33,13 @@
         adw-gtk3
         tela-circle-icon-theme
         lutris
-        blobdrop
+        ripdrag
         kdePackages.okular
         postman
         localsend
         playerctl
         hyprpicker
-
+        bibata-cursors
 
         # cli
         e2fsprogs
@@ -76,7 +76,7 @@
         # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
 
         inputs.keypop.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.scrolloverview
+        # inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.scrolloverview
         inputs.wlctl.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

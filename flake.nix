@@ -16,8 +16,7 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     noobvim = {
-      # url = "github:justanoobcoder/noobvim/dev";
-      url = "path:/home/hiepnh/Projects/noobvim";
+      url = "github:justanoobcoder/noobvim/dev";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -72,6 +71,8 @@
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    umbriel.url = "git+https://github.com/justanoobcoder/umbriel?ref=dev";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

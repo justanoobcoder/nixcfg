@@ -15,7 +15,7 @@
       self.devBundle.nixosModules
       self.desktopBundle.nixosModules
 
-      self.nixosModules.hyprland
+      self.nixosModules.umbriel
       self.nixosModules.noctaliaGreeter
       self.nixosModules.zsh
       self.nixosModules.fish
