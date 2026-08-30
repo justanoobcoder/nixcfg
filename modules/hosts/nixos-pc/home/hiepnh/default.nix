@@ -11,6 +11,7 @@
       self.homeModules.hmXdg
       self.homeModules.hmSyncthing
       self.homeModules.hmGhostty
+      self.homeModules.hmJava
     ];
 
     home = {
