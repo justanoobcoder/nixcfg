@@ -28,14 +28,14 @@ Here is the high-level tree structure of the repository:
 │   │   │   │   ├── hm-jcm.nix
 │   │   │   │   ├── hm-syncthing.nix
 │   │   │   │   ├── hm-tmux.nix
-│   │   │   │   ├── hm-udiskie.nix
-│   │   │   │   └── hm-wayvibes.nix
+│   │   │   │   └── hm-udiskie.nix
 │   │   │   ├── allow-unfree.nix
 │   │   │   ├── appimage.nix
 │   │   │   ├── battery.nix
 │   │   │   ├── bluetooth.nix
 │   │   │   ├── cachyos-kernel.nix
 │   │   │   ├── cloudflare-warp.nix
+│   │   │   ├── distrobox-podman.nix
 │   │   │   ├── docker.nix
 │   │   │   ├── fish.nix
 │   │   │   ├── fonts.nix
@@ -45,6 +45,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── niri.nix
 │   │   │   ├── noctalia-greeter.nix
 │   │   │   ├── noctalia.nix
+│   │   │   ├── numlock.nix
 │   │   │   ├── nvidia.nix
 │   │   │   ├── openssh.nix
 │   │   │   ├── optimise-disk.nix
@@ -55,13 +56,18 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── systemd-boot.nix
 │   │   │   ├── tts.nix
 │   │   │   ├── udisks2.nix
+│   │   │   ├── umbriel.nix
 │   │   │   ├── vietnamese-input-method.nix
 │   │   │   ├── zoxide.nix
 │   │   │   └── zsh.nix
 │   │   ├── overlays
 │   │   │   ├── fastfetch.nix
+│   │   │   ├── fcitx5-areca.nix
+│   │   │   ├── gpu-screen-recorder.nix
 │   │   │   └── openldap.nix
 │   │   └── packages
+│   │       ├── areca-ime.nix
+│   │       ├── keywave.nix
 │   │       └── wlctl.nix
 │   ├── hosts
 │   │   └── nixos-pc
@@ -74,6 +80,8 @@ Here is the high-level tree structure of the repository:
 │   │       │       ├── default.nix
 │   │       │       ├── hm-env.nix
 │   │       │       ├── hm-fish.nix
+│   │       │       ├── hm-ghostty.nix
+│   │       │       ├── hm-java.nix
 │   │       │       └── hm-xdg.nix
 │   │       ├── configuration.nix
 │   │       ├── default.nix
