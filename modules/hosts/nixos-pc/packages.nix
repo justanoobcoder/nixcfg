@@ -74,8 +74,9 @@
         gh
 
         # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
+        self.packages.${pkgs.stdenv.hostPlatform.system}.keywave
 
-        inputs.keypop.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
         # inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.scrolloverview
         inputs.wlctl.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default

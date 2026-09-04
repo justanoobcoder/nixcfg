@@ -48,13 +48,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wayvibes = {
-      url = "github:justanoobcoder/wayvibes";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    keypop = {
-      url = "github:justanoobcoder/keypop";
+    wayshadow = {
+      url = "github:justanoobcoder/wayshadow";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -72,7 +67,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    umbriel.url = "git+https://github.com/justanoobcoder/umbriel?ref=dev";
+    umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

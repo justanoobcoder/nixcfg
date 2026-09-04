@@ -21,7 +21,6 @@
     homeModules = _: {
       imports = [
         self.homeModules.footTerminal
-        self.homeModules.hmWayvibes
         self.homeModules.hmUdiskie
         self.homeModules.hmHypridle
         self.homeModules.hmJcm

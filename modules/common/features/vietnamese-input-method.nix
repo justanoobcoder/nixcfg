@@ -1,4 +1,4 @@
-{ inputs, self, ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.vietnameseInputMethod = { pkgs, ... }: {
     imports = [
@@ -15,8 +15,8 @@
         enable = true;
         type = "fcitx5";
         fcitx5 = {
-          addons = [
-            self.packages.${pkgs.stdenv.hostPlatform.system}.fcitx5-areca
+          addons = with pkgs; [
+            fcitx5-areca
           ];
           waylandFrontend = true;
         };
