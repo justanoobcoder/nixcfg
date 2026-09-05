@@ -11,13 +11,13 @@
     in
     {
       fcitx5-areca = prev.fcitx5-areca.overrideAttrs (old: rec {
-        version = "5.0.2";
+        version = "5.1.0";
 
         src = prev.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
           tag = "v${version}";
-          hash = "sha256-kunM0BfjQHTk0s+3AyJqg38aFSltyZBQ+NZmHqn7pkM=";
+          hash = "sha256-KClFG6/EFwjYG84Xln+juCoxXRj8Tpul8YPKWqKVSus=";
         };
 
         postUnpack = (old.postUnpack or "") + ''

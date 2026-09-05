@@ -72,6 +72,7 @@
         usbutils
         nixpkgs-review
         gh
+        bear
 
         # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
         self.packages.${pkgs.stdenv.hostPlatform.system}.keywave
