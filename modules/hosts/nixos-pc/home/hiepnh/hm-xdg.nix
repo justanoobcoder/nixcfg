@@ -31,13 +31,13 @@
           enable = true;
           defaultApplications =
             let
-              browsers = [ "zen.desktop" ];
+              browsers = [ "brave.desktop" ];
               videoPlayers = [
                 "mpv.desktop"
                 "umpv.desktop"
               ];
               imageViewers = [ "imv.desktop" ];
-              textEditors = [ "neovide.desktop" ];
+              textEditors = [ "nvim.desktop" ];
             in
             {
               "audio/mp3" = videoPlayers;

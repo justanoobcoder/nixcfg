@@ -10,7 +10,7 @@
       self.homeModules.hmEnv
       self.homeModules.hmXdg
       self.homeModules.hmSyncthing
-      self.homeModules.hmGhostty
+      self.homeModules.hmKeywave
       self.homeModules.hmJava
     ];
 

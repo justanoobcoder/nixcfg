@@ -9,85 +9,85 @@
     {
       environment.systemPackages = with pkgs; [
         # desktop
-        brave
-        kitty
-        app2unit
-        vesktop
-        wl-clipboard
-        mpv
-        imv
-        neovide
+        adw-gtk3
         antigravity-ide
-        pcmanfm-qt
-        telegram-desktop
-        obs-studio
-        keepassxc
+        app2unit
+        bibata-cursors
         brightnessctl
+        brave
+        firefox
         gimp
+        godot
+        gpu-screen-recorder
         grim
+        hyprpicker
+        imv
+        keepassxc
+        kdePackages.okular
+        kdePackages.qt6ct
+        kitty
+        libsForQt5.qt5ct
+        libresprite
+        localsend
+        lutris
+        mpv
+        obs-studio
+        pcmanfm-qt
+        playerctl
+        postman
+        ripdrag
         slurp
         swappy
-        gpu-screen-recorder
-        kdePackages.qt6ct
-        libsForQt5.qt5ct
-        adw-gtk3
+        telegram-desktop
         tela-circle-icon-theme
-        lutris
-        ripdrag
-        kdePackages.okular
-        postman
-        localsend
-        playerctl
-        hyprpicker
-        bibata-cursors
+        tiled
+        vesktop
+        wl-clipboard
 
         # cli
-        e2fsprogs
-        yazi
-        stow
         amber-lang
-        btop
-        devenv
-        nh
-        fastfetch
-        lazygit
-        eza
-        starship
-        fzf
-        killall
-        zoxide
-        git
-        tree
-        curl
-        wget
-        gnutar
-        unzip
         bat
-        jq
-        fd
-        ripgrep
-        inetutils
-        cachix
-        hw-probe
-        usbutils
-        nixpkgs-review
-        gh
         bear
+        btop
+        cachix
+        codex
+        curl
+        devenv
+        e2fsprogs
+        eza
+        fastfetch
+        fd
+        fzf
+        gh
+        git
+        gnutar
+        hw-probe
+        inetutils
+        jq
+        killall
+        lazygit
+        nh
+        nix-update
+        nixpkgs-review
+        ripgrep
+        starship
+        stow
+        tree
+        tree-sitter
+        unzip
+        usbutils
+        wget
+        yazi
+        zellij
+        zoxide
 
-        # self.packages.${pkgs.stdenv.hostPlatform.system}.wlctl
+        # custom packages
         self.packages.${pkgs.stdenv.hostPlatform.system}.keywave
 
-        inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
-        # inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.scrolloverview
-        inputs.wlctl.packages.${pkgs.stdenv.hostPlatform.system}.default
+        # others
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-        (inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
-          postPatch = (old.postPatch or "") + ''
-            substituteInPlace shell.qml --replace-fail '/Pictures' '/xdg/pictures'
-            substituteInPlace shell.qml --replace-fail '/Screenshots' '/screenshots'
-          '';
-        }))
       ];
     };
 }

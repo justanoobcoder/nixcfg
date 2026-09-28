@@ -23,7 +23,6 @@
         self.homeModules.footTerminal
         self.homeModules.hmUdiskie
         self.homeModules.hmHypridle
-        self.homeModules.hmJcm
       ];
     };
   };

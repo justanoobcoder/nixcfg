@@ -25,9 +25,8 @@ Here is the high-level tree structure of the repository:
 │   │   │   │   ├── hm-foot.nix
 │   │   │   │   ├── hm-git.nix
 │   │   │   │   ├── hm-hypridle.nix
-│   │   │   │   ├── hm-jcm.nix
+│   │   │   │   ├── hm-keywave.nix
 │   │   │   │   ├── hm-syncthing.nix
-│   │   │   │   ├── hm-tmux.nix
 │   │   │   │   └── hm-udiskie.nix
 │   │   │   ├── allow-unfree.nix
 │   │   │   ├── appimage.nix
@@ -63,12 +62,10 @@ Here is the high-level tree structure of the repository:
 │   │   ├── overlays
 │   │   │   ├── fastfetch.nix
 │   │   │   ├── fcitx5-areca.nix
-│   │   │   ├── gpu-screen-recorder.nix
-│   │   │   └── openldap.nix
+│   │   │   └── gpu-screen-recorder.nix
 │   │   └── packages
 │   │       ├── areca-ime.nix
-│   │       ├── keywave.nix
-│   │       └── wlctl.nix
+│   │       └── keywave.nix
 │   ├── hosts
 │   │   └── nixos-pc
 │   │       ├── features
@@ -80,7 +77,6 @@ Here is the high-level tree structure of the repository:
 │   │       │       ├── default.nix
 │   │       │       ├── hm-env.nix
 │   │       │       ├── hm-fish.nix
-│   │       │       ├── hm-ghostty.nix
 │   │       │       ├── hm-java.nix
 │   │       │       └── hm-xdg.nix
 │   │       ├── configuration.nix

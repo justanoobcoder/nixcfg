@@ -20,26 +20,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprland-scroll-overview = {
-      url = "github:yayuuu/hyprland-scroll-overview/new-release";
-      inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    wlctl = {
-      url = "github:aashish-thapa/wlctl";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     fcitx5-lotus = {
       url = "github:LotusInputMethod/fcitx5-lotus";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    jcm = {
-      url = "github:justanoobcoder/jcm";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -55,11 +37,6 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
-    };
-
-    HyprQuickFrame = {
-      url = "github:Ronin-CK/HyprQuickFrame";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia-greeter = {

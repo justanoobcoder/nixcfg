@@ -6,52 +6,54 @@
       ...
     }:
     {
-      packages.fcitx5-areca = pkgs.stdenv.mkDerivation rec {
+      packages.fcitx5-areca = pkgs.stdenv.mkDerivation (finalAttrs: {
         pname = "fcitx5-areca";
-        version = "5.0.2";
+        version = "7.0.0";
 
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
-          tag = "v${version}";
-          hash = "sha256-kunM0BfjQHTk0s+3AyJqg38aFSltyZBQ+NZmHqn7pkM=";
+          tag = "v${finalAttrs.version}";
+          hash = "sha256-leCGJnBQGWVXJ3WV5Y3v1PCkKacDVaXL5YB1zikQ3ZQ=";
+          fetchSubmodules = true;
         };
-        # src = /home/hiepnh/Projects/ArecaIME;
-
-        bambooCore = pkgs.fetchFromGitHub {
-          owner = "BambooEngine";
-          repo = "bamboo-core";
-          rev = "b2e49a2b48c7d3772a3673142a7747eccd9d5f79";
-          hash = "sha256-AZNUZo0zqrjYwAgJl6Ubd3Qil5VuJk0uWPsnfu8M3wg=";
-        };
-
-        postUnpack = ''
-          mkdir -p $sourceRoot/bamboo
-          rm -rf $sourceRoot/bamboo/bamboo-core
-          cp -r $bambooCore $sourceRoot/bamboo/bamboo-core
-          chmod -R u+w $sourceRoot/bamboo/bamboo-core
-        '';
 
         nativeBuildInputs = with pkgs; [
           cmake
           go
+          ninja
           pkg-config
         ];
 
-        buildInputs = [
-          pkgs.fcitx5
+        buildInputs = with pkgs; [
+          dbus
+          fcitx5
+          fontconfig
+          libinput
+          sdl3
+          udev
         ];
 
-        preBuild = ''
+        preConfigure = ''
+          export GOCACHE=$TMPDIR/go-cache
+          export GOPATH=$TMPDIR/go
           export GOPROXY=off
         '';
 
-        meta = with lib; {
-          description = "Areca is a Vietnamese input method editor for Fcitx5";
+        cmakeFlags = [
+          "-DCMAKE_BUILD_TYPE=Release"
+        ];
+
+        doCheck = false;
+
+        meta = {
+          description = "Vietnamese input method addon for Fcitx5";
           homepage = "https://github.com/xhkzeroone/ArecaIME";
-          license = licenses.mit;
-          platforms = platforms.linux;
+          license = lib.licenses.mit;
+          maintainers = with lib.maintainers; [ justanoobcoder ];
+          platforms = lib.platforms.linux;
+          mainProgram = "areca-settings";
         };
-      };
+      });
     };
 }

@@ -12,7 +12,6 @@
     homeModules = _: {
       imports = [
         self.homeModules.hmGit
-        self.homeModules.hmTmux
       ];
     };
   };
