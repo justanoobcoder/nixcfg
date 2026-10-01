@@ -26,6 +26,7 @@
         kdePackages.okular
         kdePackages.qt6ct
         kitty
+        ladybird
         libsForQt5.qt5ct
         libresprite
         localsend

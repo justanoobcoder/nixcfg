@@ -8,13 +8,13 @@
     {
       packages.fcitx5-areca = pkgs.stdenv.mkDerivation (finalAttrs: {
         pname = "fcitx5-areca";
-        version = "7.0.0";
+        version = "7.0.5";
 
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
           tag = "v${finalAttrs.version}";
-          hash = "sha256-leCGJnBQGWVXJ3WV5Y3v1PCkKacDVaXL5YB1zikQ3ZQ=";
+          hash = "sha256-HF3M5ka2yICm/B5r5rs21EU9xh6B1E6LUokzSXe6gCk=";
           fetchSubmodules = true;
         };
 
