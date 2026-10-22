@@ -25,8 +25,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,6 +34,8 @@
       url = "github:justanoobcoder/wayshadow";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ngosen.url = "github:ngosen/ngosen";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
