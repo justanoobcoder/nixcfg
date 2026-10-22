@@ -11,7 +11,7 @@
         self.nixosModules.vietnameseInputMethod
         self.nixosModules.swapCapslkEsc
         self.nixosModules.appimage
-        self.nixosModules.udisks2
+        # self.nixosModules.udisks2
         self.nixosModules.tts
         self.nixosModules.networkManager
         self.nixosModules.cloudflareWarp
@@ -21,7 +21,7 @@
     homeModules = _: {
       imports = [
         self.homeModules.footTerminal
-        self.homeModules.hmUdiskie
+        # self.homeModules.hmUdiskie
         self.homeModules.hmHypridle
       ];
     };
