@@ -23,7 +23,6 @@
         hyprpicker
         imv
         keepassxc
-        kdePackages.okular
         kdePackages.qt6ct
         kitty
         ladybird
@@ -70,11 +69,13 @@
         nh
         nix-update
         nixpkgs-review
+        python3
         ripgrep
         starship
         stow
         tree
         tree-sitter
+        unrar
         unzip
         usbutils
         wget
@@ -88,7 +89,6 @@
         # others
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 }

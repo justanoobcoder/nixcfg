@@ -8,13 +8,13 @@
     {
       packages.fcitx5-areca = pkgs.stdenv.mkDerivation (finalAttrs: {
         pname = "fcitx5-areca";
-        version = "7.0.5";
+        version = "8.1.7";
 
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
           tag = "v${finalAttrs.version}";
-          hash = "sha256-HF3M5ka2yICm/B5r5rs21EU9xh6B1E6LUokzSXe6gCk=";
+          hash = "sha256-2+llNIugmht9eeqgjlYSL8zrw8cGnMy7nkRXg2nC9As=";
           fetchSubmodules = true;
         };
 
@@ -29,7 +29,12 @@
           dbus
           fcitx5
           fontconfig
+          libei
           libinput
+          libportal
+          libx11
+          libxi
+          libxtst
           sdl3
           udev
         ];

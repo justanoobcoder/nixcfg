@@ -13,7 +13,7 @@
           owner = "justanoobcoder";
           repo = "keywave";
           rev = "main";
-          hash = "sha256-RrAabTgOySGBg09iT5/HwFhroX7lO1rLOJpnCNhN0Wo=";
+          hash = "sha256-gqm9cYXBnTJnfYqhasPK53p/DAYwPyv7Q8QXZC/xw9s=";
         };
 
         nativeBuildInputs = with pkgs; [
