@@ -1,21 +1,22 @@
 {
   flake.overlays.ladybird = _: prev: rec {
-    zmij = prev.zmij or (prev.stdenv.mkDerivation rec {
-      pname = "zmij";
-      version = "1.2";
-      src = prev.fetchFromGitHub {
-        owner = "vitaut";
-        repo = "zmij";
-        rev = "v${version}";
-        hash = "sha256-2tppKuONy9IS5IzGJF+4bqAav3aaQMZjiQCMoi5WscE=";
-      };
-      nativeBuildInputs = [ prev.cmake ];
-      cmakeFlags = [
-        "-DBUILD_SHARED_LIBS=ON"
-        "-DZMIJ_TEST=OFF"
-        "-DZMIJ_EXAMPLE=OFF"
-      ];
-    });
+    zmij =
+      prev.zmij or (prev.stdenv.mkDerivation rec {
+        pname = "zmij";
+        version = "1.2";
+        src = prev.fetchFromGitHub {
+          owner = "vitaut";
+          repo = "zmij";
+          rev = "v${version}";
+          hash = "sha256-2tppKuONy9IS5IzGJF+4bqAav3aaQMZjiQCMoi5WscE=";
+        };
+        nativeBuildInputs = [ prev.cmake ];
+        cmakeFlags = [
+          "-DBUILD_SHARED_LIBS=ON"
+          "-DZMIJ_TEST=OFF"
+          "-DZMIJ_EXAMPLE=OFF"
+        ];
+      });
 
     ladybird = prev.ladybird.overrideAttrs (old: rec {
       pname = "ladybird";
@@ -36,11 +37,22 @@
 
       postPatch =
         let
-          pdfjsMatch = builtins.match "(.*)(cp -r /nix/store/[^ ]+-pdfjs-[^/]+/share/pdf\\.js pdfjs)(.*)" (old.postPatch or "");
+          pdfjsMatch = builtins.match "(.*)(cp -r /nix/store/[^ ]+-pdfjs-[^/]+/share/pdf\\.js pdfjs)(.*)" (
+            old.postPatch or ""
+          );
+          replacedPdfjs =
+            if pdfjsMatch != null then
+              builtins.replaceStrings
+                [ (builtins.elemAt pdfjsMatch 1) ]
+                [ "cp -r ${prev.pdfjs}/share/pdf.js pdfjs" ]
+                (old.postPatch or "")
+            else
+              (old.postPatch or "");
           patchedOldPostPatch =
-            if pdfjsMatch != null
-            then builtins.replaceStrings [ (builtins.elemAt pdfjsMatch 1) ] [ "cp -r ${prev.pdfjs}/share/pdf.js pdfjs" ] old.postPatch
-            else (old.postPatch or "");
+            builtins.replaceStrings
+              [ "--replace-fail libavformat-ladybird libavformat" ]
+              [ "--replace-quiet libavformat-ladybird libavformat" ]
+              replacedPdfjs;
         in
         patchedOldPostPatch
         + ''
