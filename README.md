@@ -30,6 +30,7 @@ Here is the high-level tree structure of the repository:
 │   │   │   │   └── hm-udiskie.nix
 │   │   │   ├── allow-unfree.nix
 │   │   │   ├── appimage.nix
+│   │   │   ├── artcraft.nix
 │   │   │   ├── battery.nix
 │   │   │   ├── bluetooth.nix
 │   │   │   ├── cachyos-kernel.nix
@@ -62,7 +63,9 @@ Here is the high-level tree structure of the repository:
 │   │   ├── overlays
 │   │   │   ├── fastfetch.nix
 │   │   │   ├── fcitx5-areca.nix
-│   │   │   └── gpu-screen-recorder.nix
+│   │   │   ├── gpu-screen-recorder.nix
+│   │   │   ├── ladybird.nix
+│   │   │   └── pyopenjtalk-plus.nix
 │   │   └── packages
 │   │       ├── areca-ime.nix
 │   │       └── keywave.nix
