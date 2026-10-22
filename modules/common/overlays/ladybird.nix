@@ -24,12 +24,12 @@
         owner = "LadybirdBrowser";
         repo = "ladybird";
         rev = "b60be2e29b721f4748998e598cda2361d05462f6";
-        hash = "";
+        hash = "sha256-G6GtSYqspok3N6Ic/8edh3RUQnK3vZD2D7XULTk7EKs=";
       };
 
       cargoDeps = prev.rustPlatform.fetchCargoVendor {
         inherit pname version src;
-        hash = "sha256-agV9SUDX1iuMbdekxiXVktYyaqlBxy8gzLO9r3HlZhI=";
+        hash = "sha256-vvWIImNXEbN+S1VFX/qqgP+hT5QSBbUfPseDeXc7yNg=";
       };
 
       buildInputs = (old.buildInputs or [ ]) ++ [ zmij ];
