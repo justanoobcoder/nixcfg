@@ -8,6 +8,7 @@
       enable = true;
       apps = {
         photocraft.enable = true;
+        vectorcraft.enable = true;
         pdfcraft.enable = true;
         wordcraft.enable = true;
         gridcraft.enable = true;
