@@ -8,6 +8,7 @@
         liberation_ttf
         font-awesome
         nerd-fonts.jetbrains-mono
+        craft-fonts
       ];
     };
 }

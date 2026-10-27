@@ -35,7 +35,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ngosen.url = "github:ngosen/ngosen";
+    fcitx5-jot = {
+      url = "path:/home/hiepnh/Projects/rust/fcitx5-jot";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    jotty = {
+      url = "path:/home/hiepnh/Projects/jotty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    umbriel.url = "github:noctalia-dev/umbriel/cachix";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

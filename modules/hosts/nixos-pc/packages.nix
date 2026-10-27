@@ -11,12 +11,10 @@
         # desktop
         adw-gtk3
         antigravity-ide
-        app2unit
         bibata-cursors
         brightnessctl
         brave
         firefox
-        gimp
         godot
         gpu-screen-recorder
         grim
@@ -24,15 +22,12 @@
         imv
         keepassxc
         kdePackages.qt6ct
-        kitty
-        ladybird
         libsForQt5.qt5ct
         libresprite
         localsend
         lutris
         mpv
         obs-studio
-        pcmanfm-qt
         playerctl
         postman
         ripdrag
@@ -45,12 +40,10 @@
         wl-clipboard
 
         # cli
-        amber-lang
         bat
-        bear
         btop
         cachix
-        codex
+        claude-code
         curl
         devenv
         e2fsprogs
@@ -87,6 +80,8 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.keywave
 
         # others
+        inputs.fcitx5-jot.packages.${pkgs.stdenv.hostPlatform.system}.jot-settings
+        inputs.jotty.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];

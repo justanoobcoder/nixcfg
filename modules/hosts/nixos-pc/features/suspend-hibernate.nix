@@ -28,7 +28,7 @@
         "zswap.max_pool_percent=20"
         "zswap.shrinker_enabled=1"
       ];
-      initrd.systemd.enable = true;
+      # initrd.systemd.enable = true;
     };
     systemd.sleep.settings.Sleep = {
       AllowSuspend = "yes";

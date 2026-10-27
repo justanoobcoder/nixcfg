@@ -12,6 +12,7 @@
           "audio"
           "video"
           "networkmanager"
+          "uinput"
         ];
       };
     };

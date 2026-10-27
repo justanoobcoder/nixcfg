@@ -20,11 +20,13 @@
 
           addons = [
             self.packages.${pkgs.stdenv.hostPlatform.system}.fcitx5-areca
-            inputs.ngosen.packages.${pkgs.stdenv.hostPlatform.system}.default
+            inputs.fcitx5-jot.packages.${pkgs.stdenv.hostPlatform.system}.default
           ];
           waylandFrontend = true;
         };
       };
     };
+
+    hardware.uinput.enable = true;
   };
 }
