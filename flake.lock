@@ -7,8 +7,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1793061039,
-        "narHash": "sha256-kS/ZU+zsjHwVLpBfezE/xkBdpUEjKf5PvzHzaRQgDoI=",
+        "lastModified": 1793093973,
+        "narHash": "sha256-wSI30uGB4Fnv3PMCHND/8vcr7ygutueKu6HZOtZxbmM=",
         "path": "/home/hiepnh/Projects/rust/fcitx5-jot",
         "type": "path"
       },
@@ -25,11 +25,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1793021384,
-        "narHash": "sha256-VHO/k2lsSfiSr34X//wSJctLfr2z83KkSKCaqY3M7DY=",
+        "lastModified": 1793103597,
+        "narHash": "sha256-UxmmcaqepmAyU4eZPsHE9Uaw3Jhq/SiIuL1GSDc/9Cc=",
         "owner": "LotusInputMethod",
         "repo": "fcitx5-lotus",
-        "rev": "e5d624e53f8ab236cc5673e4c6b00338725cf9aa",
+        "rev": "4b248b9a06c57c8487fe3fbecbd2265ce098b7cb",
         "type": "github"
       },
       "original": {
@@ -219,8 +219,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1793082027,
-        "narHash": "sha256-Z9Qw7/IGjeTujTDQ49dZwyiUz9cnuel9st+jszyyd9g=",
+        "lastModified": 1793190311,
+        "narHash": "sha256-IrSlF8LGv8ZYqX4yrOsZnGI+CP2ek1B4iVBttYtKO4o=",
         "path": "/home/hiepnh/Projects/jotty",
         "type": "path"
       },
@@ -391,11 +391,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1793076550,
-        "narHash": "sha256-t+bLsze33OVl+jMJODjOxi4krrxKEpr74XxC0AivVXQ=",
+        "lastModified": 1793087587,
+        "narHash": "sha256-4xAK0J4YqR70359Z0EX6HZL0v9u9IvgIeK7GV7d8MY4=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "d8d6616cf53cd04378abe2f911a6144bd7a9cc6f",
+        "rev": "e5cd37db36c168e1f39520ee1cf48015c4e00fef",
         "type": "github"
       },
       "original": {
@@ -447,6 +447,23 @@
         "type": "github"
       }
     },
+    "pleamar": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793150194,
+        "narHash": "sha256-YGEZXVMLPkGqURdbMcarq2KJfwqXtMYwSJny9KTy/FE=",
+        "path": "/home/hiepnh/Projects/experiments/pleamar",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/hiepnh/Projects/experiments/pleamar",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "fcitx5-jot": "fcitx5-jot",
@@ -460,6 +477,7 @@
         "nixpkgs": "nixpkgs_2",
         "noctalia": "noctalia",
         "noobvim": "noobvim",
+        "pleamar": "pleamar",
         "umbriel": "umbriel",
         "wayshadow": "wayshadow"
       }
@@ -523,11 +541,11 @@
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {
-        "lastModified": 1793040322,
-        "narHash": "sha256-/ev57LNm1QmDpUJRA+IllezHQDTT+SJd4oA08nbfIxE=",
+        "lastModified": 1793098441,
+        "narHash": "sha256-qrq/BuujglYxsIlgRUxCczsF88o8o5qfIP/0z8VbhRg=",
         "owner": "noctalia-dev",
         "repo": "umbriel",
-        "rev": "366739955d3905d7600638eb637941b2782c0c68",
+        "rev": "910297eab0a343d4caeb6fbff4e6c62727b5a55c",
         "type": "github"
       },
       "original": {
