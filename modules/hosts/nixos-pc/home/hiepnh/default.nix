@@ -12,7 +12,6 @@
       self.homeModules.hmSyncthing
       self.homeModules.hmKeywave
       self.homeModules.hmJava
-      self.homeModules.hmPleamar
     ];
 
     home = {

@@ -8,7 +8,7 @@
       self.nixosModules.sudoNoPass
       self.nixosModules.suspendHibernate
       self.nixosModules.firewall
-      self.nixosModules.kernelHardwareNixosPc
+      self.nixosModules.unda
     ];
 
     nix.settings = {

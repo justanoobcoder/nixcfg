@@ -36,22 +36,18 @@
     };
 
     fcitx5-jot = {
-      url = "path:/home/hiepnh/Projects/rust/fcitx5-jot";
+      url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     jotty = {
-      url = "path:/home/hiepnh/Projects/jotty";
+      url = "git+ssh://git@github.com/justanoobcoder/jotty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
-
-    pleamar = {
-      url = "path:/home/hiepnh/Projects/experiments/pleamar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

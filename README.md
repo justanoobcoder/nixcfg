@@ -121,3 +121,106 @@ Contains machine-specific configurations (e.g., desktops, laptops, servers).
 
 ### `/modules/parts.nix`
 This file likely ties the dendritic structure into `flake-parts`, resolving how different pieces map to final flake attributes like `nixosConfigurations`.
+
+## Installing on a New Machine
+
+Some flake inputs (`fcitx5-jot`, `jotty`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild).
+
+The steps below work from the **minimal (no desktop) NixOS ISO**. GitHub login uses the device flow, so you only need a phone or another device with a browser.
+
+### 1. Prepare the live environment
+
+Boot the ISO, connect to the network, then become root (`nixos-install` runs as root, so the SSH key must belong to root):
+
+```sh
+sudo -i
+nix-shell -p gh git
+```
+
+### 2. Authenticate with GitHub
+
+```sh
+gh auth login
+```
+
+Answer the prompts:
+
+- **Where do you use GitHub?** → `GitHub.com`
+- **Preferred protocol for Git operations?** → `SSH`
+- **Generate a new SSH key?** → `Yes` (optionally set a passphrase)
+- **Title for your SSH key** → something identifiable, e.g. `nixos-installer`
+- **How would you like to authenticate?** → `Login with a web browser`
+
+`gh` prints a one-time code. Open <https://github.com/login/device> on your phone, enter the code and approve. `gh` then uploads the new public key to your GitHub account.
+
+Verify:
+
+```sh
+ssh -T git@github.com
+```
+
+### 3. Partition, format and mount
+
+Partition and mount the target disk under `/mnt` as usual (see the [NixOS manual](https://nixos.org/manual/nixos/stable/#sec-installation-manual-partitioning)).
+
+### 4. Clone the configuration
+
+```sh
+mkdir -p /mnt/home/hiepnh
+git clone git@github.com:justanoobcoder/nixcfg.git /mnt/home/hiepnh/.nixcfg
+```
+
+`pleamar` is still a local `path:` input, so clone it to the path referenced in `flake.nix` **inside the live environment** (or temporarily disable `hm-pleamar` for the first install):
+
+```sh
+git clone https://github.com/k4ditano/pleamar.git /home/hiepnh/Projects/experiments/pleamar
+```
+
+### 5. Update the hardware configuration
+
+If the hardware differs from the previous machine, regenerate it and merge the relevant parts (filesystems, kernel modules, etc.) into `modules/hosts/nixos-pc/hardware.nix`:
+
+```sh
+nixos-generate-config --root /mnt --show-hardware-config
+```
+
+### 6. Install
+
+```sh
+nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc
+```
+
+Set the root password when prompted, then set the user password:
+
+```sh
+nixos-enter --root /mnt -c 'passwd hiepnh'
+```
+
+### 7. Keep the SSH key (optional)
+
+The key generated in step 2 lives in the live environment's RAM and is lost on reboot. Either copy it to the new system:
+
+```sh
+mkdir -p /mnt/home/hiepnh/.ssh
+cp ~/.ssh/id_ed25519* /mnt/home/hiepnh/.ssh/
+nixos-enter --root /mnt -c 'chown -R hiepnh:users /home/hiepnh/.ssh /home/hiepnh/.nixcfg && chmod 600 /home/hiepnh/.ssh/id_ed25519'
+```
+
+Or, after rebooting, run `gh auth login` again as `hiepnh` to create a new key, and delete the `nixos-installer` key from <https://github.com/settings/keys>.
+
+### 8. Rebuilding afterwards
+
+Run rebuilds as your user (not `sudo nixos-rebuild`) so private inputs are fetched with your own SSH key:
+
+```sh
+nixos-rebuild switch --flake ~/.nixcfg#nixos-pc --sudo
+```
+
+### Updating the binary cache
+
+After updating the private inputs (or `nixpkgs`) and rebuilding, push the new builds so the next reinstall can download them:
+
+```sh
+nix path-info -r /run/current-system | grep -E 'jot|pleamar' | grep -v -- '-source$'
+cachix push justanoobcoder <store paths of the main packages>
+```

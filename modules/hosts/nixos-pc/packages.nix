@@ -18,9 +18,9 @@
         godot
         gpu-screen-recorder
         grim
-        hyprpicker
         imv
         keepassxc
+        kdePackages.breeze-icons
         kdePackages.qt6ct
         libsForQt5.qt5ct
         libresprite
