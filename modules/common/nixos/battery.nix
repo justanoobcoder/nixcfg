@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.nixosPcBattery =
+  flake.nixosModules.battery =
     { pkgs, ... }:
     {
       services = {

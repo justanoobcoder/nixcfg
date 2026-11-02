@@ -30,8 +30,8 @@
       self.nixosModules.zsh
       self.nixosModules.fish
       self.nixosModules.zoxide
-      self.nixosModules.nixosPcBattery
-      self.nixosModules.nixosPcNvidia
+      self.nixosModules.battery
+      self.nixosModules.nvidia
       self.nixosModules.artcraft
       self.nixosModules.zalo
     ];
