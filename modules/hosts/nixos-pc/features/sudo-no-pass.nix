@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.sudoNoPass = _: {
+  flake.nixosModules.nixosPcSudoNoPass = _: {
     security.sudo.extraRules = [
       {
         groups = [ "wheel" ];

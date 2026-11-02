@@ -1,10 +1,9 @@
 { self, ... }:
 {
-  flake.homeModules.hiepnhModule = { config, ... }: {
+  flake.homeModules.nixosPcHiepnh = { config, ... }: {
     imports = [
-      self.coreSystemBundle.homeModules
-      self.devBundle.homeModules
-      self.desktopBundle.homeModules
+      self.homeModules.bundleDev
+      self.homeModules.bundleDesktop
 
       self.homeModules.hmFish
       self.homeModules.hmEnv

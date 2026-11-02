@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.nvidia =
+  flake.nixosModules.nixosPcNvidia =
     { pkgs, ... }:
     {
       hardware = {

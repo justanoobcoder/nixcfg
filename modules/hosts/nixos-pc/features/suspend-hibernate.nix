@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.suspendHibernate = _: {
+  flake.nixosModules.nixosPcSuspendHibernate = _: {
     swapDevices = [
       {
         device = "/var/lib/swapfile";

@@ -1,16 +1,6 @@
 { self, ... }:
 {
   flake.nixosModules.nixosPcConfiguration = _: {
-    imports = [
-      self.nixosModules.nixosPcHardware
-      self.nixosModules.hiepnhUser
-      self.nixosModules.packages
-      self.nixosModules.sudoNoPass
-      self.nixosModules.suspendHibernate
-      self.nixosModules.firewall
-      self.nixosModules.unda
-    ];
-
     nix.settings = {
       experimental-features = [
         "nix-command"
@@ -49,7 +39,7 @@
       "electron-40.10.5"
     ];
 
-    home-manager.users.hiepnh = self.homeModules.hiepnhModule;
+    home-manager.users.hiepnh = self.homeModules.nixosPcHiepnh;
 
     system.stateVersion = "26.05";
   };

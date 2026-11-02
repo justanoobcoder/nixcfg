@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.firewall = _: {
+  flake.nixosModules.nixosPcFirewall = _: {
     networking.firewall = {
       enable = true;
       allowedTCPPorts = [

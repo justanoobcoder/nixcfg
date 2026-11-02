@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.hiepnhUser =
+  flake.nixosModules.nixosPcUser =
     { pkgs, ... }:
     {
       users.users.hiepnh = {

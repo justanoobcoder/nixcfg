@@ -3,7 +3,7 @@
   ...
 }:
 {
-  flake.nixosModules.packages =
+  flake.nixosModules.nixosPcPackages =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
