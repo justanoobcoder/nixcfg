@@ -5,10 +5,7 @@
       hardware = {
         graphics = {
           enable = true;
-          extraPackages = with pkgs; [
-            intel-media-driver
-            nvidia-vaapi-driver
-          ];
+          extraPackages = with pkgs; [ nvidia-vaapi-driver ];
         };
         nvidia = {
           open = false;

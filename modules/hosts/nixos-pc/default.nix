@@ -31,6 +31,7 @@
       self.nixosModules.fish
       self.nixosModules.zoxide
       self.nixosModules.battery
+      self.nixosModules.intelGraphics
       self.nixosModules.nvidia
       self.nixosModules.artcraft
       self.nixosModules.zalo
