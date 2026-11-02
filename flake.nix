@@ -13,8 +13,6 @@
 
     import-tree.url = "github:vic/import-tree";
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-
     noobvim = {
       url = "github:justanoobcoder/noobvim/dev";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,22 +28,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wayshadow = {
-      url = "github:justanoobcoder/wayshadow";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
-    jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
-
     zalo-for-linux = {
       url = "github:VN-Linux-Family/zalo-for-linux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
+    wayshadow.url = "git+ssh://git@github.com/justanoobcoder/wayshadow?ref=cachix";
+    keywave.url = "git+ssh://git@github.com/justanoobcoder/keywave?ref=cachix";
+    fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
+    jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
+    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
+
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

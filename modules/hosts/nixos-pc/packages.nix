@@ -1,5 +1,4 @@
 {
-  self,
   inputs,
   ...
 }:
@@ -76,12 +75,10 @@
         zellij
         zoxide
 
-        # custom packages
-        self.packages.${pkgs.stdenv.hostPlatform.system}.keywave
-
         # others
         inputs.fcitx5-jot.packages.${pkgs.stdenv.hostPlatform.system}.jot-settings
         inputs.jotty.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.keywave.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
         inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];

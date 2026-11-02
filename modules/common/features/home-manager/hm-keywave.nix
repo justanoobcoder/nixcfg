@@ -1,8 +1,8 @@
-{ self, ... }: {
+{ inputs, ... }: {
   flake.homeModules.hmKeywave = { pkgs, ... }: {
     systemd.user.services.keywave =
       let
-        keywavePkg = self.packages.${pkgs.stdenv.hostPlatform.system}.keywave;
+        keywavePkg = inputs.keywave.packages.${pkgs.stdenv.hostPlatform.system}.default;
       in
       {
         Unit = {
