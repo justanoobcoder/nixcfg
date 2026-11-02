@@ -5,15 +5,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793593392,
-        "narHash": "sha256-lr1gUPDJEKWJTNByktOvTjhFGeCEVKNsDxRKnZixuOk=",
-        "ref": "refs/heads/main",
-        "rev": "113dca047242a11d3df598f2782727daf444b891",
-        "revCount": 122,
+        "lastModified": 1793596229,
+        "narHash": "sha256-Pd1PzotoOPqHfdDvXPz8iuwTwtTOj2A0nx5rBcWA5Rs=",
+        "ref": "cachix",
+        "rev": "26874539ea347df7547d35e76d013bc7cdf8e204",
+        "revCount": 126,
         "type": "git",
         "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot"
       },
       "original": {
+        "ref": "cachix",
         "type": "git",
         "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot"
       }
@@ -439,11 +440,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1793586527,
-        "narHash": "sha256-4lH+v6iilhyhI26Y+QChksixjZ66ER3YHRcj1eP5wQM=",
+        "lastModified": 1793595591,
+        "narHash": "sha256-JzRkpXAxvR8/fFM0aV63W13wWOHSkhQOymdr6RiQGmU=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "beee3d1c9e6e2d68d8b56f4935bf972a69153780",
+        "rev": "cece614d286fd0c22e432213735b3ee451472342",
         "type": "github"
       },
       "original": {
@@ -461,11 +462,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1792291333,
-        "narHash": "sha256-xtySQyZjm9S/NJ8zZbe3uTnzu9uWxjXAscI/KQpq3ks=",
+        "lastModified": 1793597697,
+        "narHash": "sha256-rkv9u8/rMTjbnCnHQ/pffbRMenVkbW7VY0wa5f8aqKg=",
         "owner": "justanoobcoder",
         "repo": "noobvim",
-        "rev": "d12e908ace08c5c087a9fa5837fa33c0f2609ec2",
+        "rev": "8bdef8048927f78060c28d33080a80bac32c66ae",
         "type": "github"
       },
       "original": {
@@ -655,11 +656,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793593504,
-        "narHash": "sha256-UlUG4dXKJo0u+5GgeLPchA1oiM4N4zQV0M9jaq3gHEM=",
+        "lastModified": 1793594209,
+        "narHash": "sha256-+ihQIk0Mx8sCki4skysst97c6mL7dKs/2/oMJ2/HedU=",
         "owner": "VN-Linux-Family",
         "repo": "zalo-for-linux",
-        "rev": "c860d2dba3d3ae5717f855d21dd0c1ed03122962",
+        "rev": "eeb672729c32cd54d9e014ea39fb7e5bd53ff9a8",
         "type": "github"
       },
       "original": {
