@@ -21,7 +21,6 @@
     imports = [
       self.homeModules.hmFoot
       self.homeModules.hmUdiskie
-      self.homeModules.hmHypridle
     ];
   };
 }

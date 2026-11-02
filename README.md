@@ -14,7 +14,7 @@ modules/
 ├── common/                   # reusable across hosts
 │   ├── bundles/              # bundle* modules grouping related features (core-system, desktop, dev)
 │   ├── nixos/                # NixOS features (one per file, e.g. fonts, sound, noctalia)
-│   ├── home/                 # home-manager features (hm*, e.g. hmGit, hmHypridle)
+│   ├── home/                 # home-manager features (hm*, e.g. hmGit)
 │   ├── overlays/             # nixpkgs overlays; default.nix applies all of them
 │   └── packages/             # local packages exposed under `packages.<system>`
 └── hosts/
