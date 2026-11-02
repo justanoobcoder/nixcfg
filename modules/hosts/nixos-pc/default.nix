@@ -23,6 +23,7 @@
       self.nixosModules.battery
       self.nixosModules.nvidia
       self.nixosModules.artcraft
+      self.nixosModules.zalo
     ];
   };
 }

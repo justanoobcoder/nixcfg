@@ -35,13 +35,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fcitx5-jot = {
-      url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
+    jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
 
-    jotty = {
-      url = "git+ssh://git@github.com/justanoobcoder/jotty";
+    zalo-for-linux = {
+      url = "github:VN-Linux-Family/zalo-for-linux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
