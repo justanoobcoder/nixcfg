@@ -22,6 +22,8 @@
       dedicatedServer.openFirewall = true;
     };
 
+    services.fcitx5-lotus.user = "hiepnh";
+
     services.gnome.gnome-keyring.enable = true;
     security.pam.services.login.enableGnomeKeyring = true;
 

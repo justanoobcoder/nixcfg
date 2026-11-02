@@ -5,6 +5,9 @@
 {
   flake.nixosModules.nixosPcPackages =
     { pkgs, ... }:
+    let
+      inherit (pkgs.stdenv.hostPlatform) system;
+    in
     {
       environment.systemPackages = with pkgs; [
         # desktop
@@ -76,11 +79,11 @@
         zoxide
 
         # others
-        inputs.fcitx5-jot.packages.${pkgs.stdenv.hostPlatform.system}.jot-settings
-        inputs.jotty.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.keywave.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.noobvim.packages.${pkgs.stdenv.hostPlatform.system}.default
-        inputs.wayshadow.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.fcitx5-jot.packages.${system}.jot-settings
+        inputs.jotty.packages.${system}.default
+        inputs.keywave.packages.${system}.default
+        inputs.noobvim.packages.${system}.default
+        inputs.wayshadow.packages.${system}.default
       ];
     };
 }
