@@ -30,8 +30,8 @@
           # turn off screen after 10 minutes of inactivity
           {
             timeout = 600;
-            on-timeout = "powerprofilesctl set power-saver; hyprctl dispatch 'hl.dsp.dpms({ action = \"disable\" })'";
-            on-resume = "powerprofilesctl set balanced; hyprctl dispatch 'hl.dsp.dpms({ action = \"enable\" })' && brightnessctl -r";
+            on-timeout = "powerprofilesctl set power-saver; umbriel msg dpms-off";
+            on-resume = "powerprofilesctl set balanced; umbriel msg dpms-on && brightnessctl -r";
           }
           # suspend after 20 minutes of inactivity
           {
