@@ -57,22 +57,22 @@ Here is the high-level tree structure of the repository:
 │   │   │   ├── tts.nix
 │   │   │   ├── udisks2.nix
 │   │   │   ├── umbriel.nix
+│   │   │   ├── unda.nix
 │   │   │   ├── vietnamese-input-method.nix
+│   │   │   ├── zalo.nix
 │   │   │   ├── zoxide.nix
 │   │   │   └── zsh.nix
 │   │   ├── overlays
 │   │   │   ├── fastfetch.nix
-│   │   │   ├── fcitx5-areca.nix
 │   │   │   ├── gpu-screen-recorder.nix
-│   │   │   ├── ladybird.nix
 │   │   │   └── pyopenjtalk-plus.nix
 │   │   └── packages
-│   │       ├── areca-ime.nix
-│   │       └── keywave.nix
+│   │       └── areca-ime.nix
 │   ├── hosts
 │   │   └── nixos-pc
 │   │       ├── features
 │   │       │   ├── firewall.nix
+│   │       │   ├── kernel-hardware.nix
 │   │       │   ├── sudo-no-pass.nix
 │   │       │   └── suspend-hibernate.nix
 │   │       ├── home
