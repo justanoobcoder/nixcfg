@@ -20,6 +20,7 @@
   flake.homeModules.bundleDesktop = _: {
     imports = [
       self.homeModules.hmFoot
+      self.homeModules.hmJotty
       self.homeModules.hmUdiskie
     ];
   };
