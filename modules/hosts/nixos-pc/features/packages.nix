@@ -24,6 +24,7 @@
         keepassxc
         kdePackages.breeze-icons
         kdePackages.qt6ct
+        ladybird
         libsForQt5.qt5ct
         libresprite
         localsend
