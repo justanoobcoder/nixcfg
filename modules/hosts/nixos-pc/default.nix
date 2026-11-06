@@ -26,7 +26,6 @@
       self.nixosModules.bundleDesktop
 
       self.nixosModules.umbriel
-      self.nixosModules.noctaliaGreeter
       self.nixosModules.zsh
       self.nixosModules.fish
       self.nixosModules.zoxide
