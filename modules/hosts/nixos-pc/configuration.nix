@@ -41,9 +41,6 @@
       "electron-40.10.5"
     ];
 
-    # lutris' FHS env still pulls in gtk2, which nixpkgs now marks as broken
-    nixpkgs.config.problems.handlers."gtk+".broken = "warn";
-
     home-manager.users.hiepnh = self.homeModules.nixosPcHiepnh;
 
     system.stateVersion = "26.05";
