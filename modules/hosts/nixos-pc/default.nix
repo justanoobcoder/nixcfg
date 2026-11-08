@@ -16,6 +16,7 @@
       self.nixosModules.nixosPcSudoNoPass
       self.nixosModules.nixosPcSuspendHibernate
       self.nixosModules.nixosPcFirewall
+      self.nixosModules.nixosPcNtfy
 
       # common
       self.nixosModules.unda
