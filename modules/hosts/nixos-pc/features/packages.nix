@@ -15,7 +15,6 @@
         antigravity-ide
         bibata-cursors
         brightnessctl
-        brave
         firefox
         godot
         gpu-screen-recorder
@@ -82,6 +81,7 @@
         # others
         inputs.fcitx5-jot.packages.${system}.jot-settings
         inputs.jotty.packages.${system}.default
+        inputs.helium.packages.${system}.default
         inputs.keywave.packages.${system}.default
         inputs.noobvim.packages.${system}.default
         inputs.wayshadow.packages.${system}.default

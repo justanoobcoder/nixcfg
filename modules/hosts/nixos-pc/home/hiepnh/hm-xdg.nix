@@ -31,7 +31,7 @@
           enable = true;
           defaultApplications =
             let
-              browsers = [ "brave.desktop" ];
+              browsers = [ "helium.desktop" ];
               videoPlayers = [
                 "mpv.desktop"
                 "umpv.desktop"
