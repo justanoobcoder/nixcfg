@@ -5,16 +5,19 @@
       lib,
       ...
     }:
+    let
+      settingsPython = pkgs.python3.withPackages (ps: [ ps.pygobject3 ]);
+    in
     {
       packages.fcitx5-areca = pkgs.stdenv.mkDerivation (finalAttrs: {
         pname = "fcitx5-areca";
-        version = "8.2.5";
+        version = "8.3.3";
 
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
           tag = "v${finalAttrs.version}";
-          hash = "sha256-mF75dpHu1n85Q7Zqvoy0UkeO1p/qOIW2gFP5n5ZkC9g=";
+          hash = "sha256-VOepeXbBZ3KmUBuM8AzY7wRxIw98V4IhXzQdNSLUXBI=";
           fetchSubmodules = true;
         };
 
@@ -23,6 +26,8 @@
           go
           ninja
           pkg-config
+          wrapGAppsHook4
+          gobject-introspection
         ];
 
         buildInputs = with pkgs; [
@@ -35,9 +40,16 @@
           libx11
           libxi
           libxtst
-          sdl3
           udev
+          gtk4
+          gdk-pixbuf
+          librsvg
         ];
+
+        postPatch = ''
+          substituteInPlace data/areca-settings-launcher.in \
+            --replace-fail "exec python3" "exec ${settingsPython}/bin/python3"
+        '';
 
         preConfigure = ''
           export GOCACHE=$TMPDIR/go-cache
@@ -50,6 +62,10 @@
         ];
 
         doCheck = false;
+
+        preFixup = ''
+          gappsWrapperArgs+=(--prefix PATH : ${lib.makeBinPath [ pkgs.fcitx5 ]})
+        '';
 
         meta = {
           description = "Vietnamese input method addon for Fcitx5";
