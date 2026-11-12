@@ -34,8 +34,7 @@
       self.nixosModules.intelGraphics
       self.nixosModules.nvidia
       self.nixosModules.artcraft
-      # Disabled: dwarfs 0.15.8 (needed to unpack the Zalo AppImage) fails its tests on current nixpkgs.
-      # self.nixosModules.zalo
+      self.nixosModules.zalo
     ];
   };
 }
