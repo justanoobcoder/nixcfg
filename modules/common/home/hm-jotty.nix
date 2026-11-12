@@ -13,6 +13,11 @@
         window = {
           opacity = 0.8;
           renderer = "gpu";
+          single_instance = true;
+        };
+
+        terminal = {
+          scrollback = 5000;
         };
 
         colors = {
