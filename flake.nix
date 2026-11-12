@@ -45,7 +45,7 @@
     keywave.url = "git+ssh://git@github.com/justanoobcoder/keywave?ref=cachix";
     fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
     jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
-    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
+    unda.url = "git+file:///home/hiepnh/Projects/unda?ref=main";
 
   };
 

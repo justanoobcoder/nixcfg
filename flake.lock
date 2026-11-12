@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1794191734,
-        "narHash": "sha256-rJviD+FJKVRwtE4ihqVsM0y5N5cIv46NavQxIRzX1bQ=",
+        "lastModified": 1794368183,
+        "narHash": "sha256-eP2uWBhWi1A8+ivt8lHGY1w1HuN/69E73hKVNr7O0sU=",
         "ref": "cachix",
-        "rev": "e49a24fa63daa92b8429ab38d3e2de0fb56d2a23",
-        "revCount": 255,
+        "rev": "0d41f396bf8229419255b768945c0c6eef8b0909",
+        "revCount": 280,
         "type": "git",
         "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot"
       },
@@ -27,11 +27,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1794147937,
-        "narHash": "sha256-IgNGC7iDuzNww0TA96HsDU6yvttM1XNFj66a5DcAH68=",
+        "lastModified": 1794407412,
+        "narHash": "sha256-9edcvfoVWywAHdsCuk/LbTTKHK7P13E6kpLdZfljb0s=",
         "owner": "LotusInputMethod",
         "repo": "fcitx5-lotus",
-        "rev": "865c45aaac819c2666fc3bb1064b55ced1bcbecf",
+        "rev": "0ed55c16e2f00726229d6eff13966a698e7c2ab2",
         "type": "github"
       },
       "original": {
@@ -204,11 +204,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793894983,
-        "narHash": "sha256-Edf2dXsfHch4YEjzSdBY5+CEmBTBWa5psnlDWExBKWk=",
+        "lastModified": 1794326795,
+        "narHash": "sha256-u/bFiTT2reDPGKDeOWEJMBd7iNYFkbdcIsrymwCF8OU=",
         "owner": "oxcl",
         "repo": "nix-flake-helium-browser",
-        "rev": "9fe3f8f48c8c25b0d245d13d6c91d4cf77adc729",
+        "rev": "ee8c73c6432d7337216775ccbe726c3004af6542",
         "type": "github"
       },
       "original": {
@@ -224,11 +224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793979366,
-        "narHash": "sha256-7OoWDsYO9teiPxl0QdlS5lYE20Pue8/5mpscSL32FUA=",
+        "lastModified": 1794278858,
+        "narHash": "sha256-rkrJwLgLSHBnXfgoSKIDa+2LLGdTqynsV3GAxOTGhUU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2c0c1f01521469cf0271180c453c79782d53c2f6",
+        "rev": "82ce401aa350502897c3f2e85f384d61cd3b0b6d",
         "type": "github"
       },
       "original": {
@@ -257,11 +257,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1794190352,
-        "narHash": "sha256-9KSzyZfoISBvxh7jAd293USmlsYxWQPJ8190oEailm0=",
+        "lastModified": 1794360209,
+        "narHash": "sha256-LuVu919thLLDROZgq5hAOo/5Z/OC/Y4EPbvAuF+q3lE=",
         "ref": "cachix",
-        "rev": "b1c2ec36fec755a513d13b725fe24d5e2118c7b7",
-        "revCount": 160,
+        "rev": "089aa939fa6fc6fe0f53e81159d49da82596f474",
+        "revCount": 279,
         "type": "git",
         "url": "ssh://git@github.com/justanoobcoder/jotty"
       },
@@ -334,11 +334,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794029007,
-        "narHash": "sha256-vcUThcmjF2/0PxhDX78LlHkh9f7E55ey3b+cRJRdvQA=",
+        "lastModified": 1794288225,
+        "narHash": "sha256-KACYfJ7fwESAvP88ez9ZhqxQYLChATJEeJVOxqAs5IU=",
         "owner": "olafkfreund",
         "repo": "nix-craftapps",
-        "rev": "f7bbf3db75106102f290fc5fec68144fc80b8b3e",
+        "rev": "848f049f1894b4bf1d37aeb5c87c1b79d02fb255",
         "type": "github"
       },
       "original": {
@@ -395,11 +395,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "lastModified": 1794042290,
+        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
         "type": "github"
       },
       "original": {
@@ -517,11 +517,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1794188365,
-        "narHash": "sha256-EjDNpxVNGu2q8C0f2ASWoZxzaV8xU6bxD0SHz/XhGBQ=",
+        "lastModified": 1794433936,
+        "narHash": "sha256-HZiiTUfFpbjjuSibOd8qdTKryKfLAbUFtR5n7lKP3P4=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "274edea3af2015899ea57df22eed6dd282a91b61",
+        "rev": "7868ffe25b4d67b29f9883b8bdc4cbe3e1aee442",
         "type": "github"
       },
       "original": {
@@ -671,11 +671,11 @@
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {
-        "lastModified": 1794166988,
-        "narHash": "sha256-1q0Ho/Q2Mcxzs/t1/zz5bUlg7Chujz+3A+oASclbXJs=",
+        "lastModified": 1794436897,
+        "narHash": "sha256-EzUJJXd+9w85JYbpx3uxqx76WUW4umnr5P8kGPTijUw=",
         "owner": "noctalia-dev",
         "repo": "umbriel",
-        "rev": "d3bff0fb2458ede9726d0194554a159241cc856c",
+        "rev": "0c1f125536f19dc62bcf277840bc503a1c756abf",
         "type": "github"
       },
       "original": {
@@ -690,18 +690,18 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1793970695,
-        "narHash": "sha256-PSvBOMjp5vF3Wx62972dYpfkAlTvQ1rO64/8t8fh+5k=",
-        "ref": "cachix",
-        "rev": "25f82857b7d68f1680618a7ab857fa5998a8ef5e",
-        "revCount": 330,
+        "lastModified": 1794351866,
+        "narHash": "sha256-WPAN7SL3anNPkoQDWoA1UdnPHeBwCl00xwF3bn7EhCU=",
+        "ref": "main",
+        "rev": "b6363af67f99db258623b727be13909b823e544d",
+        "revCount": 355,
         "type": "git",
-        "url": "ssh://git@github.com/justanoobcoder/unda"
+        "url": "file:///home/hiepnh/Projects/unda"
       },
       "original": {
-        "ref": "cachix",
+        "ref": "main",
         "type": "git",
-        "url": "ssh://git@github.com/justanoobcoder/unda"
+        "url": "file:///home/hiepnh/Projects/unda"
       }
     },
     "wayshadow": {
@@ -752,11 +752,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794163645,
-        "narHash": "sha256-f3P2t7TCoEdRteCyZnpxptum76ka0ra89o8Z8AriuxY=",
+        "lastModified": 1794406911,
+        "narHash": "sha256-rR4xNMPRmJ1cT4tiMf91UU6HmL3tDl7ig6HoI04PqDw=",
         "owner": "VN-Linux-Family",
         "repo": "zalo-for-linux",
-        "rev": "741f8990a36cfdb019a89f8efc4c1796f50225e3",
+        "rev": "0f39fd9e8df590d10902b043a420dbf4168574cc",
         "type": "github"
       },
       "original": {
