@@ -40,7 +40,7 @@ Common modules should not hardcode a user or machine; set those values from the 
 
 ## Installing on a New Machine
 
-Some flake inputs (`fcitx5-jot`, `jotty`, `keywave`, `unda`, `wayshadow`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild).
+Some flake inputs (`fcitx5-jot`, `keywave`, `unda`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild).
 
 The steps below work from the **minimal (no desktop) NixOS ISO**. GitHub login uses the device flow, so you only need a phone or another device with a browser.
 
@@ -131,6 +131,6 @@ nixos-rebuild switch --flake ~/.nixcfg#nixos-pc --sudo
 After updating the private inputs (or `nixpkgs`) and rebuilding, push the new builds so the next reinstall can download them:
 
 ```sh
-nix path-info -r /run/current-system | grep -E 'jot|jotty|keywave|unda|wayshadow' | grep -v -- '-source$'
+nix path-info -r /run/current-system | grep -E 'jot|keywave|unda' | grep -v -- '-source$'
 cachix push justanoobcoder <store paths of the main packages>
 ```
