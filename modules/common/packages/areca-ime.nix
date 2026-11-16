@@ -11,13 +11,13 @@
     {
       packages.fcitx5-areca = pkgs.stdenv.mkDerivation (finalAttrs: {
         pname = "fcitx5-areca";
-        version = "8.3.3";
+        version = "8.3.13";
 
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
           tag = "v${finalAttrs.version}";
-          hash = "sha256-VOepeXbBZ3KmUBuM8AzY7wRxIw98V4IhXzQdNSLUXBI=";
+          hash = "sha256-iLT0KMt5fnq1nacVsjHDi6c5PjnyRzYtrSyV+Impll0=";
           fetchSubmodules = true;
         };
 
@@ -26,6 +26,7 @@
           go
           ninja
           pkg-config
+          wayland-scanner
           wrapGAppsHook4
           gobject-introspection
         ];
@@ -41,6 +42,7 @@
           libxi
           libxtst
           udev
+          wayland
           gtk4
           gdk-pixbuf
           librsvg
