@@ -27,6 +27,23 @@
           "mimeapps.list".force = true;
         };
 
+        # xdg-open ignores Terminal=true outside a known desktop, so terminal
+        # programs get entries that open them in a jotty window.
+        desktopEntries = {
+          nvim-jotty = {
+            name = "Neovim (jotty)";
+            exec = "jotty -e nvim %F";
+            terminal = false;
+            noDisplay = true;
+          };
+          yazi-jotty = {
+            name = "Yazi (jotty)";
+            exec = "jotty -e yazi %f";
+            terminal = false;
+            noDisplay = true;
+          };
+        };
+
         mimeApps = {
           enable = true;
           defaultApplications =
@@ -37,7 +54,8 @@
                 "umpv.desktop"
               ];
               imageViewers = [ "imv.desktop" ];
-              textEditors = [ "nvim.desktop" ];
+              textEditors = [ "nvim-jotty.desktop" ];
+              fileManagers = [ "yazi-jotty.desktop" ];
             in
             {
               "audio/mp3" = videoPlayers;
@@ -51,6 +69,25 @@
               "image/webp" = imageViewers;
               "text/plain" = textEditors;
               "application/json" = textEditors;
+              "application/toml" = textEditors;
+              "application/yaml" = textEditors;
+              "application/x-yaml" = textEditors;
+              "application/x-shellscript" = textEditors;
+              "text/markdown" = textEditors;
+              "text/rust" = textEditors;
+              "text/x-nix" = textEditors;
+              "text/x-shellscript" = textEditors;
+              "text/x-python" = textEditors;
+              "text/x-lua" = textEditors;
+              "text/x-go" = textEditors;
+              "text/x-csrc" = textEditors;
+              "text/x-chdr" = textEditors;
+              "text/x-c++src" = textEditors;
+              "text/x-c++hdr" = textEditors;
+              "text/javascript" = textEditors;
+              "text/x-patch" = textEditors;
+              "text/x-log" = textEditors;
+              "inode/directory" = fileManagers;
               #"text/csv" = ["wps-office-et.desktop"];
               #"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = ["wps-office-et.desktop"];
               #"application/vnd.ms-excel" = ["wps-office-et.desktop"];
