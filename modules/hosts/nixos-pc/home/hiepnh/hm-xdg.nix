@@ -56,6 +56,10 @@
               imageViewers = [ "imv.desktop" ];
               textEditors = [ "nvim-jotty.desktop" ];
               fileManagers = [ "yazi-jotty.desktop" ];
+              documents = [ "ai.storyteller.wordcraft.desktop" ];
+              spreadsheets = [ "ai.storyteller.gridcraft.desktop" ];
+              presentations = [ "ai.storyteller.deckcraft.desktop" ];
+              pdfViewers = [ "ai.storyteller.pdfcraft.desktop" ];
             in
             {
               "audio/mp3" = videoPlayers;
@@ -88,20 +92,30 @@
               "text/x-patch" = textEditors;
               "text/x-log" = textEditors;
               "inode/directory" = fileManagers;
-              #"text/csv" = ["wps-office-et.desktop"];
-              #"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = ["wps-office-et.desktop"];
-              #"application/vnd.ms-excel" = ["wps-office-et.desktop"];
-              #"application/msword" = ["wps-office-wps.desktop"];
-              #"application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [
-              #  "wps-office-wps.desktop"
-              #];
-              #"application/vnd.openxmlformats-officedocument.presentationml.presentation" = [
-              #  "wps-office-wpp.desktop"
-              #];
-              #"application/vnd.ms-powerpoint" = ["wps-office-wpp.desktop"];
-              #"application/pdf" = ["wps-office-pdf.desktop"];
+              "application/msword" = documents;
+              "application/msword-template" = documents;
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = documents;
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.template" = documents;
+              "application/vnd.ms-word.document.macroEnabled.12" = documents;
+              "application/vnd.ms-word.template.macroEnabled.12" = documents;
+              "application/vnd.oasis.opendocument.text" = documents;
+              "application/rtf" = documents;
+              "text/rtf" = documents;
+              "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = spreadsheets;
+              "application/vnd.ms-excel.sheet.macroEnabled.12" = spreadsheets;
+              "application/vnd.ms-excel.sheet.binary.macroEnabled.12" = spreadsheets;
+              "application/vnd.oasis.opendocument.spreadsheet" = spreadsheets;
+              "text/csv" = spreadsheets;
+              "text/tab-separated-values" = spreadsheets;
+              "application/vnd.openxmlformats-officedocument.presentationml.presentation" = presentations;
+              "application/vnd.openxmlformats-officedocument.presentationml.template" = presentations;
+              "application/vnd.openxmlformats-officedocument.presentationml.slideshow" = presentations;
+              "application/x-deckcraft" = presentations;
+              "application/pdf" = pdfViewers;
               "image/svg+xml" = browsers;
               "text/html" = browsers;
+              "x-scheme-handler/http" = browsers;
+              "x-scheme-handler/https" = browsers;
             };
         };
       };
