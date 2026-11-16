@@ -5,30 +5,12 @@
     programs.jotty = {
       enable = true;
       settings = {
-        font = {
-          family = "JetBrains Mono Nerd Font";
-          size = 12.4;
-        };
-
-        window = {
-          opacity = 0.8;
-          renderer = "gpu";
-          single_instance = true;
-        };
-
-        terminal = {
-          scrollback = 5000;
-        };
-
         colors = {
-          foreground = "#ebdbb2";
           background = "#282828";
           cursor = "#ebdbb2";
           cursor_text = "#282828";
-          selection_foreground = "#ebdbb2";
-          selection_background = "#665c54";
+          foreground = "#ebdbb2";
           palette = [
-            # regular: black, red, green, yellow, blue, magenta, cyan, white
             "#282828"
             "#cc241d"
             "#98971a"
@@ -37,7 +19,6 @@
             "#b16286"
             "#689d6a"
             "#a89984"
-            # bright
             "#928374"
             "#fb4934"
             "#b8bb26"
@@ -47,11 +28,25 @@
             "#8ec07c"
             "#ebdbb2"
           ];
+          selection_background = "#665c54";
+          selection_foreground = "#ebdbb2";
         };
-
+        font = {
+          family = "JetBrains Mono Nerd Font";
+          size = 12.4;
+        };
         keybinds = {
+          copy_last_output = [ "ctrl+shift+o" ];
           copy_or_interrupt = [ "ctrl+c" ];
           vi_mode = [ "shift+escape" ];
+        };
+        terminal = {
+          output_click = "copy";
+          scrollback = 5000;
+        };
+        window = {
+          opacity = 0.8;
+          renderer = "gpu";
         };
       };
     };
