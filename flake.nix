@@ -41,11 +41,10 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
-    wayshadow.url = "git+ssh://git@github.com/justanoobcoder/wayshadow?ref=cachix";
     keywave.url = "git+ssh://git@github.com/justanoobcoder/keywave?ref=cachix";
-    fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
+    fcitx5-jot.url = "git+file:///home/hiepnh/Projects/fcitx5-jot";
     jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
-    unda.url = "git+file:///home/hiepnh/Projects/unda?ref=main";
+    unda.url = "git+file:///home/hiepnh/Projects/unda";
 
   };
 

@@ -84,7 +84,6 @@
         inputs.helium.packages.${system}.default
         inputs.keywave.packages.${system}.default
         inputs.noobvim.packages.${system}.default
-        inputs.wayshadow.packages.${system}.default
       ];
     };
 }
