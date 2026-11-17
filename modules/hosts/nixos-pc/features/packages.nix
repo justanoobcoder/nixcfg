@@ -79,6 +79,7 @@
         zoxide
 
         # others
+        inputs.self.packages.${system}.disk-hogs
         inputs.fcitx5-jot.packages.${system}.jot-settings
         inputs.jotty.packages.${system}.default
         inputs.helium.packages.${system}.default
