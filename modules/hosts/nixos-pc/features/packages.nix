@@ -12,7 +12,6 @@
       environment.systemPackages = with pkgs; [
         # desktop
         adw-gtk3
-        antigravity-ide
         bibata-cursors
         brightnessctl
         firefox
@@ -80,6 +79,7 @@
 
         # others
         inputs.self.packages.${system}.disk-hogs
+        inputs.antigravity-nix.packages.${system}.google-antigravity-ide
         inputs.fcitx5-jot.packages.${system}.jot-settings
         inputs.jotty.packages.${system}.default
         inputs.helium.packages.${system}.default
