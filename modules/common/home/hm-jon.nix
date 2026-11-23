@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, self, ... }:
 {
   flake.homeModules.hmJon =
     { pkgs, ... }:
@@ -18,6 +18,8 @@
           rustc
           clippy
           rustfmt
+          # C and C++: clice lints with clang-tidy and formats with clang-format on its own.
+          self.packages.${pkgs.stdenv.hostPlatform.system}.clice
         ];
       };
     };
