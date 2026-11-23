@@ -62,6 +62,7 @@
         lazygit
         nh
         nix-update
+        nixd
         nixpkgs-review
         python3
         ripgrep
