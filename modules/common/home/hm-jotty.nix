@@ -46,7 +46,6 @@
         };
         window = {
           opacity = 0.8;
-          renderer = "gpu";
         };
       };
     };
