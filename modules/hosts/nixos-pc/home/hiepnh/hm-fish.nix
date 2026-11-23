@@ -40,7 +40,7 @@
         '';
         shellAliases = {
           cl = "clear";
-          v = "nvim";
+          v = "jon";
           y = "yazi";
           ls = "eza --group-directories-last";
           ll = "ls -lbg --icons always";
