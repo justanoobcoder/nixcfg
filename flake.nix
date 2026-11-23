@@ -49,8 +49,8 @@
     keywave.url = "git+file:///home/hiepnh/Projects/keywave";
     fcitx5-jot.url = "git+file:///home/hiepnh/Projects/fcitx5-jot";
     jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
+    jon.url = "git+file:///home/hiepnh/Projects/jon";
     unda.url = "git+file:///home/hiepnh/Projects/unda";
-
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

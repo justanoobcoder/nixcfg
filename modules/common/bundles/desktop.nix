@@ -21,6 +21,7 @@
     imports = [
       self.homeModules.hmFoot
       self.homeModules.hmJotty
+      self.homeModules.hmJon
       self.homeModules.hmUdiskie
     ];
   };
