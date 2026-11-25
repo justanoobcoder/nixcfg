@@ -1,27 +1,33 @@
 {
   flake.nixosModules.nixosPcSuspendHibernate =
     { config, ... }:
+    let
+      # Physical offset of the swapfile, for hibernation:
+      # `btrfs inspect-internal map-swapfile -r /swap/swapfile`.
+      resumeOffset = null;
+    in
     {
-      swapDevices = [
+      assertions = [
         {
-          device = "/var/lib/swapfile";
-          size = 10 * 1024;
+          assertion = resumeOffset != null;
+          message = "Set resumeOffset in modules/hosts/nixos-pc/features/suspend-hibernate.nix (see docs/btrfs.md).";
         }
       ];
 
+      # Created at install time with `btrfs filesystem mkswapfile --size 10g /swap/swapfile`,
+      # which makes it nocow and uncompressed as btrfs requires; no `size`, so NixOS leaves it alone.
+      swapDevices = [ { device = "/swap/swapfile"; } ];
+
       boot = {
-        # the swapfile lives on the / partition
-        resumeDevice = config.fileSystems."/".device;
+        # the swapfile lives on the btrfs partition, in @swap
+        resumeDevice = config.fileSystems."/swap".device;
 
         kernel.sysctl = {
           "vm.swappiness" = 20;
         };
 
-        # resume_offset is only for swapfile, to get resume_offset value:
-        # If ext4: filefrag -v /path/to/swap_file | awk '$1=="0:" {print substr($4, 1, length($4)-2)}'
-        # If btrfs: btrfs inspect-internal map-swapfile -r /path/to/swap_file
         kernelParams = [
-          "resume_offset=49051648"
+          "resume_offset=${toString resumeOffset}"
           "mem_sleep_default=s2idle"
           "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
           "nvidia.NVreg_TemporaryFilePath=/var/tmp"
