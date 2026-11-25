@@ -44,6 +44,7 @@
         python3
         ripgrep
         starship
+        yazi
         zellij
         zoxide
 
