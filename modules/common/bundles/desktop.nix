@@ -11,10 +11,12 @@
       self.nixosModules.swapCapslkEsc
       self.nixosModules.appimage
       self.nixosModules.udisks2
-      self.nixosModules.tts
       self.nixosModules.networkManager
       self.nixosModules.cloudflareWarp
     ];
+
+    # graphical-desktop enables speechd by default; it pulls in ~0.7 GB of mbrola voices.
+    services.speechd.enable = false;
   };
 
   flake.homeModules.bundleDesktop = _: {
