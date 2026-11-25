@@ -12,12 +12,8 @@
           # Nix: nixd formats with nixfmt.
           nixd
           nixfmt
-          # Rust: rust-analyzer loads the workspace with cargo, checks with clippy, formats with rustfmt.
+          # Rust: rust-analyzer takes cargo, clippy and rustfmt from the project's devShell.
           rust-analyzer
-          cargo
-          rustc
-          clippy
-          rustfmt
           # C and C++: clice lints with clang-tidy and formats with clang-format on its own.
           self.packages.${pkgs.stdenv.hostPlatform.system}.clice
         ];
