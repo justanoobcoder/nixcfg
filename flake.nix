@@ -46,11 +46,15 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
-    keywave.url = "git+file:///home/hiepnh/Projects/keywave";
-    fcitx5-jot.url = "git+file:///home/hiepnh/Projects/fcitx5-jot";
-    jotty.url = "git+ssh://git@github.com/justanoobcoder/jotty?ref=cachix";
-    jon.url = "git+file:///home/hiepnh/Projects/jon";
-    unda.url = "git+file:///home/hiepnh/Projects/unda";
+    # Private repos, fetched over SSH. The cachix branch only points at commits whose builds are in
+    # justanoobcoder.cachix.org. To build a local checkout: --override-input unda ~/Projects/unda
+    keywave.url = "git+ssh://git@github.com/justanoobcoder/keywave?ref=cachix";
+    fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
+    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
+    # jon has no cachix branch, so it builds locally.
+    jon.url = "git+ssh://git@github.com/justanoobcoder/jon";
+    # Public; a github: tarball honours export-ignore, so its hash is stable across Nix versions.
+    jotty.url = "github:justanoobcoder/jotty/cachix";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

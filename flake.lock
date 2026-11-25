@@ -26,17 +26,18 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795501928,
-        "narHash": "sha256-TcfZzGeE7EKiopoBqGg7VlfDkCmQKvQUGscV+54HWJI=",
-        "ref": "refs/heads/main",
-        "rev": "bb956ffecc9f366eb1fd0f410e5431076335b02a",
-        "revCount": 314,
+        "lastModified": 1795587624,
+        "narHash": "sha256-8wm0pkvQYouvP6WMDkpferA7/I0M+bz9Z4THKDmY2Rw=",
+        "ref": "cachix",
+        "rev": "71c54b4a026570e5638174c7e673062a806841b1",
+        "revCount": 320,
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/fcitx5-jot"
+        "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot"
       },
       "original": {
+        "ref": "cachix",
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/fcitx5-jot"
+        "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot"
       }
     },
     "fcitx5-lotus": {
@@ -283,11 +284,11 @@
         "rev": "a372e72086ce5c373521df7e6605d9be3f01bb8c",
         "revCount": 223,
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/jon"
+        "url": "ssh://git@github.com/justanoobcoder/jon"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/jon"
+        "url": "ssh://git@github.com/justanoobcoder/jon"
       }
     },
     "jotty": {
@@ -297,16 +298,16 @@
       "locked": {
         "lastModified": 1795071063,
         "narHash": "sha256-kxwPQxw+gcgTuEvhkztY6gSgyuFBnhUqnA02CCkBf6c=",
-        "ref": "cachix",
+        "owner": "justanoobcoder",
+        "repo": "jotty",
         "rev": "3aeeb196f9041251446421fa8837817351b19ac6",
-        "revCount": 477,
-        "type": "git",
-        "url": "ssh://git@github.com/justanoobcoder/jotty"
+        "type": "github"
       },
       "original": {
+        "owner": "justanoobcoder",
         "ref": "cachix",
-        "type": "git",
-        "url": "ssh://git@github.com/justanoobcoder/jotty"
+        "repo": "jotty",
+        "type": "github"
       }
     },
     "keywave": {
@@ -317,15 +318,16 @@
       "locked": {
         "lastModified": 1794899442,
         "narHash": "sha256-647FZvCvK04kXa6aURRA569368KXgbQNnsALuOxi2z0=",
-        "ref": "refs/heads/main",
+        "ref": "cachix",
         "rev": "7c78df874f9027b689ceaed81b4d0b8750385d75",
         "revCount": 105,
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/keywave"
+        "url": "ssh://git@github.com/justanoobcoder/keywave"
       },
       "original": {
+        "ref": "cachix",
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/keywave"
+        "url": "ssh://git@github.com/justanoobcoder/keywave"
       }
     },
     "mnw": {
@@ -730,15 +732,16 @@
       "locked": {
         "lastModified": 1794527183,
         "narHash": "sha256-oaU+OlxXQ+ZRCVXEwmjetiBZbLX9jr+JmKO6nhCxLq8=",
-        "ref": "refs/heads/main",
+        "ref": "cachix",
         "rev": "7a6573101363c18e43346467d85d9c24d2d1c7b7",
         "revCount": 369,
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/unda"
+        "url": "ssh://git@github.com/justanoobcoder/unda"
       },
       "original": {
+        "ref": "cachix",
         "type": "git",
-        "url": "file:///home/hiepnh/Projects/unda"
+        "url": "ssh://git@github.com/justanoobcoder/unda"
       }
     },
     "xdg-desktop-portal-umbriel": {
