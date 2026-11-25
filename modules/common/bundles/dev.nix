@@ -11,6 +11,7 @@
   flake.homeModules.bundleDev = _: {
     imports = [
       self.homeModules.hmGit
+      self.homeModules.hmCargo
     ];
   };
 }
