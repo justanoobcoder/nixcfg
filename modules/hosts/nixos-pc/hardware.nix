@@ -11,11 +11,10 @@
     }:
 
     let
-      # UUID of the btrfs partition (nvme0n1p6): `blkid -s UUID -o value /dev/nvme0n1p6`.
-      btrfsUuid = null;
-
+      # Mounted by label, so reformatting needs no config change: the btrfs partition (nvme0n1p6) is
+      # labelled `nixos` and the ESP (nvme0n1p5) `boot` (see docs/btrfs.md).
       subvol = name: compress: {
-        device = "/dev/disk/by-uuid/${toString btrfsUuid}";
+        device = "/dev/disk/by-label/nixos";
         fsType = "btrfs";
         options = [
           "subvol=${name}"
@@ -27,13 +26,6 @@
     {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
-      ];
-
-      assertions = [
-        {
-          assertion = btrfsUuid != null;
-          message = "Set btrfsUuid in modules/hosts/nixos-pc/hardware.nix (see docs/btrfs.md).";
-        }
       ];
 
       boot.initrd.availableKernelModules = [
@@ -64,7 +56,7 @@
       };
 
       fileSystems."/boot" = {
-        device = "/dev/disk/by-uuid/B38A-F68F";
+        device = "/dev/disk/by-label/boot";
         fsType = "vfat";
         options = [
           "fmask=0077"

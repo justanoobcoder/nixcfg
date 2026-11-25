@@ -10,13 +10,15 @@
 | `@log` | `/var/log` | `noatime,compress=zstd` |
 | `@swap` | `/swap` | `noatime` (swapfiles must not be compressed) |
 
-`/boot` stays on `nvme0n1p5`. Leave the Windows partitions (`p1`–`p4`) and `p7`/`p8` alone.
+`/boot` is the ESP on `nvme0n1p5`; Windows has its own ESP on `p1`. Leave the Windows partitions
+(`p1`–`p4`) and `p7`/`p8` alone.
 
-Two values only exist after formatting, so the config leaves them `null` and the build fails until they
-are set:
+Both partitions are mounted by label (`nixos` and `boot`), so reformatting them needs no config change.
+No other partition may carry those labels.
 
-- `btrfsUuid` in `modules/hosts/nixos-pc/hardware.nix`
-- `resumeOffset` in `modules/hosts/nixos-pc/features/suspend-hibernate.nix`
+One value only exists after formatting, so the config leaves it `null` and the build fails until it is
+set: `resumeOffset` in `modules/hosts/nixos-pc/features/suspend-hibernate.nix`, the physical offset of
+the swapfile.
 
 ## Before
 
@@ -55,6 +57,7 @@ Without a backup, create a key with `gh auth login` as in the README.
 ### 2. Format and mount
 
 ```sh
+mkfs.fat -F 32 -n boot /dev/nvme0n1p5
 mkfs.btrfs -f -L nixos /dev/nvme0n1p6
 mount /dev/nvme0n1p6 /mnt
 for s in @ @home @nix @log @swap; do btrfs subvolume create /mnt/$s; done
@@ -73,7 +76,7 @@ mount /dev/nvme0n1p5 /mnt/boot
 btrfs filesystem mkswapfile --size 10g /mnt/swap/swapfile
 ```
 
-### 3. Clone and set the two values
+### 3. Clone and set the resume offset
 
 Clone the branch that has the btrfs layout (`feat/btrfs` until it is merged into `main`):
 
@@ -82,9 +85,7 @@ mkdir -p /mnt/home/hiepnh
 git clone -b feat/btrfs https://github.com/justanoobcoder/nixcfg /mnt/home/hiepnh/.nixcfg
 cd /mnt/home/hiepnh/.nixcfg
 
-uuid=$(blkid -s UUID -o value /dev/nvme0n1p6)
 off=$(btrfs inspect-internal map-swapfile -r /mnt/swap/swapfile)
-sed -i "s/btrfsUuid = null;/btrfsUuid = \"$uuid\";/" modules/hosts/nixos-pc/hardware.nix
 sed -i "s/resumeOffset = null;/resumeOffset = $off;/" modules/hosts/nixos-pc/features/suspend-hibernate.nix
 git diff
 ```
@@ -132,6 +133,7 @@ and are set up again by hand.
 
 ## Check
 
+- `lsblk -o NAME,LABEL` shows `boot` on `p5` and `nixos` on `p6`, and no other partition with either label.
 - `findmnt -t btrfs` lists the five subvolumes.
 - `swapon --show` lists `/swap/swapfile`.
 - `nix shell nixpkgs#compsize -c sudo compsize /nix` shows how well the store compresses.
