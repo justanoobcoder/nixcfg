@@ -10,9 +10,30 @@
       ...
     }:
 
+    let
+      # UUID of the btrfs partition (nvme0n1p6): `blkid -s UUID -o value /dev/nvme0n1p6`.
+      btrfsUuid = null;
+
+      subvol = name: compress: {
+        device = "/dev/disk/by-uuid/${toString btrfsUuid}";
+        fsType = "btrfs";
+        options = [
+          "subvol=${name}"
+          "noatime"
+        ]
+        ++ lib.optional compress "compress=zstd";
+      };
+    in
     {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
+      ];
+
+      assertions = [
+        {
+          assertion = btrfsUuid != null;
+          message = "Set btrfsUuid in modules/hosts/nixos-pc/hardware.nix (see docs/btrfs.md).";
+        }
       ];
 
       boot.initrd.availableKernelModules = [
@@ -27,9 +48,19 @@
       boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
-      fileSystems."/" = {
-        device = "/dev/disk/by-uuid/66699bf2-70c1-4ddc-8180-4553254dfe67";
-        fsType = "ext4";
+      # /nix is its own subvolume so snapshots of @ or @home leave the store out;
+      # @swap is uncompressed because btrfs swapfiles must not be compressed.
+      fileSystems = {
+        "/" = subvol "@" true;
+        "/home" = subvol "@home" true;
+        "/nix" = subvol "@nix" true;
+        "/var/log" = subvol "@log" true;
+        "/swap" = subvol "@swap" false;
+      };
+
+      services.btrfs.autoScrub = {
+        enable = true;
+        fileSystems = [ "/" ];
       };
 
       fileSystems."/boot" = {
