@@ -16,8 +16,10 @@
         src = pkgs.fetchFromGitHub {
           owner = "xhkzeroone";
           repo = "ArecaIME";
-          tag = "v${finalAttrs.version}";
-          hash = "sha256-VCqjOkcGG9VVSPFi/lnoZeOzj60leZRIR5HR3wbPzfw=";
+          # tag = "v${finalAttrs.version}";
+          rev = "99a2e3229a938d9a363360110d89202655071415";
+          # hash = "sha256-VCqjOkcGG9VVSPFi/lnoZeOzj60leZRIR5HR3wbPzfw=";
+          hash = "sha256-VXizF7nAeKzdWL/Wbz0mIUqHGQVDb6K2WuvAdL1hbic=";
           fetchSubmodules = true;
         };
 
