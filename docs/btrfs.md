@@ -128,6 +128,11 @@ git clone -b nixos git@github.com:justanoobcoder/dotfiles ~/.dotfiles
 `install.sh` links the dotfiles into `$HOME`; it runs after the rebuild so home-manager has created
 `~/.config/fish` first.
 
+Run it before the desktop session starts fcitx5: fcitx5 creates its own `~/.config/fcitx5` on first launch, and
+`install.sh` never replaces an existing path, so it only prints `skip ~/.config/fcitx5: already exists`. If that
+happens, quit fcitx5, move the directory away (`mv ~/.config/fcitx5 ~/.config/fcitx5.bak`), run `install.sh` again
+and restart fcitx5.
+
 Wi-Fi passwords, Tailscale (`tailscale up`), Bluetooth pairings and Cloudflare WARP live outside `/home`
 and are set up again by hand.
 
