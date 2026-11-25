@@ -4,7 +4,7 @@
     let
       # Physical offset of the swapfile, for hibernation:
       # `btrfs inspect-internal map-swapfile -r /swap/swapfile`.
-      resumeOffset = null;
+      resumeOffset = 533760;
     in
     {
       assertions = [
