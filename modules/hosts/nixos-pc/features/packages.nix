@@ -14,67 +14,36 @@
         adw-gtk3
         bibata-cursors
         brightnessctl
-        firefox
         godot
         gpu-screen-recorder
-        grim
         imv
         keepassxc
         kdePackages.breeze-icons
         kdePackages.qt6ct
         ladybird
         libsForQt5.qt5ct
-        libresprite
-        localsend
         lutris
         mpv
-        obs-studio
         playerctl
-        postman
-        ripdrag
-        slurp
-        swappy
-        telegram-desktop
         tela-circle-icon-theme
-        tiled
         vesktop
         wl-clipboard
 
         # cli
-        bat
-        btop
         cachix
         claude-code
-        curl
-        devenv
-        e2fsprogs
         eza
         fastfetch
         fd
         fzf
         gh
         git
-        gnutar
-        hw-probe
-        inetutils
         jq
         killall
         lazygit
-        nh
-        nix-update
-        nixd
-        nixpkgs-review
         python3
         ripgrep
         starship
-        stow
-        tree
-        tree-sitter
-        unrar
-        unzip
-        usbutils
-        wget
-        yazi
         zellij
         zoxide
 
