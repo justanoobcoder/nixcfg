@@ -1,6 +1,6 @@
 {
   flake.homeModules.hmXdg =
-    { config, ... }:
+    { config, pkgs, ... }:
     {
       xdg = {
         enable = true;
@@ -25,6 +25,21 @@
 
         configFile = {
           "mimeapps.list".force = true;
+
+          # Helium reads native messaging hosts from its own profile dir, not
+          # from ~/.config/chromium where KeePassXC writes its manifest.
+          "net.imput.helium/NativeMessagingHosts/org.keepassxc.keepassxc_browser.json".text =
+            builtins.toJSON
+              {
+                name = "org.keepassxc.keepassxc_browser";
+                description = "KeePassXC integration with native messaging support";
+                path = "${pkgs.keepassxc}/bin/keepassxc-proxy";
+                type = "stdio";
+                allowed_origins = [
+                  "chrome-extension://pdffhmdngciaglkoonimfcmckehcpafo/"
+                  "chrome-extension://oboonakemofpalcgghocfoadofidjkkk/"
+                ];
+              };
         };
 
         # xdg-open ignores Terminal=true outside a known desktop, so terminal
