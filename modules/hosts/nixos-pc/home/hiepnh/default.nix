@@ -8,6 +8,7 @@
       self.homeModules.hmFish
       self.homeModules.hmEnv
       self.homeModules.hmXdg
+      self.homeModules.hmTheme
       self.homeModules.hmSyncthing
       self.homeModules.hmKeywave
       self.homeModules.hmJava
