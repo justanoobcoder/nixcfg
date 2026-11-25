@@ -52,11 +52,17 @@ btrfs inspect-internal map-swapfile -r /mnt/swap/swapfile   # -> resumeOffset
 Clone the repository to `/mnt/home/hiepnh/.nixcfg`, set the two values, then install:
 
 ```sh
-nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc
+nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc \
+  --option extra-substituters "https://justanoobcoder.cachix.org https://umbriel.cachix.org https://cache.lantian.pub/lantian https://noctalia.cachix.org" \
+  --option extra-trusted-public-keys "justanoobcoder.cachix.org-1:D2/vJZSn8o8Fpsxzbjc9tHo2/D1ejBUqc4r71UvDVyk= umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw= lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ= noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
 ```
 
-The `jotty` input is fetched over SSH (`git+ssh://`), and `nixos-install` runs as root, which has no key
-for it. Copy a key that can read the repository to `/root/.ssh` first.
+The binary caches in `nix.settings` only take effect once the new system is running, so pass them to
+`nixos-install`; without them the CachyOS kernel and the `justanoobcoder/*` packages build from source.
+
+The private inputs (`unda`, `fcitx5-jot`, `keywave`, `jon`) are fetched over SSH (`git+ssh://`), and
+`nixos-install` runs as root, which has no key for them. Copy a key that can read those repositories to
+`/root/.ssh` first.
 
 After the first boot, restore the backup into `/home/hiepnh` and fix ownership.
 

@@ -40,7 +40,7 @@ Common modules should not hardcode a user or machine; set those values from the 
 
 ## Installing on a New Machine
 
-Some flake inputs (`fcitx5-jot`, `keywave`, `unda`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild).
+Some flake inputs (`fcitx5-jot`, `keywave`, `unda`, `jon`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild), but only if the caches are passed to `nixos-install` (step 6).
 
 The steps below work from the **minimal (no desktop) NixOS ISO**. GitHub login uses the device flow, so you only need a phone or another device with a browser.
 
@@ -97,8 +97,13 @@ nixos-generate-config --root /mnt --show-hardware-config
 ### 6. Install
 
 ```sh
-nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc
+nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc \
+  --option extra-substituters "https://justanoobcoder.cachix.org https://umbriel.cachix.org https://cache.lantian.pub/lantian https://noctalia.cachix.org" \
+  --option extra-trusted-public-keys "justanoobcoder.cachix.org-1:D2/vJZSn8o8Fpsxzbjc9tHo2/D1ejBUqc4r71UvDVyk= umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw= lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ= noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
 ```
+
+The binary caches in `nix.settings` only take effect once the new system is running, so pass them to
+`nixos-install`; without them the CachyOS kernel and the `justanoobcoder/*` packages build from source.
 
 Set the root password when prompted, then set the user password:
 
