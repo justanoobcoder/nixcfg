@@ -4,7 +4,7 @@
     let
       # Physical offset of the swapfile, for hibernation:
       # `btrfs inspect-internal map-swapfile -r /swap/swapfile`.
-      resumeOffset = 533760;
+      resumeOffset = 7388932;
     in
     {
       assertions = [
@@ -14,7 +14,7 @@
         }
       ];
 
-      # Created at install time with `btrfs filesystem mkswapfile --size 10g /swap/swapfile`,
+      # Created at install time with `btrfs filesystem mkswapfile --size 16g /swap/swapfile`,
       # which makes it nocow and uncompressed as btrfs requires; no `size`, so NixOS leaves it alone.
       swapDevices = [ { device = "/swap/swapfile"; } ];
 

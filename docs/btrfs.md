@@ -73,7 +73,7 @@ mount -o subvol=@swap,noatime /dev/nvme0n1p6 /mnt/swap
 mount /dev/nvme0n1p5 /mnt/boot
 
 # nocow and uncompressed, as btrfs requires for swap
-btrfs filesystem mkswapfile --size 10g /mnt/swap/swapfile
+btrfs filesystem mkswapfile --size 16g /mnt/swap/swapfile
 ```
 
 ### 3. Clone and set the resume offset
