@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.unda = _: {
+  flake.nixosModules.unda = { config, ... }: {
     imports = [ inputs.unda.nixosModules.default ];
 
     programs.unda = {
@@ -7,7 +7,7 @@
       systemd.enable = true;
       greeter = {
         enable = true;
-        syncUser = "hiepnh";
+        syncUser = config.nixcfg.primaryUser;
       };
     };
   };

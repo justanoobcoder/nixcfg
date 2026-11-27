@@ -1,39 +1,17 @@
 {
   flake.nixosModules.nixosPcConfiguration = _: {
-    nix.settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-
-      substituters = [
-        "https://justanoobcoder.cachix.org"
-      ];
-      trusted-public-keys = [
-        "justanoobcoder.cachix.org-1:D2/vJZSn8o8Fpsxzbjc9tHo2/D1ejBUqc4r71UvDVyk="
-      ];
-    };
-
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
 
-    services.fcitx5-lotus.user = "hiepnh";
-
     services.gnome.gnome-keyring.enable = true;
     security.pam.services.login.enableGnomeKeyring = true;
 
-    time.timeZone = "Asia/Ho_Chi_Minh";
-
-    i18n.defaultLocale = "en_US.UTF-8";
-
     networking.hostName = "nixos-pc";
 
-    environment.sessionVariables = {
-      EDITOR = "jon";
-    };
+    nixcfg.primaryUser = "hiepnh";
 
     nixpkgs.config.permittedInsecurePackages = [
       "electron-40.10.5"

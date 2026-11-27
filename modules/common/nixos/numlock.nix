@@ -1,6 +1,7 @@
 {
   flake.nixosModules.numlock =
     {
+      config,
       pkgs,
       ...
     }:
@@ -20,7 +21,7 @@
       };
 
       programs.ydotool.enable = true;
-      users.users.hiepnh.extraGroups = [ "ydotool" ];
+      users.users.${config.nixcfg.primaryUser}.extraGroups = [ "ydotool" ];
 
       systemd.user.services.numlock-on-graphical = {
         description = "Enable NumLock on graphical session start";

@@ -21,18 +21,14 @@
       self.nixosModules.userHiepnh
 
       # common
-      self.nixosModules.unda
-      self.nixosModules.homeManager
-
+      self.nixosModules.bundleBase
       self.nixosModules.bundleCoreSystem
       self.nixosModules.bundleDev
       self.nixosModules.bundleDesktop
 
+      self.nixosModules.unda
       self.nixosModules.umbriel
-      self.nixosModules.zsh
-      self.nixosModules.fish
       self.nixosModules.zoxide
-      self.nixosModules.tack
       self.nixosModules.battery
       self.nixosModules.intelGraphics
       self.nixosModules.nvidia

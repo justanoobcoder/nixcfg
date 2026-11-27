@@ -41,7 +41,10 @@
       };
 
       config = {
-        services.fcitx5-lotus.enable = true;
+        services.fcitx5-lotus = {
+          enable = true;
+          user = config.nixcfg.primaryUser;
+        };
 
         i18n = {
           inputMethod = {
