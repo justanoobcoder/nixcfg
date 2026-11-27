@@ -19,7 +19,6 @@
         GOPATH = "${config.home.sessionVariables.XDG_DATA_HOME}/go";
         GOMODCACHE = "${config.home.sessionVariables.XDG_CACHE_HOME}/go/mod";
         GTK2_RC_FILES = "${config.home.sessionVariables.XDG_CONFIG_HOME}/gtk-2.0/gtkrc";
-        CARGO_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/cargo";
         RUSTUP_HOME = "${config.home.sessionVariables.XDG_DATA_HOME}/rustup";
         DOCKER_CONFIG = "${config.home.sessionVariables.XDG_CONFIG_HOME}/docker";
         MACHINE_STORAGE_PATH = "${config.home.sessionVariables.XDG_DATA_HOME}/machines";
