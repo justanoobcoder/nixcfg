@@ -15,6 +15,12 @@
 
     services.xserver.videoDrivers = [ "nvidia" ];
 
+    # Keep VRAM across suspend and hibernate, saved under /var/tmp
+    boot.kernelParams = [
+      "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+      "nvidia.NVreg_TemporaryFilePath=/var/tmp"
+    ];
+
     environment.variables = {
       LIBVA_DRIVER_NAME = "nvidia";
       MOZ_DISABLE_RDD_SANDBOX = "1";

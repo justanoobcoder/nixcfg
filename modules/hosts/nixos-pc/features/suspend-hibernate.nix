@@ -29,8 +29,6 @@
         kernelParams = [
           "resume_offset=${toString resumeOffset}"
           "mem_sleep_default=s2idle"
-          "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-          "nvidia.NVreg_TemporaryFilePath=/var/tmp"
           "zswap.enabled=1"
           "zswap.compressor=zstd"
           "zswap.max_pool_percent=20"
