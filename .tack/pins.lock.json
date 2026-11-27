@@ -59,18 +59,18 @@
     "type": "github",
     "owner": "oxcl",
     "repo": "nix-flake-helium-browser",
-    "rev": "5ffc9e7498b8d893fa33122bb994249a723e788b",
-    "narHash": "sha256-cAJyi5Bzj0NmeG0Li2VvLFcAsM0Wf7VBHjCX+kj/nvY=",
-    "lastModified": 1795631174,
+    "rev": "e78a6de9e4c918b1b6d1bf0692f49f19e2729b1b",
+    "narHash": "sha256-1t9mbb3lMkGY/NDqRvlHsiybCpK2TKoWRNhRYbfF9io=",
+    "lastModified": 1795716490,
     "public": true
   },
   "home-manager": {
     "type": "github",
     "owner": "nix-community",
     "repo": "home-manager",
-    "rev": "6a13737c0ed27c7c285f59e3be423ed972aa605f",
-    "narHash": "sha256-d9Osol//t6hqeo1xlspsYMbhTJK507h6t0EmPyF5Db0=",
-    "lastModified": 1795618997,
+    "rev": "54f903fdaaf5d5720ed36706fe75332af69eb793",
+    "narHash": "sha256-J1iQ1QMnkFwZFXnlPt2t3Qx7TsGjw08/0L3QMqNt+Wg=",
+    "lastModified": 1795748630,
     "public": true
   },
   "import-tree": {
@@ -111,18 +111,18 @@
     "type": "github",
     "owner": "xddxdd",
     "repo": "nix-cachyos-kernel",
-    "rev": "4a974e2f96527fab5dfd08efb7f04167f66057be",
-    "narHash": "sha256-GtEnFlzPM0/WBDF3E/iggCN4cRRfOaJ+kDW71eyy4FI=",
-    "lastModified": 1795655343,
+    "rev": "2294a3b7da84c589792b586e66d9989400977977",
+    "narHash": "sha256-HlnL2pmxTSz/ql/1AGsHhiP5Rdj26QSsI4kcm6BxAMw=",
+    "lastModified": 1795741760,
     "public": true
   },
   "nix-craftapps": {
     "type": "github",
     "owner": "olafkfreund",
     "repo": "nix-craftapps",
-    "rev": "42e2f8d6c045bbe507774b4e20ecc754ffbf25e1",
-    "narHash": "sha256-2nelhAMuIc5cuV/P+sy4TCOlLq1qxgzdJL/egSXNFiQ=",
-    "lastModified": 1795497716,
+    "rev": "fd52bfbcd592ca8b03c95631d9736a3b16b2c257",
+    "narHash": "sha256-sdEpXJRvZ9sKT9rZtMWCXUOMlJi7aYfIDVt5MFoAq7U=",
+    "lastModified": 1795705861,
     "public": true
   },
   "nixpkgs": {
@@ -138,9 +138,9 @@
     "type": "github",
     "owner": "noctalia-dev",
     "repo": "noctalia",
-    "rev": "b7e90676fed15a8930c2ae74c497689dc14c4e73",
-    "narHash": "sha256-TuoYmAiNWFg5morOREQ1AO/xXMpgqrK4Ibs2pOpO4sA=",
-    "lastModified": 1795653189,
+    "rev": "54958562e9f8a83aaa07eba7c0ff353ba45b1167",
+    "narHash": "sha256-ib2e733yMWJdVN58/jF+K0fGAZHMTJhcGyGfvu0/4fQ=",
+    "lastModified": 1795735096,
     "public": true
   },
   "noobvim": {
@@ -165,9 +165,9 @@
     "type": "github",
     "owner": "noctalia-dev",
     "repo": "umbriel",
-    "rev": "f81b1ea45097a0beb3914b57eaa651764ded4d96",
-    "narHash": "sha256-Ib1Gwwu1c/M+l7ETXleqS4bywndhZp6op1AMGbOeAwA=",
-    "lastModified": 1795685023,
+    "rev": "0760394b3a97702a95833d2fb6985f36464a9417",
+    "narHash": "sha256-+IN1PV8B53lfCJASs3x2HstrfVk/vnKdL3N9SdPqPE4=",
+    "lastModified": 1795737803,
     "public": true
   },
   "unda": {
@@ -182,9 +182,9 @@
     "type": "github",
     "owner": "VN-Linux-Family",
     "repo": "zalo-for-linux",
-    "rev": "d9e8ec77ceaf8f80c9733efb2f71801d9a9336af",
-    "narHash": "sha256-IerNePZqjXxQ+wMBG2lIhV2Dhe6vByPBt3/A+TPIXsY=",
-    "lastModified": 1795522231,
+    "rev": "6ad941df806a39abe88ad9053e21dbff03175cc9",
+    "narHash": "sha256-mKAX2upJjKWkmlBfS2KJVoiErGsBgMaclsI7jGrPR34=",
+    "lastModified": 1795753655,
     "public": true
   }
 }
