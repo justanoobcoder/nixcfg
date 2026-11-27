@@ -34,7 +34,7 @@
     networking.hostName = "nixos-pc";
 
     environment.sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "jon";
     };
 
     nixpkgs.config.permittedInsecurePackages = [
