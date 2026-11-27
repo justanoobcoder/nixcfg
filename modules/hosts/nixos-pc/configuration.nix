@@ -1,4 +1,3 @@
-{ self, ... }:
 {
   flake.nixosModules.nixosPcConfiguration = _: {
     nix.settings = {
@@ -6,7 +5,6 @@
         "nix-command"
         "flakes"
       ];
-      trusted-users = [ "hiepnh" ];
 
       substituters = [
         "https://justanoobcoder.cachix.org"
@@ -40,8 +38,6 @@
     nixpkgs.config.permittedInsecurePackages = [
       "electron-40.10.5"
     ];
-
-    home-manager.users.hiepnh = self.homeModules.nixosPcHiepnh;
 
     system.stateVersion = "26.05";
   };

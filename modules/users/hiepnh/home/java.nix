@@ -1,5 +1,5 @@
 {
-  flake.homeModules.hmJava = { pkgs, ... }: {
+  flake.homeModules.userHiepnhJava = { pkgs, ... }: {
     programs.java.enable = true;
 
     home.packages = with pkgs; [

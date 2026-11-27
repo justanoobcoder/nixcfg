@@ -1,5 +1,5 @@
 {
-  flake.homeModules.hmEnv =
+  flake.homeModules.userHiepnhEnv =
     { config, ... }:
     {
       home.sessionSearchVariables = {

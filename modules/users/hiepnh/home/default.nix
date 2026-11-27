@@ -1,17 +1,17 @@
 { self, ... }:
 {
-  flake.homeModules.nixosPcHiepnh = { config, ... }: {
+  flake.homeModules.userHiepnh = { config, ... }: {
     imports = [
       self.homeModules.bundleDev
       self.homeModules.bundleDesktop
 
-      self.homeModules.hmFish
-      self.homeModules.hmEnv
-      self.homeModules.hmXdg
-      self.homeModules.hmTheme
+      self.homeModules.userHiepnhFish
+      self.homeModules.userHiepnhEnv
+      self.homeModules.userHiepnhXdg
+      self.homeModules.userHiepnhTheme
       self.homeModules.hmSyncthing
       self.homeModules.hmKeywave
-      self.homeModules.hmJava
+      self.homeModules.userHiepnhJava
     ];
 
     home = {

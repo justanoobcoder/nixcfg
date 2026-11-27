@@ -11,12 +11,14 @@
       # host
       self.nixosModules.nixosPcConfiguration
       self.nixosModules.nixosPcHardware
-      self.nixosModules.nixosPcUser
       self.nixosModules.nixosPcPackages
       self.nixosModules.nixosPcSudoNoPass
       self.nixosModules.nixosPcSuspendHibernate
       self.nixosModules.nixosPcFirewall
       self.nixosModules.nixosPcNtfy
+
+      # users
+      self.nixosModules.userHiepnh
 
       # common
       self.nixosModules.unda

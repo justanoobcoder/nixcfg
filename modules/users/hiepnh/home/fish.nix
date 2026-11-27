@@ -1,5 +1,5 @@
 {
-  flake.homeModules.hmFish =
+  flake.homeModules.userHiepnhFish =
     { config, ... }:
     let
       # Zalo blocks shutdown, so kill it first

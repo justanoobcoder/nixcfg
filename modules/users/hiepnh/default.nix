@@ -1,5 +1,7 @@
+{ self, ... }:
 {
-  flake.nixosModules.nixosPcUser =
+  # Everything a host needs to have hiepnh: the account and its home-manager config.
+  flake.nixosModules.userHiepnh =
     { pkgs, ... }:
     {
       users.users.hiepnh = {
@@ -15,5 +17,9 @@
           "uinput"
         ];
       };
+
+      nix.settings.trusted-users = [ "hiepnh" ];
+
+      home-manager.users.hiepnh = self.homeModules.userHiepnh;
     };
 }

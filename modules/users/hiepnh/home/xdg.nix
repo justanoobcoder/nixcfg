@@ -1,5 +1,5 @@
 {
-  flake.homeModules.hmXdg =
+  flake.homeModules.userHiepnhXdg =
     { config, pkgs, ... }:
     {
       xdg = {
