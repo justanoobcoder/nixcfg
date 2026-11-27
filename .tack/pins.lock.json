@@ -86,9 +86,9 @@
     "type": "git",
     "url": "file:///home/hiepnh/Projects/jon",
     "ref": "HEAD",
-    "rev": "df0355fc68bde5f80f484392f3caf951b0f18dba",
-    "narHash": "sha256-XGUylDbp6EdLFxmLNgAWjQAMWZp8wfDc1fdmBd6wSMA=",
-    "lastModified": 1795673558
+    "rev": "46d0f4c96d3598d945aeeaf8917599e3f079c8a9",
+    "narHash": "sha256-fwi1rbFo0RHM7EUSrQJl19OXcQT+1rjNxdSMl7RYQaY=",
+    "lastModified": 1795769691
   },
   "jotty": {
     "type": "github",
