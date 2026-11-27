@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - '**.nix'
-      - 'flake.lock'
+      - '.tack/**'
   workflow_dispatch:
 
 jobs:
