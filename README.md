@@ -48,7 +48,7 @@ tack update [name]   # relock all pins, or one
 tack undo            # revert the last tack edit
 ```
 
-`nix flake update` and `--override-input` do not apply. tack resolves `github:` pins through the GitHub API, which allows 60 requests an hour without a token; set `GH_TOKEN` (e.g. `GH_TOKEN=$(gh auth token) tack update`) if updates run into that limit.
+`nix flake update` and `--override-input` do not apply. tack resolves `github:` pins through the GitHub API, which allows 60 requests an hour without a token; set `GH_TOKEN` (e.g. `GH_TOKEN=$(gh auth token) tack update`) if updates run into that limit. See [docs/tack.md](docs/tack.md) for the full workflow.
 
 ## Installing on a New Machine
 
