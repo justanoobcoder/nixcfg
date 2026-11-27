@@ -38,6 +38,18 @@ modules/
 
 Common modules should not hardcode a user or machine; set those values from the host (e.g. `services.fcitx5-lotus.user` in `hosts/nixos-pc/configuration.nix`).
 
+### Inputs
+
+Inputs are pinned with [tack](https://github.com/manic-systems/tack) in `.tack/pins.toml` and locked in `.tack/pins.lock.json`; `flake.nix` has no `inputs` block and there is no `flake.lock`. Evaluating and building only need Nix (`.tack/default.nix` is plain Nix), while changing pins needs the `tack` CLI:
+
+```sh
+tack look            # show upstream drift (-v lists the commits)
+tack update [name]   # relock all pins, or one
+tack undo            # revert the last tack edit
+```
+
+`nix flake update` and `--override-input` do not apply. tack resolves `github:` pins through the GitHub API, which allows 60 requests an hour without a token; set `GH_TOKEN` (e.g. `GH_TOKEN=$(gh auth token) tack update`) if updates run into that limit.
+
 ## Installing on a New Machine
 
 Some flake inputs (`fcitx5-jot`, `keywave`, `unda`, `jon`) are **private GitHub repositories** fetched over SSH, so the installer needs an SSH key registered on GitHub before it can evaluate the flake. Prebuilt binaries of these packages are served from [`justanoobcoder.cachix.org`](https://app.cachix.org/cache/justanoobcoder), so they are downloaded instead of rebuilt (as long as the cache was pushed after the last rebuild), but only if the caches are passed to `nixos-install` (step 6).
