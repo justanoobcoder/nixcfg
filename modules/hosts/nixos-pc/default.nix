@@ -30,6 +30,7 @@
       self.nixosModules.zsh
       self.nixosModules.fish
       self.nixosModules.zoxide
+      self.nixosModules.tack
       self.nixosModules.battery
       self.nixosModules.intelGraphics
       self.nixosModules.nvidia

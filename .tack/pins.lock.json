@@ -15,6 +15,7 @@
     "nixpkgs": "github:NixOS/nixpkgs/nixos-unstable",
     "noctalia": "github:noctalia-dev/noctalia/cachix",
     "noobvim": "github:justanoobcoder/noobvim/dev",
+    "tack": "github:manic-systems/tack",
     "umbriel": "github:noctalia-dev/umbriel/cachix",
     "unda": "git+file:///home/hiepnh/Projects/unda",
     "zalo-for-linux": "github:VN-Linux-Family/zalo-for-linux"
@@ -149,6 +150,15 @@
     "rev": "0a50e9063d3a8a78b9e86d7a477db2c17d8fa16a",
     "narHash": "sha256-CsAsjgCbne8357hRTkpQymIhv2M2KCbp6DbFJ2Vu6Vk=",
     "lastModified": 1794896109,
+    "public": true
+  },
+  "tack": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "tack",
+    "rev": "673997981720feebb3870645932b6cfe6657db9f",
+    "narHash": "sha256-iRVnAKvQh5vC76QppovlxTklJf98EA+GYEY91loasy4=",
+    "lastModified": 1795748364,
     "public": true
   },
   "umbriel": {

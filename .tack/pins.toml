@@ -136,3 +136,9 @@ url = "github:VN-Linux-Family/zalo-for-linux"
 
 [inputs.zalo-for-linux.follows]
 nixpkgs = "nixpkgs"
+
+[inputs.tack]
+url = "github:manic-systems/tack"
+
+[inputs.tack.follows]
+nixpkgs = "nixpkgs"
