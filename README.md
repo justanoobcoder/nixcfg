@@ -94,6 +94,13 @@ sudo -i
 nix-shell -p gh git
 ```
 
+Set the host and the user to install; the commands below use them (`nixos-pc` and `hiepnh` for the current machine):
+
+```sh
+host=nixos-pc
+user=hiepnh
+```
+
 ### 2. Authenticate with GitHub
 
 ```sh
@@ -123,22 +130,32 @@ Partition and mount the target disk under `/mnt` as usual (see the [NixOS manual
 ### 4. Clone the configuration
 
 ```sh
-mkdir -p /mnt/home/hiepnh
-git clone git@github.com:justanoobcoder/nixcfg.git /mnt/home/hiepnh/.nixcfg
+mkdir -p /mnt/home/$user
+git clone git@github.com:justanoobcoder/nixcfg.git /mnt/home/$user/.nixcfg
 ```
 
 ### 5. Update the hardware configuration
 
-If the hardware differs from the previous machine, regenerate it and merge the relevant parts (filesystems, kernel modules, etc.) into `modules/hosts/nixos-pc/hardware.nix`:
+Print the hardware configuration of this machine:
 
 ```sh
 nixos-generate-config --root /mnt --show-hardware-config
 ```
 
+- **Reinstalling an existing host:** if the hardware changed, merge the relevant parts (filesystems, kernel
+  modules, etc.) into `modules/hosts/$host/hardware.nix`.
+- **A new host:** create it as described in [Adding a host](#adding-a-host), using this output for its
+  `hardware.nix`. If the user is new too, see [Adding a user](#adding-a-user). The flake only sees tracked
+  files, so `git add` them before installing:
+
+  ```sh
+  git -C /mnt/home/$user/.nixcfg add modules
+  ```
+
 ### 6. Install
 
 ```sh
-nixos-install --flake /mnt/home/hiepnh/.nixcfg#nixos-pc \
+nixos-install --flake /mnt/home/$user/.nixcfg#$host \
   --option extra-substituters "https://justanoobcoder.cachix.org https://umbriel.cachix.org https://cache.lantian.pub/lantian https://noctalia.cachix.org" \
   --option extra-trusted-public-keys "justanoobcoder.cachix.org-1:D2/vJZSn8o8Fpsxzbjc9tHo2/D1ejBUqc4r71UvDVyk= umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw= lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ= noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
 ```
@@ -149,7 +166,7 @@ The binary caches in `nix.settings` only take effect once the new system is runn
 Set the root password when prompted, then set the user password:
 
 ```sh
-nixos-enter --root /mnt -c 'passwd hiepnh'
+nixos-enter --root /mnt -c "passwd $user"
 ```
 
 ### 7. Keep the SSH key (optional)
@@ -157,19 +174,19 @@ nixos-enter --root /mnt -c 'passwd hiepnh'
 The key generated in step 2 lives in the live environment's RAM and is lost on reboot. Either copy it to the new system:
 
 ```sh
-mkdir -p /mnt/home/hiepnh/.ssh
-cp ~/.ssh/id_ed25519* /mnt/home/hiepnh/.ssh/
-nixos-enter --root /mnt -c 'chown -R hiepnh:users /home/hiepnh/.ssh /home/hiepnh/.nixcfg && chmod 600 /home/hiepnh/.ssh/id_ed25519'
+mkdir -p /mnt/home/$user/.ssh
+cp ~/.ssh/id_ed25519* /mnt/home/$user/.ssh/
+nixos-enter --root /mnt -c "chown -R $user:users /home/$user/.ssh /home/$user/.nixcfg && chmod 600 /home/$user/.ssh/id_ed25519"
 ```
 
-Or, after rebooting, run `gh auth login` again as `hiepnh` to create a new key, and delete the `nixos-installer` key from <https://github.com/settings/keys>.
+Or, after rebooting, run `gh auth login` again as the user to create a new key, and delete the `nixos-installer` key from <https://github.com/settings/keys>.
 
 ### 8. Rebuilding afterwards
 
 Run rebuilds as your user (not `sudo nixos-rebuild`) so private inputs are fetched with your own SSH key:
 
 ```sh
-nixos-rebuild switch --flake ~/.nixcfg#nixos-pc --sudo
+nixos-rebuild switch --flake ~/.nixcfg#<host> --sudo
 ```
 
 ### Updating the binary cache
