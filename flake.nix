@@ -50,9 +50,9 @@
     # justanoobcoder.cachix.org. To build a local checkout: --override-input unda ~/Projects/unda
     keywave.url = "git+ssh://git@github.com/justanoobcoder/keywave?ref=cachix";
     fcitx5-jot.url = "git+ssh://git@github.com/justanoobcoder/fcitx5-jot?ref=cachix";
-    unda.url = "git+ssh://git@github.com/justanoobcoder/unda?ref=cachix";
+    unda.url = "git+file:/home/hiepnh/Projects/unda";
     # jon has no cachix branch, so it builds locally.
-    jon.url = "git+ssh://git@github.com/justanoobcoder/jon";
+    jon.url = "git+file:/home/hiepnh/Projects/jon";
     # Public; a github: tarball honours export-ignore, so its hash is stable across Nix versions.
     jotty.url = "github:justanoobcoder/jotty/cachix";
   };
