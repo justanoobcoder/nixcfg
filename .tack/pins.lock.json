@@ -25,26 +25,26 @@
     "type": "github",
     "owner": "jacopone",
     "repo": "antigravity-nix",
-    "rev": "c7b60189f6c5d728d8da3e2bb71a3684f1598a95",
-    "narHash": "sha256-wxmI7pyE/XuYlWwHic0bHsR2L3gI8zyQjkxQGQ1u0jw=",
-    "lastModified": 1795677075,
+    "rev": "6e1ea646aeb410cdc181403fa63a37ac5e338e4f",
+    "narHash": "sha256-etpipxVzj6ha8GEJWZgAf34ilfNRlz6XwL0JqZI8rns=",
+    "lastModified": 1795778859,
     "public": true
   },
   "fcitx5-jot": {
     "type": "git",
     "url": "ssh://git@github.com/justanoobcoder/fcitx5-jot",
-    "ref": "cachix",
-    "rev": "71c54b4a026570e5638174c7e673062a806841b1",
-    "narHash": "sha256-8wm0pkvQYouvP6WMDkpferA7/I0M+bz9Z4THKDmY2Rw=",
-    "lastModified": 1795587624
+    "ref": "refs/heads/cachix",
+    "rev": "4c25a603528debc9c8c708bef4eaf7864b86b81a",
+    "narHash": "sha256-um7J4JkbPCC8t9iXSl3aB+N8Wg96qn7uWchAcGdHeQo=",
+    "lastModified": 1795857445
   },
   "fcitx5-lotus": {
     "type": "github",
     "owner": "LotusInputMethod",
     "repo": "fcitx5-lotus",
-    "rev": "5efd481007674ffa599402739ac678eba2f0bbb1",
-    "narHash": "sha256-jsnm5R24YiuO6kw/N8AX9Ahpz1DOPKyawVgLZZOiNjg=",
-    "lastModified": 1795458730,
+    "rev": "1ecba841cac2ff2b97afd716e693f5987a2cc150",
+    "narHash": "sha256-Itbl6F+Fhknhu4WMBlQdOfbDeHzKh11mMKNETkt9q38=",
+    "lastModified": 1795794985,
     "public": true
   },
   "flake-parts": {
@@ -69,9 +69,9 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "home-manager",
-    "rev": "54f903fdaaf5d5720ed36706fe75332af69eb793",
-    "narHash": "sha256-J1iQ1QMnkFwZFXnlPt2t3Qx7TsGjw08/0L3QMqNt+Wg=",
-    "lastModified": 1795748630,
+    "rev": "5f5abf5eb8de62d954232f3797b5bf4505656b91",
+    "narHash": "sha256-Udjs2j0EkvK+qGXKHRIQwXWRgzNBIl4oXSUktuOzbmQ=",
+    "lastModified": 1795827905,
     "public": true
   },
   "import-tree": {
@@ -95,9 +95,9 @@
     "type": "github",
     "owner": "justanoobcoder",
     "repo": "jotty",
-    "rev": "3aeeb196f9041251446421fa8837817351b19ac6",
-    "narHash": "sha256-kxwPQxw+gcgTuEvhkztY6gSgyuFBnhUqnA02CCkBf6c=",
-    "lastModified": 1795071063,
+    "rev": "ce1d0797220f8bd29df149cf6450d47608749a6f",
+    "narHash": "sha256-BT8fGYAj7Uhavk9sPm1a8WnrCQCvSgl6MLBV/jVWtfc=",
+    "lastModified": 1795847865,
     "public": true
   },
   "keywave": {
@@ -121,9 +121,9 @@
     "type": "github",
     "owner": "xddxdd",
     "repo": "nix-cachyos-kernel",
-    "rev": "2294a3b7da84c589792b586e66d9989400977977",
-    "narHash": "sha256-HlnL2pmxTSz/ql/1AGsHhiP5Rdj26QSsI4kcm6BxAMw=",
-    "lastModified": 1795741760,
+    "rev": "a7007e69122c80d09252224b19cc5ad466627217",
+    "narHash": "sha256-Vp8DehfkzNRa+zOL7qU5y+M8FpTdS/k60br1vggwf24=",
+    "lastModified": 1795826707,
     "public": true
   },
   "nix-craftapps": {
@@ -148,9 +148,9 @@
     "type": "github",
     "owner": "noctalia-dev",
     "repo": "noctalia",
-    "rev": "54958562e9f8a83aaa07eba7c0ff353ba45b1167",
-    "narHash": "sha256-ib2e733yMWJdVN58/jF+K0fGAZHMTJhcGyGfvu0/4fQ=",
-    "lastModified": 1795735096,
+    "rev": "17e51bdbcd13da9f57858fbb30f19b7d723e629c",
+    "narHash": "sha256-gSj0GrlTj2QNsTZwH19wKqX8LSwOwZGz9jfSD+LyU14=",
+    "lastModified": 1795797641,
     "public": true
   },
   "noobvim": {
@@ -175,9 +175,9 @@
     "type": "github",
     "owner": "noctalia-dev",
     "repo": "umbriel",
-    "rev": "0760394b3a97702a95833d2fb6985f36464a9417",
-    "narHash": "sha256-+IN1PV8B53lfCJASs3x2HstrfVk/vnKdL3N9SdPqPE4=",
-    "lastModified": 1795737803,
+    "rev": "9300aa9d844087253e18c41ccbd883fc3d6ae61f",
+    "narHash": "sha256-35Dqm37Coxbgb0PITsLJGqC8R2eyuG7Lmvp0LujeCvo=",
+    "lastModified": 1795828019,
     "public": true
   },
   "unda": {
