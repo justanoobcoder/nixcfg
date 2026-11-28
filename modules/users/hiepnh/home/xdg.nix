@@ -70,7 +70,7 @@
               ];
               imageViewers = [ "imv.desktop" ];
               textEditors = [ "nvim-jotty.desktop" ];
-              fileManagers = [ "yazi-jotty.desktop" ];
+              fileManagers = [ "dev.noctalia.luciole.desktop" ];
               documents = [ "ai.storyteller.wordcraft.desktop" ];
               spreadsheets = [ "ai.storyteller.gridcraft.desktop" ];
               presentations = [ "ai.storyteller.deckcraft.desktop" ];
