@@ -142,3 +142,6 @@ url = "github:manic-systems/tack"
 
 [inputs.tack.follows]
 nixpkgs = "nixpkgs"
+
+[inputs.luciole]
+url = "github:noctalia-dev/luciole/cachix"

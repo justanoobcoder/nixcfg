@@ -55,6 +55,7 @@
         inputs.jotty.packages.${system}.default
         inputs.helium.packages.${system}.default
         inputs.keywave.packages.${system}.default
+        inputs.luciole.packages.${system}.default
         inputs.noobvim.packages.${system}.default
       ];
     };
