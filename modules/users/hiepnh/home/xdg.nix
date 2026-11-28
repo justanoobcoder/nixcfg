@@ -45,9 +45,10 @@
         # xdg-open ignores Terminal=true outside a known desktop, so terminal
         # programs get entries that open them in a jotty window.
         desktopEntries = {
-          nvim-jotty = {
-            name = "Neovim (jotty)";
-            exec = "jotty -e nvim %F";
+          # jon takes one file; `--` keeps a name starting with `+` from being read as a command.
+          jon-jotty = {
+            name = "jon (jotty)";
+            exec = "jotty -e jon -- %f";
             terminal = false;
             noDisplay = true;
           };
@@ -69,7 +70,7 @@
                 "umpv.desktop"
               ];
               imageViewers = [ "imv.desktop" ];
-              textEditors = [ "nvim-jotty.desktop" ];
+              textEditors = [ "jon-jotty.desktop" ];
               fileManagers = [ "dev.noctalia.luciole.desktop" ];
               documents = [ "ai.storyteller.wordcraft.desktop" ];
               spreadsheets = [ "ai.storyteller.gridcraft.desktop" ];
